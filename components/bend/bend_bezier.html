@@ -1,0 +1,363 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+<title>gpdk.components.bend.bend_bezier API documentation</title>
+<meta name="description" content="" />
+<link rel="preload stylesheet" as="style" href="../../assets/10up-sanitize.css/11.0.1/sanitize.min.css">
+<link rel="preload stylesheet" as="style" href="../../assets/10up-sanitize.css/11.0.1/typography.min.css">
+<link rel="stylesheet preload" as="style" href="../../assets/highlight.js/10.1.1/styles/github-dark.min.css">
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:30px;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}#lunr-search{width:100%;font-size:1em;padding:6px 9px 5px 9px;border:1px solid silver}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:1em 0 .50em 0}h3{font-size:1.4em;margin:25px 0 10px 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .3s ease-in-out}a:hover{color:#e82}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900}pre code{background:#f8f8f8;font-size:.8em;line-height:1.4em}code{background:#f2f2f1;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{background:#f8f8f8;border:0;border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0;padding:1ex}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-weight:bold;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em .5em;margin-bottom:1em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.item .name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul{padding-left:1.5em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+<script defer src="../../assets/highlight.js/10.1.1/highlight.min.js"></script>
+<script>window.addEventListener('DOMContentLoaded', () => hljs.initHighlighting())</script>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>gpdk.components.bend.bend_bezier</code></h1>
+</header>
+<section id="section-intro">
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">from dataclasses import dataclass
+from functools import cached_property
+from typing import Sequence, Tuple
+
+from fnpcell import all as fp
+from gpdk.technology import get_technology
+
+
+@fp.pcell_class()
+@dataclass(eq=False)
+class BendBezier(fp.IWaveguideLike, fp.PCell):
+    &#34;&#34;&#34;
+    Attributes:
+        start: start point of bezier curve
+        controls: control points of bezier, 1 for Quadratic Bezier, 2 for Cubic Bezier, ...
+        end: end point of bezier curve
+        waveguide_type: type of waveguide of the bend
+        port_names: defaults to [&#34;op_0&#34;, &#34;op_1&#34;]
+
+    Examples:
+    ```python
+    TECH = get_technology()
+        bend = BendBezier(name=&#34;q&#34;, start=(0, 0), controls=[(31, 30)], end=(60, 0), waveguide_type=TECH.WG.FWG.C.WIRE)
+    fp.plot(bend)
+    ```
+    ![BendBezier](images/bend_bezier_q.png)
+    &#34;&#34;&#34;
+
+    start: fp.Point2D = fp.PositionParam(default=(0, 0), doc=&#34;position where bend start, eg. (x, y)&#34;).as_field()
+    controls: Sequence[fp.Point2D] = fp.PointsParam(default=[(10, 0)], min_count=1, doc=&#34;control points, count &gt;= 1, eg. [(x1, y1), (x2, y2)]&#34;).as_field()
+    end: fp.Point2D = fp.PositionParam(default=(10, 10), doc=&#34;position where bend end, eg. (x, y)&#34;).as_field()
+    waveguide_type: fp.IWaveguideType = fp.WaveguideTypeParam(doc=&#34;Waveguide parameters&#34;).as_field()
+    port_names: fp.IPortOptions = fp.PortOptionsParam(count=2, default=[&#34;op_0&#34;, &#34;op_1&#34;]).as_field()
+
+    def _default_waveguide_type(self):
+        return get_technology().WG.FWG.C.WIRE
+
+    @cached_property
+    def raw_curve(self):
+        return fp.g.Bezier(
+            start=self.start,
+            controls=self.controls,
+            end=self.end,
+        )
+
+    def build(self) -&gt; Tuple[fp.InstanceSet, fp.ElementSet, fp.PortSet]:
+        insts, elems, ports = super().build()
+        wg = self.waveguide_type(curve=self.raw_curve).with_ports(self.port_names)
+        insts += wg
+        ports += wg.ports
+        return insts, elems, ports
+
+
+if __name__ == &#34;__main__&#34;:
+    from pathlib import Path
+
+    gds_file = Path(__file__).parent / &#34;local&#34; / Path(__file__).with_suffix(&#34;.gds&#34;).name
+    library = fp.Library()
+
+    TECH = get_technology()
+    # =======================================================================
+    # fmt: off
+
+    library += BendBezier()
+    # library += BendBezier(name=&#34;q&#34;, start=(0, 0), controls=[(31, 30)], end=(60, 0), waveguide_type=TECH.WG.FWG.C.WIRE)
+    # library += BendBezier(name=&#34;c&#34;, start=(0, 0), controls=[(0, 30), (60, 30)], end=(60, 0), waveguide_type=TECH.WG.FWG.C.WIRE, transform=fp.translate(0, 40))
+
+    # fmt: on
+    # =============================================================
+    fp.export_gds(library, file=gds_file)
+    # fp.plot(library)</code></pre>
+</details>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-classes">Classes</h2>
+<dl>
+<dt id="gpdk.components.bend.bend_bezier.BendBezier"><code class="flex name class">
+<span>class <span class="ident">BendBezier</span></span>
+<span>(</span><span>name: str = None, bands: Optional[FrozenSet[fnpcell.interfaces.IBand]] = None, patches: Tuple[fnpcell.interfaces.IElement, ...] = (), port_names: Sequence[Union[None, str, fnpcell.interfaces.Hidden]] = ('op_0', 'op_1'), transform: fnpcell.transform.Affine2D = None, start: Tuple[float, float] = (0, 0), controls: Sequence[Tuple[float, float]] = ((10, 0),), end: Tuple[float, float] = (10, 10), waveguide_type: fnpcell.interfaces.IWaveguideType = None)</span>
+</code></dt>
+<dd>
+<div class="desc"><h2 id="attributes">Attributes</h2>
+<dl>
+<dt><strong><code>start</code></strong></dt>
+<dd>start point of bezier curve</dd>
+<dt><strong><code>controls</code></strong></dt>
+<dd>control points of bezier, 1 for Quadratic Bezier, 2 for Cubic Bezier, &hellip;</dd>
+<dt><strong><code>end</code></strong></dt>
+<dd>end point of bezier curve</dd>
+<dt><strong><code>waveguide_type</code></strong></dt>
+<dd>type of waveguide of the bend</dd>
+<dt><strong><code>port_names</code></strong></dt>
+<dd>defaults to ["op_0", "op_1"]</dd>
+</dl>
+<p>Examples:</p>
+<pre><code class="language-python">TECH = get_technology()
+    bend = BendBezier(name=&quot;q&quot;, start=(0, 0), controls=[(31, 30)], end=(60, 0), waveguide_type=TECH.WG.FWG.C.WIRE)
+fp.plot(bend)
+</code></pre>
+<p><img alt="BendBezier" src="images/bend_bezier_q.png"></p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class BendBezier(fp.IWaveguideLike, fp.PCell):
+    &#34;&#34;&#34;
+    Attributes:
+        start: start point of bezier curve
+        controls: control points of bezier, 1 for Quadratic Bezier, 2 for Cubic Bezier, ...
+        end: end point of bezier curve
+        waveguide_type: type of waveguide of the bend
+        port_names: defaults to [&#34;op_0&#34;, &#34;op_1&#34;]
+
+    Examples:
+    ```python
+    TECH = get_technology()
+        bend = BendBezier(name=&#34;q&#34;, start=(0, 0), controls=[(31, 30)], end=(60, 0), waveguide_type=TECH.WG.FWG.C.WIRE)
+    fp.plot(bend)
+    ```
+    ![BendBezier](images/bend_bezier_q.png)
+    &#34;&#34;&#34;
+
+    start: fp.Point2D = fp.PositionParam(default=(0, 0), doc=&#34;position where bend start, eg. (x, y)&#34;).as_field()
+    controls: Sequence[fp.Point2D] = fp.PointsParam(default=[(10, 0)], min_count=1, doc=&#34;control points, count &gt;= 1, eg. [(x1, y1), (x2, y2)]&#34;).as_field()
+    end: fp.Point2D = fp.PositionParam(default=(10, 10), doc=&#34;position where bend end, eg. (x, y)&#34;).as_field()
+    waveguide_type: fp.IWaveguideType = fp.WaveguideTypeParam(doc=&#34;Waveguide parameters&#34;).as_field()
+    port_names: fp.IPortOptions = fp.PortOptionsParam(count=2, default=[&#34;op_0&#34;, &#34;op_1&#34;]).as_field()
+
+    def _default_waveguide_type(self):
+        return get_technology().WG.FWG.C.WIRE
+
+    @cached_property
+    def raw_curve(self):
+        return fp.g.Bezier(
+            start=self.start,
+            controls=self.controls,
+            end=self.end,
+        )
+
+    def build(self) -&gt; Tuple[fp.InstanceSet, fp.ElementSet, fp.PortSet]:
+        insts, elems, ports = super().build()
+        wg = self.waveguide_type(curve=self.raw_curve).with_ports(self.port_names)
+        insts += wg
+        ports += wg.ports
+        return insts, elems, ports</code></pre>
+</details>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li>fnpcell.interfaces.IWaveguideLike</li>
+<li>fnpcell.interfaces.ICurveLike</li>
+<li>fnpcell.interfaces.ICurvedCellRef</li>
+<li>fnpcell.interfaces.ICurved</li>
+<li>fnpcell.pdk.pcell.PCell</li>
+<li>fnpcell.cell.cell_ref.CellRef</li>
+<li>fnpcell.mixin.transform_mixin.TransformMixin</li>
+<li>fnpcell.interfaces.ICellRef</li>
+<li>fnpcell.interfaces.IUpdatable</li>
+<li>fnpcell.interfaces.IElement</li>
+<li>fnpcell.interfaces.IRunnable</li>
+<li>fnpcell.interfaces.IAffineTransformable</li>
+</ul>
+<h3>Class variables</h3>
+<dl>
+<dt id="gpdk.components.bend.bend_bezier.BendBezier.controls"><code class="name">var <span class="ident">controls</span> : Sequence[Tuple[float, float]]</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="gpdk.components.bend.bend_bezier.BendBezier.end"><code class="name">var <span class="ident">end</span> : Tuple[float, float]</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="gpdk.components.bend.bend_bezier.BendBezier.port_names"><code class="name">var <span class="ident">port_names</span> : Sequence[Union[None, str, fnpcell.interfaces.Hidden]]</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="gpdk.components.bend.bend_bezier.BendBezier.start"><code class="name">var <span class="ident">start</span> : Tuple[float, float]</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="gpdk.components.bend.bend_bezier.BendBezier.waveguide_type"><code class="name">var <span class="ident">waveguide_type</span> : fnpcell.interfaces.IWaveguideType</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+</dl>
+<h3>Instance variables</h3>
+<dl>
+<dt id="gpdk.components.bend.bend_bezier.BendBezier.raw_curve"><code class="name">var <span class="ident">raw_curve</span> : fnpcell.interfaces.ICurve</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def __get__(self, instance, owner=None):
+    if instance is None:
+        return self
+    if self.attrname is None:
+        raise TypeError(
+            &#34;Cannot use cached_property instance without calling __set_name__ on it.&#34;)
+    try:
+        cache = instance.__dict__
+    except AttributeError:  # not all objects have __dict__ (e.g. class defines slots)
+        msg = (
+            f&#34;No &#39;__dict__&#39; attribute on {type(instance).__name__!r} &#34;
+            f&#34;instance to cache {self.attrname!r} property.&#34;
+        )
+        raise TypeError(msg) from None
+    val = cache.get(self.attrname, _NOT_FOUND)
+    if val is _NOT_FOUND:
+        with self.lock:
+            # check if another thread filled cache while we awaited lock
+            val = cache.get(self.attrname, _NOT_FOUND)
+            if val is _NOT_FOUND:
+                val = self.func(instance)
+                try:
+                    cache[self.attrname] = val
+                except TypeError:
+                    msg = (
+                        f&#34;The &#39;__dict__&#39; attribute on {type(instance).__name__!r} instance &#34;
+                        f&#34;does not support item assignment for caching {self.attrname!r} property.&#34;
+                    )
+                    raise TypeError(msg) from None
+    return val</code></pre>
+</details>
+</dd>
+</dl>
+<h3>Methods</h3>
+<dl>
+<dt id="gpdk.components.bend.bend_bezier.BendBezier.build"><code class="name flex">
+<span>def <span class="ident">build</span></span>(<span>self) ‑> Tuple[fnpcell.pdk.collection.InstanceSet, fnpcell.pdk.collection.ElementSet, fnpcell.pdk.collection.PortSet]</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Abstract method must be implemented to build a pcell.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def build(self) -&gt; Tuple[fp.InstanceSet, fp.ElementSet, fp.PortSet]:
+    insts, elems, ports = super().build()
+    wg = self.waveguide_type(curve=self.raw_curve).with_ports(self.port_names)
+    insts += wg
+    ports += wg.ports
+    return insts, elems, ports</code></pre>
+</details>
+</dd>
+</dl>
+</dd>
+</dl>
+</section>
+</article>
+<nav id="sidebar">
+<form>
+<input id="lunr-search" name="q" placeholder="🔎 Search ..." aria-label="Search"
+disabled minlength="2">
+</form>
+<link rel="preload stylesheet" as="style" href="../../assets/tingle/0.15.3/tingle.min.css">
+<script src="../../assets/tingle/0.15.3/tingle.min.js"></script>
+<style>
+.modal-dialog iframe {
+width: 100vw;
+height: calc(100vh - 80px);
+}
+@media screen and (min-width: 700px) {
+.modal-dialog iframe {
+width: 70vw;
+height: 80vh;
+}
+}
+.modal-dialog .tingle-modal-box {width: auto;}
+.modal-dialog .tingle-modal-box__content {padding: 0;}
+</style>
+<script>
+const input = document.getElementById('lunr-search');
+input.disabled = false;
+input.form.addEventListener('submit', (ev) => {
+ev.preventDefault();
+const url = new URL(window.location);
+url.searchParams.set('q', input.value);
+history.replaceState({}, null, url.toString());
+search(input.value);
+});
+const query = new URL(window.location).searchParams.get('q');
+if (query)
+search(query);
+function search(query) {
+const url = '../../doc-search.html#' + encodeURIComponent(query);
+new tingle.modal({
+cssClass: ['modal-dialog'],
+onClose: () => {
+const url = new URL(window.location);
+url.searchParams.delete('q');
+history.replaceState({}, null, url.toString());
+setTimeout(() => input.focus(), 100);
+}
+}).setContent('<iframe src="' + url + '"></iframe>').open();
+}
+</script>
+<h1>Index</h1>
+<div class="toc">
+<ul></ul>
+</div>
+<ul id="index">
+<li><h3>Super-module</h3>
+<ul>
+<li><code><a title="gpdk.components.bend" href="index.html">gpdk.components.bend</a></code></li>
+</ul>
+</li>
+<li><h3><a href="#header-classes">Classes</a></h3>
+<ul>
+<li>
+<h4><code><a title="gpdk.components.bend.bend_bezier.BendBezier" href="#gpdk.components.bend.bend_bezier.BendBezier">BendBezier</a></code></h4>
+<ul class="two-column">
+<li><code><a title="gpdk.components.bend.bend_bezier.BendBezier.build" href="#gpdk.components.bend.bend_bezier.BendBezier.build">build</a></code></li>
+<li><code><a title="gpdk.components.bend.bend_bezier.BendBezier.controls" href="#gpdk.components.bend.bend_bezier.BendBezier.controls">controls</a></code></li>
+<li><code><a title="gpdk.components.bend.bend_bezier.BendBezier.end" href="#gpdk.components.bend.bend_bezier.BendBezier.end">end</a></code></li>
+<li><code><a title="gpdk.components.bend.bend_bezier.BendBezier.port_names" href="#gpdk.components.bend.bend_bezier.BendBezier.port_names">port_names</a></code></li>
+<li><code><a title="gpdk.components.bend.bend_bezier.BendBezier.raw_curve" href="#gpdk.components.bend.bend_bezier.BendBezier.raw_curve">raw_curve</a></code></li>
+<li><code><a title="gpdk.components.bend.bend_bezier.BendBezier.start" href="#gpdk.components.bend.bend_bezier.BendBezier.start">start</a></code></li>
+<li><code><a title="gpdk.components.bend.bend_bezier.BendBezier.waveguide_type" href="#gpdk.components.bend.bend_bezier.BendBezier.waveguide_type">waveguide_type</a></code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+</footer>
+</body>
+</html>

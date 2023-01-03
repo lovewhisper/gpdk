@@ -1,0 +1,383 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+<title>gpdk.components.transition.fwg2mwg_transition API documentation</title>
+<meta name="description" content="" />
+<link rel="preload stylesheet" as="style" href="../../assets/10up-sanitize.css/11.0.1/sanitize.min.css">
+<link rel="preload stylesheet" as="style" href="../../assets/10up-sanitize.css/11.0.1/typography.min.css">
+<link rel="stylesheet preload" as="style" href="../../assets/highlight.js/10.1.1/styles/github-dark.min.css">
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:30px;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}#lunr-search{width:100%;font-size:1em;padding:6px 9px 5px 9px;border:1px solid silver}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:1em 0 .50em 0}h3{font-size:1.4em;margin:25px 0 10px 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .3s ease-in-out}a:hover{color:#e82}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900}pre code{background:#f8f8f8;font-size:.8em;line-height:1.4em}code{background:#f2f2f1;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{background:#f8f8f8;border:0;border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0;padding:1ex}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-weight:bold;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em .5em;margin-bottom:1em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.item .name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul{padding-left:1.5em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+<script defer src="../../assets/highlight.js/10.1.1/highlight.min.js"></script>
+<script>window.addEventListener('DOMContentLoaded', () => hljs.initHighlighting())</script>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>gpdk.components.transition.fwg2mwg_transition</code></h1>
+</header>
+<section id="section-intro">
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">from dataclasses import dataclass
+from typing import Tuple
+from fnpcell import all as fp
+from gpdk.components.transition._fwg_transition import FWGTransition
+from gpdk.technology import WG
+from gpdk.technology import get_technology
+
+
+@fp.pcell_class()
+@dataclass(eq=False)
+class FWG2MWGTransition(fp.PCell, fp.ICurvedCellRef):
+    &#34;&#34;&#34;
+    Attributes:
+        length: defaults to 20, Length of transition
+        wire_only_length: defaults to 5.0, Length of transition where shallow part is built up
+        deep_only_width: defaults to 3.0, Core width of the waveguide at the end of shallow transition part
+        fwg_type: type of FWG waveguide
+        mwg_type: type of MWG waveguide
+        anchor: defaults to `Anchor.START`, origin of the straight(START at origin, CENTER at origin or End at origin)
+        port_names: defaults to [&#34;op_0&#34;, &#34;op_1&#34;]
+
+    Examples:
+    ```python
+    TECH = get_technology()
+    transition = FWG2MWGTransition(name=&#34;a&#34;, length=20, fwg_type=TECH.WG.FWG.C.WIRE, mwg_type=TECH.WG.MWG.C.WIRE)
+    fp.plot(transition)
+    ```
+    ![FWG2MWGTransition](images/fwg2mwg_transition.png)
+    &#34;&#34;&#34;
+
+    length: float = fp.PositiveFloatParam(default=20, doc=&#34;Length of transition&#34;).as_field()
+    wire_only_length: float = fp.PositiveFloatParam(default=5.0, doc=&#34;Length of transition where shallow part is built up&#34;).as_field()
+    deep_only_width: float = fp.PositiveFloatParam(default=3.0, doc=&#34;Core width of the waveguide at the end of shallow transition part&#34;).as_field()
+    fwg_type: WG.FWG.C = fp.WaveguideTypeParam(type=WG.FWG.C).as_field()
+    mwg_type: WG.MWG.C = fp.WaveguideTypeParam(type=WG.MWG.C).as_field()
+    anchor: fp.Anchor = fp.AnchorParam(default=fp.Anchor.START).as_field()
+    port_names: fp.IPortOptions = fp.PortOptionsParam(count=2, default=[&#34;op_0&#34;, &#34;op_1&#34;]).as_field()
+
+    def _default_fwg_type(self):
+        return get_technology().WG.FWG.C.WIRE
+
+    def _default_mwg_type(self):
+        return get_technology().WG.MWG.C.WIRE
+
+    def build(self) -&gt; Tuple[fp.InstanceSet, fp.ElementSet, fp.PortSet]:
+        insts, elems, ports = super().build()
+        transition = FWGTransition(
+            length=self.length,
+            wire_only_length=self.wire_only_length,
+            deep_only_width=self.deep_only_width,
+            fwg_type=self.fwg_type,
+            other_type=self.mwg_type,
+            anchor=self.anchor,
+            port_names=self.port_names,
+        )
+        insts += transition
+        ports += transition.ports
+
+        return insts, elems, ports
+
+    @property
+    def raw_curve(self):
+        IN, OUT = self.cell.ports
+        return fp.g.LineBetween(IN.position, OUT.position)
+
+
+if __name__ == &#34;__main__&#34;:
+    from pathlib import Path
+
+    gds_file = Path(__file__).parent / &#34;local&#34; / Path(__file__).with_suffix(&#34;.gds&#34;).name
+    library = fp.Library()
+
+    TECH = get_technology()
+    # =============================================================
+    # fmt: off
+
+    library += FWG2MWGTransition()
+    library += FWG2MWGTransition(name=&#34;a&#34;, length=20, fwg_type=TECH.WG.FWG.C.WIRE, mwg_type=TECH.WG.MWG.C.WIRE, transform=fp.translate(0, 20))
+    library += FWG2MWGTransition(name=&#34;b&#34;, length=20, deep_only_width=4, fwg_type=TECH.WG.FWG.C.WIRE, mwg_type=TECH.WG.MWG.C.WIRE)
+
+    # fmt: on
+    # =============================================================
+    fp.export_gds(library, file=gds_file)</code></pre>
+</details>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-classes">Classes</h2>
+<dl>
+<dt id="gpdk.components.transition.fwg2mwg_transition.FWG2MWGTransition"><code class="flex name class">
+<span>class <span class="ident">FWG2MWGTransition</span></span>
+<span>(</span><span>name: str = None, bands: Optional[FrozenSet[fnpcell.interfaces.IBand]] = None, patches: Tuple[fnpcell.interfaces.IElement, ...] = (), port_names: Sequence[Union[None, str, fnpcell.interfaces.Hidden]] = ('op_0', 'op_1'), transform: fnpcell.transform.Affine2D = None, length: float = 20, wire_only_length: float = 5.0, deep_only_width: float = 3.0, fwg_type: gpdk.technology.wg.WG.FWG.C = None, mwg_type: gpdk.technology.wg.WG.MWG.C = None, anchor: fnpcell.interfaces.Anchor = Anchor.START)</span>
+</code></dt>
+<dd>
+<div class="desc"><h2 id="attributes">Attributes</h2>
+<dl>
+<dt><strong><code>length</code></strong></dt>
+<dd>defaults to 20, Length of transition</dd>
+<dt><strong><code>wire_only_length</code></strong></dt>
+<dd>defaults to 5.0, Length of transition where shallow part is built up</dd>
+<dt><strong><code>deep_only_width</code></strong></dt>
+<dd>defaults to 3.0, Core width of the waveguide at the end of shallow transition part</dd>
+<dt><strong><code>fwg_type</code></strong></dt>
+<dd>type of FWG waveguide</dd>
+<dt><strong><code>mwg_type</code></strong></dt>
+<dd>type of MWG waveguide</dd>
+<dt><strong><code>anchor</code></strong></dt>
+<dd>defaults to <code>Anchor.START</code>, origin of the straight(START at origin, CENTER at origin or End at origin)</dd>
+<dt><strong><code>port_names</code></strong></dt>
+<dd>defaults to ["op_0", "op_1"]</dd>
+</dl>
+<p>Examples:</p>
+<pre><code class="language-python">TECH = get_technology()
+transition = FWG2MWGTransition(name=&quot;a&quot;, length=20, fwg_type=TECH.WG.FWG.C.WIRE, mwg_type=TECH.WG.MWG.C.WIRE)
+fp.plot(transition)
+</code></pre>
+<p><img alt="FWG2MWGTransition" src="images/fwg2mwg_transition.png"></p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class FWG2MWGTransition(fp.PCell, fp.ICurvedCellRef):
+    &#34;&#34;&#34;
+    Attributes:
+        length: defaults to 20, Length of transition
+        wire_only_length: defaults to 5.0, Length of transition where shallow part is built up
+        deep_only_width: defaults to 3.0, Core width of the waveguide at the end of shallow transition part
+        fwg_type: type of FWG waveguide
+        mwg_type: type of MWG waveguide
+        anchor: defaults to `Anchor.START`, origin of the straight(START at origin, CENTER at origin or End at origin)
+        port_names: defaults to [&#34;op_0&#34;, &#34;op_1&#34;]
+
+    Examples:
+    ```python
+    TECH = get_technology()
+    transition = FWG2MWGTransition(name=&#34;a&#34;, length=20, fwg_type=TECH.WG.FWG.C.WIRE, mwg_type=TECH.WG.MWG.C.WIRE)
+    fp.plot(transition)
+    ```
+    ![FWG2MWGTransition](images/fwg2mwg_transition.png)
+    &#34;&#34;&#34;
+
+    length: float = fp.PositiveFloatParam(default=20, doc=&#34;Length of transition&#34;).as_field()
+    wire_only_length: float = fp.PositiveFloatParam(default=5.0, doc=&#34;Length of transition where shallow part is built up&#34;).as_field()
+    deep_only_width: float = fp.PositiveFloatParam(default=3.0, doc=&#34;Core width of the waveguide at the end of shallow transition part&#34;).as_field()
+    fwg_type: WG.FWG.C = fp.WaveguideTypeParam(type=WG.FWG.C).as_field()
+    mwg_type: WG.MWG.C = fp.WaveguideTypeParam(type=WG.MWG.C).as_field()
+    anchor: fp.Anchor = fp.AnchorParam(default=fp.Anchor.START).as_field()
+    port_names: fp.IPortOptions = fp.PortOptionsParam(count=2, default=[&#34;op_0&#34;, &#34;op_1&#34;]).as_field()
+
+    def _default_fwg_type(self):
+        return get_technology().WG.FWG.C.WIRE
+
+    def _default_mwg_type(self):
+        return get_technology().WG.MWG.C.WIRE
+
+    def build(self) -&gt; Tuple[fp.InstanceSet, fp.ElementSet, fp.PortSet]:
+        insts, elems, ports = super().build()
+        transition = FWGTransition(
+            length=self.length,
+            wire_only_length=self.wire_only_length,
+            deep_only_width=self.deep_only_width,
+            fwg_type=self.fwg_type,
+            other_type=self.mwg_type,
+            anchor=self.anchor,
+            port_names=self.port_names,
+        )
+        insts += transition
+        ports += transition.ports
+
+        return insts, elems, ports
+
+    @property
+    def raw_curve(self):
+        IN, OUT = self.cell.ports
+        return fp.g.LineBetween(IN.position, OUT.position)</code></pre>
+</details>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li>fnpcell.pdk.pcell.PCell</li>
+<li>fnpcell.cell.cell_ref.CellRef</li>
+<li>fnpcell.mixin.transform_mixin.TransformMixin</li>
+<li>fnpcell.interfaces.ICurvedCellRef</li>
+<li>fnpcell.interfaces.ICurved</li>
+<li>fnpcell.interfaces.ICellRef</li>
+<li>fnpcell.interfaces.IUpdatable</li>
+<li>fnpcell.interfaces.IElement</li>
+<li>fnpcell.interfaces.IRunnable</li>
+<li>fnpcell.interfaces.IAffineTransformable</li>
+</ul>
+<h3>Class variables</h3>
+<dl>
+<dt id="gpdk.components.transition.fwg2mwg_transition.FWG2MWGTransition.anchor"><code class="name">var <span class="ident">anchor</span> : fnpcell.interfaces.Anchor</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="gpdk.components.transition.fwg2mwg_transition.FWG2MWGTransition.deep_only_width"><code class="name">var <span class="ident">deep_only_width</span> : float</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="gpdk.components.transition.fwg2mwg_transition.FWG2MWGTransition.fwg_type"><code class="name">var <span class="ident">fwg_type</span> : gpdk.technology.wg.WG.FWG.C</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="gpdk.components.transition.fwg2mwg_transition.FWG2MWGTransition.length"><code class="name">var <span class="ident">length</span> : float</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="gpdk.components.transition.fwg2mwg_transition.FWG2MWGTransition.mwg_type"><code class="name">var <span class="ident">mwg_type</span> : gpdk.technology.wg.WG.MWG.C</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="gpdk.components.transition.fwg2mwg_transition.FWG2MWGTransition.port_names"><code class="name">var <span class="ident">port_names</span> : Sequence[Union[None, str, fnpcell.interfaces.Hidden]]</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="gpdk.components.transition.fwg2mwg_transition.FWG2MWGTransition.wire_only_length"><code class="name">var <span class="ident">wire_only_length</span> : float</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+</dl>
+<h3>Instance variables</h3>
+<dl>
+<dt id="gpdk.components.transition.fwg2mwg_transition.FWG2MWGTransition.raw_curve"><code class="name">var <span class="ident">raw_curve</span> : fnpcell.interfaces.ICurve</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def raw_curve(self):
+    IN, OUT = self.cell.ports
+    return fp.g.LineBetween(IN.position, OUT.position)</code></pre>
+</details>
+</dd>
+</dl>
+<h3>Methods</h3>
+<dl>
+<dt id="gpdk.components.transition.fwg2mwg_transition.FWG2MWGTransition.build"><code class="name flex">
+<span>def <span class="ident">build</span></span>(<span>self) ‑> Tuple[fnpcell.pdk.collection.InstanceSet, fnpcell.pdk.collection.ElementSet, fnpcell.pdk.collection.PortSet]</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Abstract method must be implemented to build a pcell.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def build(self) -&gt; Tuple[fp.InstanceSet, fp.ElementSet, fp.PortSet]:
+    insts, elems, ports = super().build()
+    transition = FWGTransition(
+        length=self.length,
+        wire_only_length=self.wire_only_length,
+        deep_only_width=self.deep_only_width,
+        fwg_type=self.fwg_type,
+        other_type=self.mwg_type,
+        anchor=self.anchor,
+        port_names=self.port_names,
+    )
+    insts += transition
+    ports += transition.ports
+
+    return insts, elems, ports</code></pre>
+</details>
+</dd>
+</dl>
+</dd>
+</dl>
+</section>
+</article>
+<nav id="sidebar">
+<form>
+<input id="lunr-search" name="q" placeholder="🔎 Search ..." aria-label="Search"
+disabled minlength="2">
+</form>
+<link rel="preload stylesheet" as="style" href="../../assets/tingle/0.15.3/tingle.min.css">
+<script src="../../assets/tingle/0.15.3/tingle.min.js"></script>
+<style>
+.modal-dialog iframe {
+width: 100vw;
+height: calc(100vh - 80px);
+}
+@media screen and (min-width: 700px) {
+.modal-dialog iframe {
+width: 70vw;
+height: 80vh;
+}
+}
+.modal-dialog .tingle-modal-box {width: auto;}
+.modal-dialog .tingle-modal-box__content {padding: 0;}
+</style>
+<script>
+const input = document.getElementById('lunr-search');
+input.disabled = false;
+input.form.addEventListener('submit', (ev) => {
+ev.preventDefault();
+const url = new URL(window.location);
+url.searchParams.set('q', input.value);
+history.replaceState({}, null, url.toString());
+search(input.value);
+});
+const query = new URL(window.location).searchParams.get('q');
+if (query)
+search(query);
+function search(query) {
+const url = '../../doc-search.html#' + encodeURIComponent(query);
+new tingle.modal({
+cssClass: ['modal-dialog'],
+onClose: () => {
+const url = new URL(window.location);
+url.searchParams.delete('q');
+history.replaceState({}, null, url.toString());
+setTimeout(() => input.focus(), 100);
+}
+}).setContent('<iframe src="' + url + '"></iframe>').open();
+}
+</script>
+<h1>Index</h1>
+<div class="toc">
+<ul></ul>
+</div>
+<ul id="index">
+<li><h3>Super-module</h3>
+<ul>
+<li><code><a title="gpdk.components.transition" href="index.html">gpdk.components.transition</a></code></li>
+</ul>
+</li>
+<li><h3><a href="#header-classes">Classes</a></h3>
+<ul>
+<li>
+<h4><code><a title="gpdk.components.transition.fwg2mwg_transition.FWG2MWGTransition" href="#gpdk.components.transition.fwg2mwg_transition.FWG2MWGTransition">FWG2MWGTransition</a></code></h4>
+<ul class="two-column">
+<li><code><a title="gpdk.components.transition.fwg2mwg_transition.FWG2MWGTransition.anchor" href="#gpdk.components.transition.fwg2mwg_transition.FWG2MWGTransition.anchor">anchor</a></code></li>
+<li><code><a title="gpdk.components.transition.fwg2mwg_transition.FWG2MWGTransition.build" href="#gpdk.components.transition.fwg2mwg_transition.FWG2MWGTransition.build">build</a></code></li>
+<li><code><a title="gpdk.components.transition.fwg2mwg_transition.FWG2MWGTransition.deep_only_width" href="#gpdk.components.transition.fwg2mwg_transition.FWG2MWGTransition.deep_only_width">deep_only_width</a></code></li>
+<li><code><a title="gpdk.components.transition.fwg2mwg_transition.FWG2MWGTransition.fwg_type" href="#gpdk.components.transition.fwg2mwg_transition.FWG2MWGTransition.fwg_type">fwg_type</a></code></li>
+<li><code><a title="gpdk.components.transition.fwg2mwg_transition.FWG2MWGTransition.length" href="#gpdk.components.transition.fwg2mwg_transition.FWG2MWGTransition.length">length</a></code></li>
+<li><code><a title="gpdk.components.transition.fwg2mwg_transition.FWG2MWGTransition.mwg_type" href="#gpdk.components.transition.fwg2mwg_transition.FWG2MWGTransition.mwg_type">mwg_type</a></code></li>
+<li><code><a title="gpdk.components.transition.fwg2mwg_transition.FWG2MWGTransition.port_names" href="#gpdk.components.transition.fwg2mwg_transition.FWG2MWGTransition.port_names">port_names</a></code></li>
+<li><code><a title="gpdk.components.transition.fwg2mwg_transition.FWG2MWGTransition.raw_curve" href="#gpdk.components.transition.fwg2mwg_transition.FWG2MWGTransition.raw_curve">raw_curve</a></code></li>
+<li><code><a title="gpdk.components.transition.fwg2mwg_transition.FWG2MWGTransition.wire_only_length" href="#gpdk.components.transition.fwg2mwg_transition.FWG2MWGTransition.wire_only_length">wire_only_length</a></code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+</footer>
+</body>
+</html>

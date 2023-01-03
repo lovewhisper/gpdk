@@ -1,0 +1,650 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+<title>gpdk.components.sbend.sbend API documentation</title>
+<meta name="description" content="" />
+<link rel="preload stylesheet" as="style" href="../../assets/10up-sanitize.css/11.0.1/sanitize.min.css">
+<link rel="preload stylesheet" as="style" href="../../assets/10up-sanitize.css/11.0.1/typography.min.css">
+<link rel="stylesheet preload" as="style" href="../../assets/highlight.js/10.1.1/styles/github-dark.min.css">
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:30px;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}#lunr-search{width:100%;font-size:1em;padding:6px 9px 5px 9px;border:1px solid silver}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:1em 0 .50em 0}h3{font-size:1.4em;margin:25px 0 10px 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .3s ease-in-out}a:hover{color:#e82}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900}pre code{background:#f8f8f8;font-size:.8em;line-height:1.4em}code{background:#f2f2f1;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{background:#f8f8f8;border:0;border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0;padding:1ex}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-weight:bold;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em .5em;margin-bottom:1em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.item .name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul{padding-left:1.5em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+<script defer src="../../assets/highlight.js/10.1.1/highlight.min.js"></script>
+<script>window.addEventListener('DOMContentLoaded', () => hljs.initHighlighting())</script>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>gpdk.components.sbend.sbend</code></h1>
+</header>
+<section id="section-intro">
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">import math
+from dataclasses import dataclass
+from typing import List, Optional, Tuple, cast
+
+from fnpcell import all as fp
+from fnpcell.pdk.technology import all as fpt
+from gpdk.technology import get_technology
+from gpdk.util import all as util
+from gpdk.components.straight.straight import StraightBetween
+
+
+@fp.pcell_class()
+@dataclass(eq=False)
+class SBend(fp.PCell):
+    &#34;&#34;&#34;
+    Attributes:
+        distance: required=False
+        height: defaults to 10
+        bend_degrees: required=False,
+        max_distance: required=False, if final distance is greater than max_distance, then use max_distance as final distance
+        bend_factory: Optional bend factory
+        waveguide_type: type of waveguide
+        port_names: defaults to [&#34;op_0&#34;, &#34;op_1&#34;]
+
+    Examples:
+    ```python
+    TECH = get_technology()
+        sbend = SBend(name=&#34;f&#34;, distance=100, height=90, waveguide_type=TECH.WG.FWG.C.WIRE)
+    fp.plot(sbend)
+    ```
+    ![SBend](images/sbend.png)
+    &#34;&#34;&#34;
+
+    distance: Optional[float] = fp.PositiveFloatParam(required=False).as_field()
+    height: float = fp.FloatParam(default=10, invalid=[0]).as_field()
+    bend_degrees: Optional[float] = fp.DegreeParam(required=False).as_field()
+    max_distance: float = fp.PositiveFloatParam(required=False).as_field()
+    bend_factory: fp.IBendWaveguideFactory = fp.Param(required=False).as_field()
+    waveguide_type: fp.IWaveguideType = fp.WaveguideTypeParam().as_field()
+    port_names: fp.IPortOptions = fp.PortOptionsParam(count=2, default=(&#34;op_0&#34;, &#34;op_1&#34;)).as_field()
+
+    def _default_bend_degrees(self):
+        if self.distance is None:
+            return 45
+
+    def _default_waveguide_type(self):
+        return get_technology().WG.FWG.C.WIRE
+
+    def build(self) -&gt; Tuple[fp.InstanceSet, fp.ElementSet, fp.PortSet]:
+        insts, elems, ports = super().build()
+        TECH = get_technology()
+        # fmt: off
+        distance = self.distance
+        height = self.height
+        bend_degrees = self.bend_degrees
+        max_distance = self.max_distance
+        bend_factory = self.bend_factory
+        waveguide_type = self.waveguide_type
+        port_names = self.port_names
+
+        assert distance or bend_degrees is not None, &#34;either distance or bend_degrees must be supplied&#34;
+        if bend_factory is None:
+            bend_factory = waveguide_type.bend_factory
+
+        reflect = height &lt; 0
+        height = abs(height)
+        bend = None
+
+        if distance is None:
+            assert bend_degrees is not None
+            central_angle = math.radians(bend_degrees)
+            assert 0 &lt; central_angle &lt; math.pi
+            bend, _, (_, port_out) = bend_factory(central_angle)
+            ex, ey = bend[port_out].position
+            distance = (height - ey * 2) / math.tan(central_angle) + ex * 2
+
+        if max_distance is not None and distance &gt; max_distance:
+            distance = max_distance
+            bend = None
+
+        if bend is None:
+            central_angle = _get_central_angle(distance=distance, height=height, bend_factory=bend_factory)
+            bend, _, _ = bend_factory(central_angle)
+
+        assert bend is not None
+
+        bend = bend.translated(-distance / 2, -height / 2)
+
+        start_bend = bend
+        end_bend = bend.c_mirrored()
+
+        if reflect:
+            start_bend = start_bend.v_mirrored()
+            end_bend = end_bend.v_mirrored()
+
+        insts += start_bend
+        ports += start_bend[&#34;op_0&#34;].with_name(port_names[0])
+
+        insts += end_bend
+        ports += end_bend[&#34;op_0&#34;].with_name(port_names[1])
+
+        if cast(fp.IPort, bend[&#34;op_1&#34;]).waveguide_type != waveguide_type:
+            buffer:List[fp.ICellRef] = []
+            t1 = util.links.transition_start(TECH, buffer, start=cast(fp.IPort, start_bend[&#34;op_1&#34;]), final_type=waveguide_type)
+            insts += buffer[0]
+            buffer = []
+            t2 = util.links.transition_start(TECH, buffer, start=cast(fp.IPort, end_bend[&#34;op_1&#34;]), final_type=waveguide_type)
+            insts += buffer[0]
+            straight = StraightBetween(start=t1.position, end=t2.position, waveguide_type=waveguide_type)
+        else:
+            straight = StraightBetween(start=start_bend[&#34;op_1&#34;].position, end=end_bend[&#34;op_1&#34;].position, waveguide_type=waveguide_type)
+
+        insts += straight
+
+        # fmt: on
+        return insts, elems, ports
+
+
+def _get_central_angle(*, distance: float, height: float, bend_factory: fp.IBendWaveguideFactory):
+    epsilon = fpt.grid_unit() / 20 / fpt.user_unit()
+    d = distance / 2
+    h = height / 2
+    ls = (h ** 2 + d ** 2) / (2 * d)
+    if height == distance:  # Edge case to avoid divergent tangent values
+        max_angle = math.pi / 2.0
+    else:
+        max_angle = math.atan(h / (d - ls))
+    central_angle = max_angle
+    while True:
+        bend, radius_eff, (_, port_out) = bend_factory(central_angle)
+        ex, ey = bend[port_out].position
+        line_angle = math.atan2(h - ey, d - ex)
+        assert line_angle &gt; 0, &#34;radius_min too large&#34;
+
+        if fp.is_close(radius_eff * line_angle, radius_eff * central_angle, epsilon=epsilon):
+            return central_angle
+
+        central_angle = (central_angle + line_angle) / 2
+
+
+def SBendPair(
+    *,
+    left_spacing: float,
+    right_spacing: float,
+    top_type: fp.IWaveguideType,
+    bottom_type: fp.IWaveguideType,
+    top_distance: Optional[float] = None,
+    bottom_distance: Optional[float] = None,
+    bend_degrees: Optional[float] = None,
+    top_bend_factory: Optional[fp.IBendWaveguideFactory] = None,
+    bottom_bend_factory: Optional[fp.IBendWaveguideFactory] = None,
+):
+    assert top_distance or bend_degrees
+    assert bottom_distance or bend_degrees
+    sbend_height = (left_spacing - right_spacing) / 2
+    dy = sbend_height / 2 + right_spacing / 2
+
+    top = SBend(
+        name=&#34;top&#34;,
+        distance=top_distance,
+        bend_degrees=bend_degrees,
+        height=-sbend_height,
+        bend_factory=top_bend_factory or top_type.bend_factory,
+        waveguide_type=top_type,
+        transform=fp.translate(0, dy),
+    )
+    bottom = SBend(
+        name=&#34;bottom&#34;,
+        distance=bottom_distance,
+        bend_degrees=bend_degrees,
+        height=sbend_height,
+        bend_factory=bottom_bend_factory or bottom_type.bend_factory,
+        waveguide_type=bottom_type,
+        transform=fp.translate(0, -dy),
+    )
+
+    return top, bottom
+
+
+if __name__ == &#34;__main__&#34;:
+    from pathlib import Path
+
+    gds_file = Path(__file__).parent / &#34;local&#34; / Path(__file__).with_suffix(&#34;.gds&#34;).name
+    library = fp.Library()
+
+    TECH = get_technology()
+    # =============================================================
+    # fmt: off
+
+    from gpdk import all as pdk
+
+    def mwg_bend_factory(central_angle: float):
+        bend = pdk.BendEuler(degrees=math.degrees(central_angle), radius_min=15, l_max=35, waveguide_type=TECH.WG.MWG.C.WIRE)
+        return bend, bend.raw_curve.radius_eff, (&#34;op_0&#34;,&#34;op_1&#34;)
+
+    def swg_bend_factory(central_angle: float):
+        bend = pdk.BendEuler(degrees=math.degrees(central_angle), radius_min=20, l_max=35, waveguide_type=TECH.WG.SWG.C.WIRE)
+        return bend, bend.raw_curve.radius_eff, (&#34;op_0&#34;, &#34;op_1&#34;)
+
+    library += SBend()
+    library += SBend(name=&#34;f&#34;, distance=100, height=90, waveguide_type=TECH.WG.FWG.C.WIRE)
+    library += SBend(name=&#34;f&#34;, distance=100, height=90, bend_factory=mwg_bend_factory, waveguide_type=TECH.WG.MWG.C.WIRE)
+    library += SBend(name=&#34;f&#34;, distance=100, height=90, bend_factory=swg_bend_factory, waveguide_type=TECH.WG.SWG.C.WIRE)
+
+    library += SBend(name=&#34;f&#34;, distance=100, height=-90, waveguide_type=TECH.WG.FWG.C.WIRE)
+    library += SBend(name=&#34;f&#34;, distance=100, height=-90, waveguide_type=TECH.WG.FWG.C.WIRE, bend_factory=TECH.WG.MWG.C.WIRE.bend_factory)
+
+    # fmt: on
+    # =============================================================
+    fp.export_gds(library, file=gds_file)
+    # fp.plot(library)</code></pre>
+</details>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-functions">Functions</h2>
+<dl>
+<dt id="gpdk.components.sbend.sbend.SBendPair"><code class="name flex">
+<span>def <span class="ident">SBendPair</span></span>(<span>*, left_spacing: float, right_spacing: float, top_type: fnpcell.interfaces.IWaveguideType, bottom_type: fnpcell.interfaces.IWaveguideType, top_distance: Optional[float] = None, bottom_distance: Optional[float] = None, bend_degrees: Optional[float] = None, top_bend_factory: Optional[fnpcell.interfaces.IBendWaveguideFactory] = None, bottom_bend_factory: Optional[fnpcell.interfaces.IBendWaveguideFactory] = None)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def SBendPair(
+    *,
+    left_spacing: float,
+    right_spacing: float,
+    top_type: fp.IWaveguideType,
+    bottom_type: fp.IWaveguideType,
+    top_distance: Optional[float] = None,
+    bottom_distance: Optional[float] = None,
+    bend_degrees: Optional[float] = None,
+    top_bend_factory: Optional[fp.IBendWaveguideFactory] = None,
+    bottom_bend_factory: Optional[fp.IBendWaveguideFactory] = None,
+):
+    assert top_distance or bend_degrees
+    assert bottom_distance or bend_degrees
+    sbend_height = (left_spacing - right_spacing) / 2
+    dy = sbend_height / 2 + right_spacing / 2
+
+    top = SBend(
+        name=&#34;top&#34;,
+        distance=top_distance,
+        bend_degrees=bend_degrees,
+        height=-sbend_height,
+        bend_factory=top_bend_factory or top_type.bend_factory,
+        waveguide_type=top_type,
+        transform=fp.translate(0, dy),
+    )
+    bottom = SBend(
+        name=&#34;bottom&#34;,
+        distance=bottom_distance,
+        bend_degrees=bend_degrees,
+        height=sbend_height,
+        bend_factory=bottom_bend_factory or bottom_type.bend_factory,
+        waveguide_type=bottom_type,
+        transform=fp.translate(0, -dy),
+    )
+
+    return top, bottom</code></pre>
+</details>
+</dd>
+</dl>
+</section>
+<section>
+<h2 class="section-title" id="header-classes">Classes</h2>
+<dl>
+<dt id="gpdk.components.sbend.sbend.SBend"><code class="flex name class">
+<span>class <span class="ident">SBend</span></span>
+<span>(</span><span>name: str = None, bands: Optional[FrozenSet[fnpcell.interfaces.IBand]] = None, patches: Tuple[fnpcell.interfaces.IElement, ...] = (), port_names: Sequence[Union[None, str, fnpcell.interfaces.Hidden]] = ('op_0', 'op_1'), transform: fnpcell.transform.Affine2D = None, distance: Optional[float] = None, height: float = 10, bend_degrees: Optional[float] = None, max_distance: float = None, bend_factory: fnpcell.interfaces.IBendWaveguideFactory = None, waveguide_type: fnpcell.interfaces.IWaveguideType = None)</span>
+</code></dt>
+<dd>
+<div class="desc"><h2 id="attributes">Attributes</h2>
+<dl>
+<dt><strong><code>distance</code></strong></dt>
+<dd>required=False</dd>
+<dt><strong><code>height</code></strong></dt>
+<dd>defaults to 10</dd>
+<dt><strong><code>bend_degrees</code></strong></dt>
+<dd>required=False,</dd>
+<dt><strong><code>max_distance</code></strong></dt>
+<dd>required=False, if final distance is greater than max_distance, then use max_distance as final distance</dd>
+<dt><strong><code>bend_factory</code></strong></dt>
+<dd>Optional bend factory</dd>
+<dt><strong><code>waveguide_type</code></strong></dt>
+<dd>type of waveguide</dd>
+<dt><strong><code>port_names</code></strong></dt>
+<dd>defaults to ["op_0", "op_1"]</dd>
+</dl>
+<p>Examples:</p>
+<pre><code class="language-python">TECH = get_technology()
+    sbend = SBend(name=&quot;f&quot;, distance=100, height=90, waveguide_type=TECH.WG.FWG.C.WIRE)
+fp.plot(sbend)
+</code></pre>
+<p><img alt="SBend" src="images/sbend.png"></p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class SBend(fp.PCell):
+    &#34;&#34;&#34;
+    Attributes:
+        distance: required=False
+        height: defaults to 10
+        bend_degrees: required=False,
+        max_distance: required=False, if final distance is greater than max_distance, then use max_distance as final distance
+        bend_factory: Optional bend factory
+        waveguide_type: type of waveguide
+        port_names: defaults to [&#34;op_0&#34;, &#34;op_1&#34;]
+
+    Examples:
+    ```python
+    TECH = get_technology()
+        sbend = SBend(name=&#34;f&#34;, distance=100, height=90, waveguide_type=TECH.WG.FWG.C.WIRE)
+    fp.plot(sbend)
+    ```
+    ![SBend](images/sbend.png)
+    &#34;&#34;&#34;
+
+    distance: Optional[float] = fp.PositiveFloatParam(required=False).as_field()
+    height: float = fp.FloatParam(default=10, invalid=[0]).as_field()
+    bend_degrees: Optional[float] = fp.DegreeParam(required=False).as_field()
+    max_distance: float = fp.PositiveFloatParam(required=False).as_field()
+    bend_factory: fp.IBendWaveguideFactory = fp.Param(required=False).as_field()
+    waveguide_type: fp.IWaveguideType = fp.WaveguideTypeParam().as_field()
+    port_names: fp.IPortOptions = fp.PortOptionsParam(count=2, default=(&#34;op_0&#34;, &#34;op_1&#34;)).as_field()
+
+    def _default_bend_degrees(self):
+        if self.distance is None:
+            return 45
+
+    def _default_waveguide_type(self):
+        return get_technology().WG.FWG.C.WIRE
+
+    def build(self) -&gt; Tuple[fp.InstanceSet, fp.ElementSet, fp.PortSet]:
+        insts, elems, ports = super().build()
+        TECH = get_technology()
+        # fmt: off
+        distance = self.distance
+        height = self.height
+        bend_degrees = self.bend_degrees
+        max_distance = self.max_distance
+        bend_factory = self.bend_factory
+        waveguide_type = self.waveguide_type
+        port_names = self.port_names
+
+        assert distance or bend_degrees is not None, &#34;either distance or bend_degrees must be supplied&#34;
+        if bend_factory is None:
+            bend_factory = waveguide_type.bend_factory
+
+        reflect = height &lt; 0
+        height = abs(height)
+        bend = None
+
+        if distance is None:
+            assert bend_degrees is not None
+            central_angle = math.radians(bend_degrees)
+            assert 0 &lt; central_angle &lt; math.pi
+            bend, _, (_, port_out) = bend_factory(central_angle)
+            ex, ey = bend[port_out].position
+            distance = (height - ey * 2) / math.tan(central_angle) + ex * 2
+
+        if max_distance is not None and distance &gt; max_distance:
+            distance = max_distance
+            bend = None
+
+        if bend is None:
+            central_angle = _get_central_angle(distance=distance, height=height, bend_factory=bend_factory)
+            bend, _, _ = bend_factory(central_angle)
+
+        assert bend is not None
+
+        bend = bend.translated(-distance / 2, -height / 2)
+
+        start_bend = bend
+        end_bend = bend.c_mirrored()
+
+        if reflect:
+            start_bend = start_bend.v_mirrored()
+            end_bend = end_bend.v_mirrored()
+
+        insts += start_bend
+        ports += start_bend[&#34;op_0&#34;].with_name(port_names[0])
+
+        insts += end_bend
+        ports += end_bend[&#34;op_0&#34;].with_name(port_names[1])
+
+        if cast(fp.IPort, bend[&#34;op_1&#34;]).waveguide_type != waveguide_type:
+            buffer:List[fp.ICellRef] = []
+            t1 = util.links.transition_start(TECH, buffer, start=cast(fp.IPort, start_bend[&#34;op_1&#34;]), final_type=waveguide_type)
+            insts += buffer[0]
+            buffer = []
+            t2 = util.links.transition_start(TECH, buffer, start=cast(fp.IPort, end_bend[&#34;op_1&#34;]), final_type=waveguide_type)
+            insts += buffer[0]
+            straight = StraightBetween(start=t1.position, end=t2.position, waveguide_type=waveguide_type)
+        else:
+            straight = StraightBetween(start=start_bend[&#34;op_1&#34;].position, end=end_bend[&#34;op_1&#34;].position, waveguide_type=waveguide_type)
+
+        insts += straight
+
+        # fmt: on
+        return insts, elems, ports</code></pre>
+</details>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li>fnpcell.pdk.pcell.PCell</li>
+<li>fnpcell.cell.cell_ref.CellRef</li>
+<li>fnpcell.mixin.transform_mixin.TransformMixin</li>
+<li>fnpcell.interfaces.ICellRef</li>
+<li>fnpcell.interfaces.IUpdatable</li>
+<li>fnpcell.interfaces.IElement</li>
+<li>fnpcell.interfaces.IRunnable</li>
+<li>fnpcell.interfaces.IAffineTransformable</li>
+</ul>
+<h3>Class variables</h3>
+<dl>
+<dt id="gpdk.components.sbend.sbend.SBend.bend_degrees"><code class="name">var <span class="ident">bend_degrees</span> : Optional[float]</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="gpdk.components.sbend.sbend.SBend.bend_factory"><code class="name">var <span class="ident">bend_factory</span> : fnpcell.interfaces.IBendWaveguideFactory</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="gpdk.components.sbend.sbend.SBend.distance"><code class="name">var <span class="ident">distance</span> : Optional[float]</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="gpdk.components.sbend.sbend.SBend.height"><code class="name">var <span class="ident">height</span> : float</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="gpdk.components.sbend.sbend.SBend.max_distance"><code class="name">var <span class="ident">max_distance</span> : float</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="gpdk.components.sbend.sbend.SBend.port_names"><code class="name">var <span class="ident">port_names</span> : Sequence[Union[None, str, fnpcell.interfaces.Hidden]]</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="gpdk.components.sbend.sbend.SBend.waveguide_type"><code class="name">var <span class="ident">waveguide_type</span> : fnpcell.interfaces.IWaveguideType</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+</dl>
+<h3>Methods</h3>
+<dl>
+<dt id="gpdk.components.sbend.sbend.SBend.build"><code class="name flex">
+<span>def <span class="ident">build</span></span>(<span>self) ‑> Tuple[fnpcell.pdk.collection.InstanceSet, fnpcell.pdk.collection.ElementSet, fnpcell.pdk.collection.PortSet]</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Abstract method must be implemented to build a pcell.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def build(self) -&gt; Tuple[fp.InstanceSet, fp.ElementSet, fp.PortSet]:
+    insts, elems, ports = super().build()
+    TECH = get_technology()
+    # fmt: off
+    distance = self.distance
+    height = self.height
+    bend_degrees = self.bend_degrees
+    max_distance = self.max_distance
+    bend_factory = self.bend_factory
+    waveguide_type = self.waveguide_type
+    port_names = self.port_names
+
+    assert distance or bend_degrees is not None, &#34;either distance or bend_degrees must be supplied&#34;
+    if bend_factory is None:
+        bend_factory = waveguide_type.bend_factory
+
+    reflect = height &lt; 0
+    height = abs(height)
+    bend = None
+
+    if distance is None:
+        assert bend_degrees is not None
+        central_angle = math.radians(bend_degrees)
+        assert 0 &lt; central_angle &lt; math.pi
+        bend, _, (_, port_out) = bend_factory(central_angle)
+        ex, ey = bend[port_out].position
+        distance = (height - ey * 2) / math.tan(central_angle) + ex * 2
+
+    if max_distance is not None and distance &gt; max_distance:
+        distance = max_distance
+        bend = None
+
+    if bend is None:
+        central_angle = _get_central_angle(distance=distance, height=height, bend_factory=bend_factory)
+        bend, _, _ = bend_factory(central_angle)
+
+    assert bend is not None
+
+    bend = bend.translated(-distance / 2, -height / 2)
+
+    start_bend = bend
+    end_bend = bend.c_mirrored()
+
+    if reflect:
+        start_bend = start_bend.v_mirrored()
+        end_bend = end_bend.v_mirrored()
+
+    insts += start_bend
+    ports += start_bend[&#34;op_0&#34;].with_name(port_names[0])
+
+    insts += end_bend
+    ports += end_bend[&#34;op_0&#34;].with_name(port_names[1])
+
+    if cast(fp.IPort, bend[&#34;op_1&#34;]).waveguide_type != waveguide_type:
+        buffer:List[fp.ICellRef] = []
+        t1 = util.links.transition_start(TECH, buffer, start=cast(fp.IPort, start_bend[&#34;op_1&#34;]), final_type=waveguide_type)
+        insts += buffer[0]
+        buffer = []
+        t2 = util.links.transition_start(TECH, buffer, start=cast(fp.IPort, end_bend[&#34;op_1&#34;]), final_type=waveguide_type)
+        insts += buffer[0]
+        straight = StraightBetween(start=t1.position, end=t2.position, waveguide_type=waveguide_type)
+    else:
+        straight = StraightBetween(start=start_bend[&#34;op_1&#34;].position, end=end_bend[&#34;op_1&#34;].position, waveguide_type=waveguide_type)
+
+    insts += straight
+
+    # fmt: on
+    return insts, elems, ports</code></pre>
+</details>
+</dd>
+</dl>
+</dd>
+</dl>
+</section>
+</article>
+<nav id="sidebar">
+<form>
+<input id="lunr-search" name="q" placeholder="🔎 Search ..." aria-label="Search"
+disabled minlength="2">
+</form>
+<link rel="preload stylesheet" as="style" href="../../assets/tingle/0.15.3/tingle.min.css">
+<script src="../../assets/tingle/0.15.3/tingle.min.js"></script>
+<style>
+.modal-dialog iframe {
+width: 100vw;
+height: calc(100vh - 80px);
+}
+@media screen and (min-width: 700px) {
+.modal-dialog iframe {
+width: 70vw;
+height: 80vh;
+}
+}
+.modal-dialog .tingle-modal-box {width: auto;}
+.modal-dialog .tingle-modal-box__content {padding: 0;}
+</style>
+<script>
+const input = document.getElementById('lunr-search');
+input.disabled = false;
+input.form.addEventListener('submit', (ev) => {
+ev.preventDefault();
+const url = new URL(window.location);
+url.searchParams.set('q', input.value);
+history.replaceState({}, null, url.toString());
+search(input.value);
+});
+const query = new URL(window.location).searchParams.get('q');
+if (query)
+search(query);
+function search(query) {
+const url = '../../doc-search.html#' + encodeURIComponent(query);
+new tingle.modal({
+cssClass: ['modal-dialog'],
+onClose: () => {
+const url = new URL(window.location);
+url.searchParams.delete('q');
+history.replaceState({}, null, url.toString());
+setTimeout(() => input.focus(), 100);
+}
+}).setContent('<iframe src="' + url + '"></iframe>').open();
+}
+</script>
+<h1>Index</h1>
+<div class="toc">
+<ul></ul>
+</div>
+<ul id="index">
+<li><h3>Super-module</h3>
+<ul>
+<li><code><a title="gpdk.components.sbend" href="index.html">gpdk.components.sbend</a></code></li>
+</ul>
+</li>
+<li><h3><a href="#header-functions">Functions</a></h3>
+<ul class="">
+<li><code><a title="gpdk.components.sbend.sbend.SBendPair" href="#gpdk.components.sbend.sbend.SBendPair">SBendPair</a></code></li>
+</ul>
+</li>
+<li><h3><a href="#header-classes">Classes</a></h3>
+<ul>
+<li>
+<h4><code><a title="gpdk.components.sbend.sbend.SBend" href="#gpdk.components.sbend.sbend.SBend">SBend</a></code></h4>
+<ul class="two-column">
+<li><code><a title="gpdk.components.sbend.sbend.SBend.bend_degrees" href="#gpdk.components.sbend.sbend.SBend.bend_degrees">bend_degrees</a></code></li>
+<li><code><a title="gpdk.components.sbend.sbend.SBend.bend_factory" href="#gpdk.components.sbend.sbend.SBend.bend_factory">bend_factory</a></code></li>
+<li><code><a title="gpdk.components.sbend.sbend.SBend.build" href="#gpdk.components.sbend.sbend.SBend.build">build</a></code></li>
+<li><code><a title="gpdk.components.sbend.sbend.SBend.distance" href="#gpdk.components.sbend.sbend.SBend.distance">distance</a></code></li>
+<li><code><a title="gpdk.components.sbend.sbend.SBend.height" href="#gpdk.components.sbend.sbend.SBend.height">height</a></code></li>
+<li><code><a title="gpdk.components.sbend.sbend.SBend.max_distance" href="#gpdk.components.sbend.sbend.SBend.max_distance">max_distance</a></code></li>
+<li><code><a title="gpdk.components.sbend.sbend.SBend.port_names" href="#gpdk.components.sbend.sbend.SBend.port_names">port_names</a></code></li>
+<li><code><a title="gpdk.components.sbend.sbend.SBend.waveguide_type" href="#gpdk.components.sbend.sbend.SBend.waveguide_type">waveguide_type</a></code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+</footer>
+</body>
+</html>

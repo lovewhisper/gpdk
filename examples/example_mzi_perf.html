@@ -1,0 +1,1403 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+<title>gpdk.examples.example_mzi_perf API documentation</title>
+<meta name="description" content="" />
+<link rel="preload stylesheet" as="style" href="../assets/10up-sanitize.css/11.0.1/sanitize.min.css">
+<link rel="preload stylesheet" as="style" href="../assets/10up-sanitize.css/11.0.1/typography.min.css">
+<link rel="stylesheet preload" as="style" href="../assets/highlight.js/10.1.1/styles/github-dark.min.css">
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:30px;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}#lunr-search{width:100%;font-size:1em;padding:6px 9px 5px 9px;border:1px solid silver}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:1em 0 .50em 0}h3{font-size:1.4em;margin:25px 0 10px 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .3s ease-in-out}a:hover{color:#e82}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900}pre code{background:#f8f8f8;font-size:.8em;line-height:1.4em}code{background:#f2f2f1;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{background:#f8f8f8;border:0;border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0;padding:1ex}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-weight:bold;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em .5em;margin-bottom:1em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.item .name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul{padding-left:1.5em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+<script defer src="../assets/highlight.js/10.1.1/highlight.min.js"></script>
+<script>window.addEventListener('DOMContentLoaded', () => hljs.initHighlighting())</script>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>gpdk.examples.example_mzi_perf</code></h1>
+</header>
+<section id="section-intro">
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">from functools import cached_property
+import math
+from dataclasses import dataclass, field
+from typing import Any, Iterable, Mapping, Optional, Sequence, Tuple, Type, cast
+
+from fnpcell import all as fp
+from fnpcell.pdk.technology import all as fpt
+from gpdk import all as pdk
+from gpdk.technology import get_technology
+
+
+@fp.pcell_class()
+@dataclass(eq=False)
+class BendCosine(fp.IWaveguideLike, fp.PCell):
+    degrees: float = fp.DegreeParam(default=90, min=-180, max=180, doc=&#34;Bend angle in degrees&#34;).as_field()
+    radius_eff: float = fp.PositiveFloatParam(required=False, doc=&#34;Bend radius_eff&#34;).as_field()
+    radius_min: float = fp.PositiveFloatParam(required=False, doc=&#34;Bend radius_min&#34;).as_field()
+    p: Optional[float] = fp.PositiveFloatParam(required=False, max=1, doc=&#34;Bend parameter&#34;).as_field()
+    l_max: Optional[float] = fp.PositiveFloatParam(required=False, doc=&#34;Bend Lmax&#34;).as_field()
+    waveguide_type: fp.IWaveguideType = fp.WaveguideTypeParam(doc=&#34;Waveguide parameters&#34;).as_field()
+    port_names: fp.IPortOptions = fp.PortOptionsParam(count=2, default=[&#34;op_0&#34;, &#34;op_1&#34;]).as_field()
+
+    def _default_radius_eff(self):
+        if self.radius_min is None:
+            return 10
+
+    def _default_waveguide_type(self):
+        return get_technology().WG.FWG.C.WIRE
+
+    def __post_pcell_init__(self):
+        assert self.radius_eff is not None or self.radius_min is not None, &#34;either radius_eff or radius_min must be provided&#34;
+
+    @cached_property
+    def raw_curve(self):
+        radius_min = self.radius_min
+        if radius_min is None:
+            radius_min = self.radius_eff
+        curve = fp.g.CosineBend(radius_min=radius_min, degrees=self.degrees, p=self.p, l_max=self.l_max)
+        if self.radius_min is None and not fp.is_close(curve.radius_eff, self.radius_eff):
+            curve = curve.scaled(self.radius_eff / curve.radius_eff)
+        return curve
+
+    def build(self) -&gt; Tuple[fp.InstanceSet, fp.ElementSet, fp.PortSet]:
+        insts, elems, ports = super().build()
+        wg = self.waveguide_type(curve=self.raw_curve).with_ports(self.port_names)
+        insts += wg
+        ports += wg.ports
+        return insts, elems, ports
+
+
+@dataclass(frozen=True)
+class CosineBendFactory(fpt.IBendWaveguideFactory):
+    radius_min: float
+    l_max: float
+    waveguide_type: fpt.IWaveguideType = field(repr=False, compare=False)
+
+    def __call__(self, central_angle: float):
+
+        bend = BendCosine(degrees=math.degrees(central_angle), radius_min=self.radius_min, l_max=self.l_max, waveguide_type=self.waveguide_type)
+        return bend, bend.raw_curve.radius_eff, (&#34;op_0&#34;, &#34;op_1&#34;)
+
+
+@fp.pcell_class()
+@dataclass(eq=False)
+class LinkBetweenBase(fp.PCell, fpt.WaveguideBetween):
+    start: fpt.IOwnedTerminal = fp.Param(type=fpt.IPort).as_field()
+    end: fpt.IOwnedTerminal = fp.Param(type=fpt.IPort).as_field()
+    waypoints: Iterable[fpt.IWaypoint] = fp.ListParam(default=(), immutable=True).as_field()
+    link_type: fp.IWaveguideType = fp.Param().as_field()
+    bend_factory: fp.IBendWaveguideFactory = fp.Param().as_field()
+
+    def _default_link_type(self):
+        TECH = get_technology()
+        return TECH.WG.SWG.C.WIRE
+
+    def _default_bend_factory(self):
+        TECH = get_technology()
+        return TECH.WG.FWG.C.WIRE.BEND_EULER
+
+    @property
+    def generated_link(self) -&gt; fpt.IWaveguideBetween:
+        link = fp.LinkBetween(
+            self.start,
+            self.end,
+            waypoints=self.waypoints,
+            link_type=self.link_type,
+            bend_factory=self.bend_factory,
+        )
+        assert link is not None
+        return link
+
+    def build(self):
+        inst_set, elem_set, port_set = super().build()
+
+        inst_set += self.generated_link
+        port_set += self.generated_link.ports
+
+        return inst_set, elem_set, port_set
+
+    @property
+    def curve_length(self) -&gt; float:
+        return self.generated_link.curve_length
+
+    def with_environment(self, **kwargs: Any):
+        return self
+
+
+class Linker:
+    @fp.pcell_class()
+    @dataclass(eq=False)
+    class FWG_WIRE_CIRCULAR_WIRE(LinkBetweenBase):
+        def _default_link_type(self):
+            TECH = get_technology()
+            return TECH.WG.FWG.C.WIRE
+
+        def _default_bend_factory(self):
+            TECH = get_technology()
+            return TECH.WG.FWG.C.WIRE.BEND_CIRCULAR
+
+    @fp.pcell_class()
+    @dataclass(eq=False)
+    class FWG_EXPANDED_EULER_WIRE(LinkBetweenBase):
+        def _default_link_type(self):
+            TECH = get_technology()
+            return TECH.WG.FWG.C.EXPANDED
+
+        def _default_bend_factory(self):
+            TECH = get_technology()
+            return TECH.WG.FWG.C.WIRE.BEND_EULER
+
+    @fp.pcell_class()
+    @dataclass(eq=False)
+    class SWG_EXPANDED_COSINE_EXPANDED(LinkBetweenBase):
+        def _default_link_type(self):
+            TECH = get_technology()
+            return TECH.WG.SWG.C.EXPANDED
+
+        def _default_bend_factory(self):
+            TECH = get_technology()
+            wgt = TECH.WG.SWG.C.EXPANDED
+            return CosineBendFactory(radius_min=wgt.cladding_width / 2 + 1, l_max=15, waveguide_type=wgt)
+
+
+@fp.pcell_class()
+@dataclass(eq=False)
+class Mzi(fp.PCell):
+    dc1: fp.IDevice = fp.DeviceParam().as_field()
+    dc2: fp.IDevice = fp.DeviceParam().as_field()
+    ps: fp.IDevice = fp.DeviceParam().as_field()
+    ps_offset: Tuple[float, float] = fp.Param().as_field()
+    wg: fp.IDevice = fp.DeviceParam().as_field()
+    wg_offset: Tuple[float, float] = fp.Param().as_field()
+    dc_distance: float = fp.PositiveFloatParam(default=200).as_field()
+
+    def _default_dc1(self):
+        TECH = get_technology()
+        return pdk.DirectionalCouplerBend(coupler_length=10, coupler_spacing=1.2, bend_radius=10, waveguide_type=TECH.WG.FWG.C.WIRE)
+
+    def _default_dc2(self):
+        TECH = get_technology()
+        return pdk.DirectionalCouplerBend(coupler_length=10, coupler_spacing=1.2, bend_radius=10, waveguide_type=TECH.WG.FWG.C.WIRE)
+
+    def _default_ps(self):
+        TECH = get_technology()
+        return pdk.PnPhaseShifter(wg_length=80, waveguide_type=TECH.WG.FWG.C.WIRE)
+
+    def _default_ps_offset(self):
+        return (-40, 50)
+
+    def _default_wg(self):
+        TECH = get_technology()
+        return pdk.Straight(length=40, waveguide_type=TECH.WG.FWG.C.WIRE)
+
+    def _default_wg_offset(self):
+        return (-20, -50)
+
+    def build(self):
+        insts, elems, ports = super().build()
+        TECH = get_technology()
+
+        dc1 = self.dc1
+        dc2 = self.dc2
+        dc_distance = self.dc_distance
+        ps = self.ps
+        ps_offset = self.ps_offset
+        wg = self.wg
+        wg_offset = self.wg_offset
+
+        dc1 = dc1.translated(-dc_distance / 2, 0)
+        insts += dc1
+        dc2 = dc2.translated(dc_distance / 2, 0)
+        insts += dc2
+        ps = ps.translated(*ps_offset)
+        insts += ps
+        wg = wg.translated(*wg_offset)
+        insts += wg
+
+        links = fp.create_links(
+            link_type=TECH.WG.FWG.C.EXPANDED,
+            bend_factory=TECH.WG.FWG.C.WIRE.BEND_EULER,
+            specs=[
+                dc1[&#34;op_2&#34;] &gt;&gt; wg[&#34;op_0&#34;],
+                wg[&#34;op_1&#34;] &gt;&gt; dc2[&#34;op_1&#34;],
+                dc1[&#34;op_3&#34;] &gt;&gt; ps[&#34;op_0&#34;],
+                ps[&#34;op_1&#34;] &gt;&gt; dc2[&#34;op_0&#34;],
+            ],
+        )
+        insts += links
+
+        ports += [
+            dc1[&#34;op_0&#34;].with_name(&#34;op_0&#34;),
+            dc1[&#34;op_1&#34;].with_name(&#34;op_1&#34;),
+            dc2[&#34;op_2&#34;].with_name(&#34;op_2&#34;),
+            dc2[&#34;op_3&#34;].with_name(&#34;op_3&#34;),
+        ]
+
+        return insts, elems, ports
+
+
+@fp.pcell_class()
+@dataclass(eq=False)
+class MziArray(fp.PCell):
+    mzis: Sequence[Mzi] = fp.ListParam(default=(Mzi(),), immutable=True).as_field()
+    rows: int = fp.PositiveIntParam(default=20).as_field()
+    cols: int = fp.PositiveIntParam(default=20).as_field()
+
+    period_x: float = fp.PositiveFloatParam(default=600).as_field()
+    period_y: float = fp.PositiveFloatParam(default=200).as_field()
+
+    offsets: Sequence[Tuple[float, float]] = fp.ListParam(default=((1, 1), (2, 2), (-1, 2), (-2, 1)), immutable=True).as_field()
+    linkers: Sequence[Type[LinkBetweenBase]] = fp.ListParam(default=(fp.LinkBetween,), immutable=True).as_field()
+    waypoints_candidates: Sequence[Any] = fp.ListParam(default=(fp.Offset(0, 0),), immutable=True).as_field()
+
+    def build(self):
+        insts, elems, ports = super().build()
+
+        mzis = self.mzis
+        rows = self.rows
+        cols = self.cols
+        period_x = self.period_x
+        period_y = self.period_y
+        offsets = self.offsets
+        linkers = self.linkers
+        waypoints_candidates = self.waypoints_candidates
+
+        p = 0
+        mzi_count = len(mzis)
+        offset_count = len(offsets)
+        linker_count = len(linkers)
+        waypoints_candidates_count = len(waypoints_candidates)
+        for i in range(rows):
+            for j in range(cols):
+                # choose mzi variant
+                mzi = mzis[p % mzi_count]
+                # get pseudo-random offset for mzi
+                dx, dy = offsets[p % offset_count]
+                # calculate mzi position
+                tx = period_x * j + dx + (period_x / 2 if (i % 2 == 1) else 0)
+                ty = period_y / 2 * math.sqrt(3) * i + dy
+                # snap to grid to avoid 1nm gap and better performance
+                tx = fp.snap_round(tx)
+                ty = fp.snap_round(ty)
+                # place mzi
+                mzi_array = mzi.translated(tx, ty)
+                insts += mzi_array, f&#34;{i},{j}&#34;
+                # print(f&#34;i:{i}, j:{j}, p:{p}, mzi:{p%mzi_count}&#34;)
+                p += 1
+
+        mapping = cast(Mapping[str, fp.ICellRef], insts)  # Just `mapping = insts` is OK, we cast here to help IDE typing
+        for i in range(rows):
+            for j in range(cols):
+                linker = linkers[p % linker_count]
+                if i &gt;= rows / 3 * 2 and j &gt;= cols / 3 * 2:
+                    waypoints = waypoints_candidates[p % waypoints_candidates_count]
+                else:
+                    waypoints = ()
+                it = mapping[f&#34;{i},{j}&#34;]
+                n = i % 2
+                if n == 0:
+                    if i == 0:
+                        if j != cols - 1:
+                            link = linker(start=it[&#34;op_2&#34;], end=mapping[f&#34;{i},{j + 1}&#34;][&#34;op_1&#34;], waypoints=waypoints)
+                            insts += link
+                    if i != rows - 1:
+                        link = linker(start=it[&#34;op_3&#34;], end=mapping[f&#34;{i+1},{j}&#34;][&#34;op_1&#34;], waypoints=waypoints)
+                        insts += link
+                        if j != 0:
+                            link = linker(start=mapping[f&#34;{i+1},{j-1}&#34;][&#34;op_2&#34;], end=it[&#34;op_0&#34;], waypoints=waypoints)
+                            insts += link
+                    else:
+                        if j != cols - 1:
+                            link = linker(start=it[&#34;op_3&#34;], end=mapping[f&#34;{i},{j+1}&#34;][&#34;op_0&#34;], waypoints=waypoints)
+                            insts += link
+                else:
+                    if i != rows - 1:
+                        link = linker(start=mapping[f&#34;{i+1},{j}&#34;][&#34;op_2&#34;], end=it[&#34;op_0&#34;], waypoints=waypoints)
+                        insts += link
+                        if j != cols - 1:
+                            link = linker(start=it[&#34;op_3&#34;], end=mapping[f&#34;{i+1},{j+1}&#34;][&#34;op_1&#34;], waypoints=waypoints)
+                            insts += link
+
+                    if i == rows - 1:
+                        if j != cols - 1:
+                            link = linker(start=it[&#34;op_3&#34;], end=mapping[f&#34;{i},{j + 1}&#34;][&#34;op_0&#34;], waypoints=waypoints)
+                            insts += link
+                p += 1
+
+        # fmt: on
+        return insts, elems, ports
+
+
+if __name__ == &#34;__main__&#34;:
+    from pathlib import Path
+    from time import perf_counter
+
+    from fnpcell import console
+
+    gds_file = Path(__file__).parent / &#34;local&#34; / Path(__file__).with_suffix(&#34;.gds&#34;).name
+    library = fp.Library()
+
+    TECH = get_technology()
+    # =============================================================
+
+    # ==== Warming up is optional, we can comment it out since the impact is not significant  ======
+    console.info(&#34;Warming up ...&#34;)
+    fp.export_gds(MziArray(rows=1, cols=1), file=fp.util.BytesIO())  # just warmup: module loading, initializing, ...,
+    # ==== Warming up is optional, we can comment it out ======
+
+    console.info(&#34;Start pure pcell layouting (about 2-3 minutes) ...&#34;)
+    started_at = perf_counter()
+
+    library += MziArray(
+        rows=70,
+        cols=70,
+        period_x=1200,
+        period_y=800,
+        mzis=[  # mzi variants
+            Mzi(
+                dc1=pdk.DirectionalCouplerBend(coupler_length=12, coupler_spacing=1.2, bend_radius=10, waveguide_type=TECH.WG.FWG.C.WIRE),
+                dc2=pdk.DirectionalCouplerBend(coupler_length=12, coupler_spacing=1.2, bend_radius=10, waveguide_type=TECH.WG.FWG.C.WIRE),
+                dc_distance=200,
+                ps=pdk.PnPhaseShifter(wg_length=80, waveguide_type=TECH.WG.FWG.C.WIRE),
+                ps_offset=(-40, 50),
+                wg=pdk.Straight(length=40, waveguide_type=TECH.WG.FWG.C.WIRE),
+                wg_offset=(-20, -50),
+            ),
+            Mzi(
+                dc1=pdk.DirectionalCouplerBend(coupler_length=12, coupler_spacing=1.2, bend_radius=10, waveguide_type=TECH.WG.SWG.C.WIRE),
+                dc2=pdk.DirectionalCouplerBend(coupler_length=12, coupler_spacing=1.2, bend_radius=10, waveguide_type=TECH.WG.SWG.C.WIRE),
+                dc_distance=200,
+                ps=pdk.PnPhaseShifter(wg_length=80, waveguide_type=TECH.WG.FWG.C.WIRE),
+                ps_offset=(-40, 50),
+                wg=pdk.Straight(length=40, waveguide_type=TECH.WG.FWG.C.WIRE),
+                wg_offset=(-20, -50),
+            ),
+            Mzi(
+                dc1=pdk.DirectionalCouplerBend(coupler_length=12, coupler_spacing=1.2, bend_radius=10, waveguide_type=TECH.WG.MWG.C.WIRE),
+                dc2=pdk.DirectionalCouplerBend(coupler_length=12, coupler_spacing=1.2, bend_radius=10, waveguide_type=TECH.WG.MWG.C.WIRE),
+                dc_distance=200,
+                ps=pdk.PnPhaseShifter(wg_length=80, waveguide_type=TECH.WG.FWG.C.WIRE),
+                ps_offset=(-40, 50),
+                wg=pdk.Straight(length=40, waveguide_type=TECH.WG.FWG.C.WIRE),
+                wg_offset=(-20, -50),
+            ),
+        ],
+        offsets=[(30, 20), (-10, 40), (-20, 30), (-40, 10), (-30, 20), (40, 10), (-40, -20)],  # pseudo-random offset to each mzi, more offsets, more randomness
+        linkers=[Linker.FWG_WIRE_CIRCULAR_WIRE, Linker.FWG_EXPANDED_EULER_WIRE, Linker.SWG_EXPANDED_COSINE_EXPANDED],
+        waypoints_candidates=[
+            [fp.Offset(60, 100), fp.Offset(90, -50)],
+            [fp.Offset(40, 200), fp.Offset(70, -50)],
+            [fp.Offset(70, -100), fp.Offset(70, 50)],
+            [fp.Offset(90, -200), fp.Offset(90, 50)],
+        ],
+    )
+
+    # =============================================================
+    console.info(f&#34;Layouting elapsed time: {perf_counter() - started_at}s&#34;)
+    fp.export_gds(library, file=gds_file)
+    console.info(f&#34;Total elapsed time: {perf_counter() - started_at}s&#34;)
+    # fp.plot(library)</code></pre>
+</details>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-classes">Classes</h2>
+<dl>
+<dt id="gpdk.examples.example_mzi_perf.BendCosine"><code class="flex name class">
+<span>class <span class="ident">BendCosine</span></span>
+<span>(</span><span>name: str = None, bands: Optional[FrozenSet[fnpcell.interfaces.IBand]] = None, patches: Tuple[fnpcell.interfaces.IElement, ...] = (), port_names: Sequence[Union[None, str, fnpcell.interfaces.Hidden]] = ('op_0', 'op_1'), transform: fnpcell.transform.Affine2D = None, degrees: float = 90, radius_eff: float = None, radius_min: float = None, p: Optional[float] = None, l_max: Optional[float] = None, waveguide_type: fnpcell.interfaces.IWaveguideType = None)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>BendCosine(<em>args: Any, </em>*kwargs: Any)</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class BendCosine(fp.IWaveguideLike, fp.PCell):
+    degrees: float = fp.DegreeParam(default=90, min=-180, max=180, doc=&#34;Bend angle in degrees&#34;).as_field()
+    radius_eff: float = fp.PositiveFloatParam(required=False, doc=&#34;Bend radius_eff&#34;).as_field()
+    radius_min: float = fp.PositiveFloatParam(required=False, doc=&#34;Bend radius_min&#34;).as_field()
+    p: Optional[float] = fp.PositiveFloatParam(required=False, max=1, doc=&#34;Bend parameter&#34;).as_field()
+    l_max: Optional[float] = fp.PositiveFloatParam(required=False, doc=&#34;Bend Lmax&#34;).as_field()
+    waveguide_type: fp.IWaveguideType = fp.WaveguideTypeParam(doc=&#34;Waveguide parameters&#34;).as_field()
+    port_names: fp.IPortOptions = fp.PortOptionsParam(count=2, default=[&#34;op_0&#34;, &#34;op_1&#34;]).as_field()
+
+    def _default_radius_eff(self):
+        if self.radius_min is None:
+            return 10
+
+    def _default_waveguide_type(self):
+        return get_technology().WG.FWG.C.WIRE
+
+    def __post_pcell_init__(self):
+        assert self.radius_eff is not None or self.radius_min is not None, &#34;either radius_eff or radius_min must be provided&#34;
+
+    @cached_property
+    def raw_curve(self):
+        radius_min = self.radius_min
+        if radius_min is None:
+            radius_min = self.radius_eff
+        curve = fp.g.CosineBend(radius_min=radius_min, degrees=self.degrees, p=self.p, l_max=self.l_max)
+        if self.radius_min is None and not fp.is_close(curve.radius_eff, self.radius_eff):
+            curve = curve.scaled(self.radius_eff / curve.radius_eff)
+        return curve
+
+    def build(self) -&gt; Tuple[fp.InstanceSet, fp.ElementSet, fp.PortSet]:
+        insts, elems, ports = super().build()
+        wg = self.waveguide_type(curve=self.raw_curve).with_ports(self.port_names)
+        insts += wg
+        ports += wg.ports
+        return insts, elems, ports</code></pre>
+</details>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li>fnpcell.interfaces.IWaveguideLike</li>
+<li>fnpcell.interfaces.ICurveLike</li>
+<li>fnpcell.interfaces.ICurvedCellRef</li>
+<li>fnpcell.interfaces.ICurved</li>
+<li>fnpcell.pdk.pcell.PCell</li>
+<li>fnpcell.cell.cell_ref.CellRef</li>
+<li>fnpcell.mixin.transform_mixin.TransformMixin</li>
+<li>fnpcell.interfaces.ICellRef</li>
+<li>fnpcell.interfaces.IUpdatable</li>
+<li>fnpcell.interfaces.IElement</li>
+<li>fnpcell.interfaces.IRunnable</li>
+<li>fnpcell.interfaces.IAffineTransformable</li>
+</ul>
+<h3>Class variables</h3>
+<dl>
+<dt id="gpdk.examples.example_mzi_perf.BendCosine.degrees"><code class="name">var <span class="ident">degrees</span> : float</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="gpdk.examples.example_mzi_perf.BendCosine.l_max"><code class="name">var <span class="ident">l_max</span> : Optional[float]</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="gpdk.examples.example_mzi_perf.BendCosine.p"><code class="name">var <span class="ident">p</span> : Optional[float]</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="gpdk.examples.example_mzi_perf.BendCosine.port_names"><code class="name">var <span class="ident">port_names</span> : Sequence[Union[None, str, fnpcell.interfaces.Hidden]]</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="gpdk.examples.example_mzi_perf.BendCosine.radius_eff"><code class="name">var <span class="ident">radius_eff</span> : float</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="gpdk.examples.example_mzi_perf.BendCosine.radius_min"><code class="name">var <span class="ident">radius_min</span> : float</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="gpdk.examples.example_mzi_perf.BendCosine.waveguide_type"><code class="name">var <span class="ident">waveguide_type</span> : fnpcell.interfaces.IWaveguideType</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+</dl>
+<h3>Instance variables</h3>
+<dl>
+<dt id="gpdk.examples.example_mzi_perf.BendCosine.raw_curve"><code class="name">var <span class="ident">raw_curve</span> : fnpcell.interfaces.ICurve</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def __get__(self, instance, owner=None):
+    if instance is None:
+        return self
+    if self.attrname is None:
+        raise TypeError(
+            &#34;Cannot use cached_property instance without calling __set_name__ on it.&#34;)
+    try:
+        cache = instance.__dict__
+    except AttributeError:  # not all objects have __dict__ (e.g. class defines slots)
+        msg = (
+            f&#34;No &#39;__dict__&#39; attribute on {type(instance).__name__!r} &#34;
+            f&#34;instance to cache {self.attrname!r} property.&#34;
+        )
+        raise TypeError(msg) from None
+    val = cache.get(self.attrname, _NOT_FOUND)
+    if val is _NOT_FOUND:
+        with self.lock:
+            # check if another thread filled cache while we awaited lock
+            val = cache.get(self.attrname, _NOT_FOUND)
+            if val is _NOT_FOUND:
+                val = self.func(instance)
+                try:
+                    cache[self.attrname] = val
+                except TypeError:
+                    msg = (
+                        f&#34;The &#39;__dict__&#39; attribute on {type(instance).__name__!r} instance &#34;
+                        f&#34;does not support item assignment for caching {self.attrname!r} property.&#34;
+                    )
+                    raise TypeError(msg) from None
+    return val</code></pre>
+</details>
+</dd>
+</dl>
+<h3>Methods</h3>
+<dl>
+<dt id="gpdk.examples.example_mzi_perf.BendCosine.build"><code class="name flex">
+<span>def <span class="ident">build</span></span>(<span>self) ‑> Tuple[fnpcell.pdk.collection.InstanceSet, fnpcell.pdk.collection.ElementSet, fnpcell.pdk.collection.PortSet]</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Abstract method must be implemented to build a pcell.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def build(self) -&gt; Tuple[fp.InstanceSet, fp.ElementSet, fp.PortSet]:
+    insts, elems, ports = super().build()
+    wg = self.waveguide_type(curve=self.raw_curve).with_ports(self.port_names)
+    insts += wg
+    ports += wg.ports
+    return insts, elems, ports</code></pre>
+</details>
+</dd>
+</dl>
+</dd>
+<dt id="gpdk.examples.example_mzi_perf.CosineBendFactory"><code class="flex name class">
+<span>class <span class="ident">CosineBendFactory</span></span>
+<span>(</span><span>radius_min: float, l_max: float, waveguide_type: fnpcell.interfaces.IWaveguideType)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>CosineBendFactory(<em>args, </em>*kwds)</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class CosineBendFactory(fpt.IBendWaveguideFactory):
+    radius_min: float
+    l_max: float
+    waveguide_type: fpt.IWaveguideType = field(repr=False, compare=False)
+
+    def __call__(self, central_angle: float):
+
+        bend = BendCosine(degrees=math.degrees(central_angle), radius_min=self.radius_min, l_max=self.l_max, waveguide_type=self.waveguide_type)
+        return bend, bend.raw_curve.radius_eff, (&#34;op_0&#34;, &#34;op_1&#34;)</code></pre>
+</details>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li>fnpcell.interfaces.IBendWaveguideFactory</li>
+<li>typing.Protocol</li>
+<li>typing.Generic</li>
+</ul>
+<h3>Class variables</h3>
+<dl>
+<dt id="gpdk.examples.example_mzi_perf.CosineBendFactory.l_max"><code class="name">var <span class="ident">l_max</span> : float</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="gpdk.examples.example_mzi_perf.CosineBendFactory.radius_min"><code class="name">var <span class="ident">radius_min</span> : float</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="gpdk.examples.example_mzi_perf.CosineBendFactory.waveguide_type"><code class="name">var <span class="ident">waveguide_type</span> : fnpcell.interfaces.IWaveguideType</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+</dl>
+</dd>
+<dt id="gpdk.examples.example_mzi_perf.LinkBetweenBase"><code class="flex name class">
+<span>class <span class="ident">LinkBetweenBase</span></span>
+<span>(</span><span>name: str = None, bands: Optional[FrozenSet[fnpcell.interfaces.IBand]] = None, patches: Tuple[fnpcell.interfaces.IElement, ...] = (), port_names: Sequence[Union[None, str, fnpcell.interfaces.Hidden]] = (), transform: fnpcell.transform.Affine2D = None, start: fnpcell.interfaces.IOwnedTerminal = None, end: fnpcell.interfaces.IOwnedTerminal = None, waypoints: Iterable[Union[fnpcell.interfaces.IRay, fnpcell.interfaces.Offset]] = (), link_type: fnpcell.interfaces.IWaveguideType = None, bend_factory: fnpcell.interfaces.IBendWaveguideFactory = None)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>LinkBetweenBase(<em>args: Any, </em>*kwargs: Any)</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class LinkBetweenBase(fp.PCell, fpt.WaveguideBetween):
+    start: fpt.IOwnedTerminal = fp.Param(type=fpt.IPort).as_field()
+    end: fpt.IOwnedTerminal = fp.Param(type=fpt.IPort).as_field()
+    waypoints: Iterable[fpt.IWaypoint] = fp.ListParam(default=(), immutable=True).as_field()
+    link_type: fp.IWaveguideType = fp.Param().as_field()
+    bend_factory: fp.IBendWaveguideFactory = fp.Param().as_field()
+
+    def _default_link_type(self):
+        TECH = get_technology()
+        return TECH.WG.SWG.C.WIRE
+
+    def _default_bend_factory(self):
+        TECH = get_technology()
+        return TECH.WG.FWG.C.WIRE.BEND_EULER
+
+    @property
+    def generated_link(self) -&gt; fpt.IWaveguideBetween:
+        link = fp.LinkBetween(
+            self.start,
+            self.end,
+            waypoints=self.waypoints,
+            link_type=self.link_type,
+            bend_factory=self.bend_factory,
+        )
+        assert link is not None
+        return link
+
+    def build(self):
+        inst_set, elem_set, port_set = super().build()
+
+        inst_set += self.generated_link
+        port_set += self.generated_link.ports
+
+        return inst_set, elem_set, port_set
+
+    @property
+    def curve_length(self) -&gt; float:
+        return self.generated_link.curve_length
+
+    def with_environment(self, **kwargs: Any):
+        return self</code></pre>
+</details>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li>fnpcell.pdk.pcell.PCell</li>
+<li>fnpcell.cell.cell_ref.CellRef</li>
+<li>fnpcell.mixin.transform_mixin.TransformMixin</li>
+<li>fnpcell.pdk.technology.link_between.WaveguideBetween</li>
+<li>fnpcell.interfaces.IWaveguideBetween</li>
+<li>fnpcell.interfaces.ILinkBetween</li>
+<li>fnpcell.interfaces.ILink</li>
+<li>fnpcell.interfaces.ICurveLike</li>
+<li>fnpcell.interfaces.ICurvedCellRef</li>
+<li>fnpcell.interfaces.ICurved</li>
+<li>fnpcell.interfaces.ICellRef</li>
+<li>fnpcell.interfaces.IUpdatable</li>
+<li>fnpcell.interfaces.IElement</li>
+<li>fnpcell.interfaces.IRunnable</li>
+<li>fnpcell.interfaces.IAffineTransformable</li>
+</ul>
+<h3>Subclasses</h3>
+<ul class="hlist">
+<li><a title="gpdk.examples.example_mzi_perf.Linker.FWG_EXPANDED_EULER_WIRE" href="#gpdk.examples.example_mzi_perf.Linker.FWG_EXPANDED_EULER_WIRE">Linker.FWG_EXPANDED_EULER_WIRE</a></li>
+<li><a title="gpdk.examples.example_mzi_perf.Linker.FWG_WIRE_CIRCULAR_WIRE" href="#gpdk.examples.example_mzi_perf.Linker.FWG_WIRE_CIRCULAR_WIRE">Linker.FWG_WIRE_CIRCULAR_WIRE</a></li>
+<li><a title="gpdk.examples.example_mzi_perf.Linker.SWG_EXPANDED_COSINE_EXPANDED" href="#gpdk.examples.example_mzi_perf.Linker.SWG_EXPANDED_COSINE_EXPANDED">Linker.SWG_EXPANDED_COSINE_EXPANDED</a></li>
+</ul>
+<h3>Class variables</h3>
+<dl>
+<dt id="gpdk.examples.example_mzi_perf.LinkBetweenBase.bend_factory"><code class="name">var <span class="ident">bend_factory</span> : fnpcell.interfaces.IBendWaveguideFactory</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="gpdk.examples.example_mzi_perf.LinkBetweenBase.end"><code class="name">var <span class="ident">end</span> : fnpcell.interfaces.IOwnedTerminal</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="gpdk.examples.example_mzi_perf.LinkBetweenBase.link_type"><code class="name">var <span class="ident">link_type</span> : fnpcell.interfaces.IWaveguideType</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="gpdk.examples.example_mzi_perf.LinkBetweenBase.start"><code class="name">var <span class="ident">start</span> : fnpcell.interfaces.IOwnedTerminal</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="gpdk.examples.example_mzi_perf.LinkBetweenBase.waypoints"><code class="name">var <span class="ident">waypoints</span> : Iterable[Union[fnpcell.interfaces.IRay, fnpcell.interfaces.Offset]]</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+</dl>
+<h3>Instance variables</h3>
+<dl>
+<dt id="gpdk.examples.example_mzi_perf.LinkBetweenBase.curve_length"><code class="name">var <span class="ident">curve_length</span> : float</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def curve_length(self) -&gt; float:
+    return self.generated_link.curve_length</code></pre>
+</details>
+</dd>
+<dt id="gpdk.examples.example_mzi_perf.LinkBetweenBase.generated_link"><code class="name">var <span class="ident">generated_link</span> : fnpcell.interfaces.IWaveguideBetween</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def generated_link(self) -&gt; fpt.IWaveguideBetween:
+    link = fp.LinkBetween(
+        self.start,
+        self.end,
+        waypoints=self.waypoints,
+        link_type=self.link_type,
+        bend_factory=self.bend_factory,
+    )
+    assert link is not None
+    return link</code></pre>
+</details>
+</dd>
+</dl>
+<h3>Methods</h3>
+<dl>
+<dt id="gpdk.examples.example_mzi_perf.LinkBetweenBase.build"><code class="name flex">
+<span>def <span class="ident">build</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Abstract method must be implemented to build a pcell.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def build(self):
+    inst_set, elem_set, port_set = super().build()
+
+    inst_set += self.generated_link
+    port_set += self.generated_link.ports
+
+    return inst_set, elem_set, port_set</code></pre>
+</details>
+</dd>
+<dt id="gpdk.examples.example_mzi_perf.LinkBetweenBase.with_environment"><code class="name flex">
+<span>def <span class="ident">with_environment</span></span>(<span>self, **kwargs: Any)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def with_environment(self, **kwargs: Any):
+    return self</code></pre>
+</details>
+</dd>
+</dl>
+</dd>
+<dt id="gpdk.examples.example_mzi_perf.Linker"><code class="flex name class">
+<span>class <span class="ident">Linker</span></span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class Linker:
+    @fp.pcell_class()
+    @dataclass(eq=False)
+    class FWG_WIRE_CIRCULAR_WIRE(LinkBetweenBase):
+        def _default_link_type(self):
+            TECH = get_technology()
+            return TECH.WG.FWG.C.WIRE
+
+        def _default_bend_factory(self):
+            TECH = get_technology()
+            return TECH.WG.FWG.C.WIRE.BEND_CIRCULAR
+
+    @fp.pcell_class()
+    @dataclass(eq=False)
+    class FWG_EXPANDED_EULER_WIRE(LinkBetweenBase):
+        def _default_link_type(self):
+            TECH = get_technology()
+            return TECH.WG.FWG.C.EXPANDED
+
+        def _default_bend_factory(self):
+            TECH = get_technology()
+            return TECH.WG.FWG.C.WIRE.BEND_EULER
+
+    @fp.pcell_class()
+    @dataclass(eq=False)
+    class SWG_EXPANDED_COSINE_EXPANDED(LinkBetweenBase):
+        def _default_link_type(self):
+            TECH = get_technology()
+            return TECH.WG.SWG.C.EXPANDED
+
+        def _default_bend_factory(self):
+            TECH = get_technology()
+            wgt = TECH.WG.SWG.C.EXPANDED
+            return CosineBendFactory(radius_min=wgt.cladding_width / 2 + 1, l_max=15, waveguide_type=wgt)</code></pre>
+</details>
+<h3>Class variables</h3>
+<dl>
+<dt id="gpdk.examples.example_mzi_perf.Linker.FWG_EXPANDED_EULER_WIRE"><code class="name">var <span class="ident">FWG_EXPANDED_EULER_WIRE</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="gpdk.examples.example_mzi_perf.Linker.FWG_WIRE_CIRCULAR_WIRE"><code class="name">var <span class="ident">FWG_WIRE_CIRCULAR_WIRE</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="gpdk.examples.example_mzi_perf.Linker.SWG_EXPANDED_COSINE_EXPANDED"><code class="name">var <span class="ident">SWG_EXPANDED_COSINE_EXPANDED</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+</dl>
+</dd>
+<dt id="gpdk.examples.example_mzi_perf.Mzi"><code class="flex name class">
+<span>class <span class="ident">Mzi</span></span>
+<span>(</span><span>name: str = None, bands: Optional[FrozenSet[fnpcell.interfaces.IBand]] = None, patches: Tuple[fnpcell.interfaces.IElement, ...] = (), port_names: Sequence[Union[None, str, fnpcell.interfaces.Hidden]] = (), transform: fnpcell.transform.Affine2D = None, dc1: fnpcell.interfaces.ICellRef = None, dc2: fnpcell.interfaces.ICellRef = None, ps: fnpcell.interfaces.ICellRef = None, ps_offset: Tuple[float, float] = None, wg: fnpcell.interfaces.ICellRef = None, wg_offset: Tuple[float, float] = None, dc_distance: float = 200)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Mzi(<em>args: Any, </em>*kwargs: Any)</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class Mzi(fp.PCell):
+    dc1: fp.IDevice = fp.DeviceParam().as_field()
+    dc2: fp.IDevice = fp.DeviceParam().as_field()
+    ps: fp.IDevice = fp.DeviceParam().as_field()
+    ps_offset: Tuple[float, float] = fp.Param().as_field()
+    wg: fp.IDevice = fp.DeviceParam().as_field()
+    wg_offset: Tuple[float, float] = fp.Param().as_field()
+    dc_distance: float = fp.PositiveFloatParam(default=200).as_field()
+
+    def _default_dc1(self):
+        TECH = get_technology()
+        return pdk.DirectionalCouplerBend(coupler_length=10, coupler_spacing=1.2, bend_radius=10, waveguide_type=TECH.WG.FWG.C.WIRE)
+
+    def _default_dc2(self):
+        TECH = get_technology()
+        return pdk.DirectionalCouplerBend(coupler_length=10, coupler_spacing=1.2, bend_radius=10, waveguide_type=TECH.WG.FWG.C.WIRE)
+
+    def _default_ps(self):
+        TECH = get_technology()
+        return pdk.PnPhaseShifter(wg_length=80, waveguide_type=TECH.WG.FWG.C.WIRE)
+
+    def _default_ps_offset(self):
+        return (-40, 50)
+
+    def _default_wg(self):
+        TECH = get_technology()
+        return pdk.Straight(length=40, waveguide_type=TECH.WG.FWG.C.WIRE)
+
+    def _default_wg_offset(self):
+        return (-20, -50)
+
+    def build(self):
+        insts, elems, ports = super().build()
+        TECH = get_technology()
+
+        dc1 = self.dc1
+        dc2 = self.dc2
+        dc_distance = self.dc_distance
+        ps = self.ps
+        ps_offset = self.ps_offset
+        wg = self.wg
+        wg_offset = self.wg_offset
+
+        dc1 = dc1.translated(-dc_distance / 2, 0)
+        insts += dc1
+        dc2 = dc2.translated(dc_distance / 2, 0)
+        insts += dc2
+        ps = ps.translated(*ps_offset)
+        insts += ps
+        wg = wg.translated(*wg_offset)
+        insts += wg
+
+        links = fp.create_links(
+            link_type=TECH.WG.FWG.C.EXPANDED,
+            bend_factory=TECH.WG.FWG.C.WIRE.BEND_EULER,
+            specs=[
+                dc1[&#34;op_2&#34;] &gt;&gt; wg[&#34;op_0&#34;],
+                wg[&#34;op_1&#34;] &gt;&gt; dc2[&#34;op_1&#34;],
+                dc1[&#34;op_3&#34;] &gt;&gt; ps[&#34;op_0&#34;],
+                ps[&#34;op_1&#34;] &gt;&gt; dc2[&#34;op_0&#34;],
+            ],
+        )
+        insts += links
+
+        ports += [
+            dc1[&#34;op_0&#34;].with_name(&#34;op_0&#34;),
+            dc1[&#34;op_1&#34;].with_name(&#34;op_1&#34;),
+            dc2[&#34;op_2&#34;].with_name(&#34;op_2&#34;),
+            dc2[&#34;op_3&#34;].with_name(&#34;op_3&#34;),
+        ]
+
+        return insts, elems, ports</code></pre>
+</details>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li>fnpcell.pdk.pcell.PCell</li>
+<li>fnpcell.cell.cell_ref.CellRef</li>
+<li>fnpcell.mixin.transform_mixin.TransformMixin</li>
+<li>fnpcell.interfaces.ICellRef</li>
+<li>fnpcell.interfaces.IUpdatable</li>
+<li>fnpcell.interfaces.IElement</li>
+<li>fnpcell.interfaces.IRunnable</li>
+<li>fnpcell.interfaces.IAffineTransformable</li>
+</ul>
+<h3>Class variables</h3>
+<dl>
+<dt id="gpdk.examples.example_mzi_perf.Mzi.dc1"><code class="name">var <span class="ident">dc1</span> : fnpcell.interfaces.ICellRef</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="gpdk.examples.example_mzi_perf.Mzi.dc2"><code class="name">var <span class="ident">dc2</span> : fnpcell.interfaces.ICellRef</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="gpdk.examples.example_mzi_perf.Mzi.dc_distance"><code class="name">var <span class="ident">dc_distance</span> : float</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="gpdk.examples.example_mzi_perf.Mzi.ps"><code class="name">var <span class="ident">ps</span> : fnpcell.interfaces.ICellRef</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="gpdk.examples.example_mzi_perf.Mzi.ps_offset"><code class="name">var <span class="ident">ps_offset</span> : Tuple[float, float]</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="gpdk.examples.example_mzi_perf.Mzi.wg"><code class="name">var <span class="ident">wg</span> : fnpcell.interfaces.ICellRef</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="gpdk.examples.example_mzi_perf.Mzi.wg_offset"><code class="name">var <span class="ident">wg_offset</span> : Tuple[float, float]</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+</dl>
+<h3>Methods</h3>
+<dl>
+<dt id="gpdk.examples.example_mzi_perf.Mzi.build"><code class="name flex">
+<span>def <span class="ident">build</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Abstract method must be implemented to build a pcell.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def build(self):
+    insts, elems, ports = super().build()
+    TECH = get_technology()
+
+    dc1 = self.dc1
+    dc2 = self.dc2
+    dc_distance = self.dc_distance
+    ps = self.ps
+    ps_offset = self.ps_offset
+    wg = self.wg
+    wg_offset = self.wg_offset
+
+    dc1 = dc1.translated(-dc_distance / 2, 0)
+    insts += dc1
+    dc2 = dc2.translated(dc_distance / 2, 0)
+    insts += dc2
+    ps = ps.translated(*ps_offset)
+    insts += ps
+    wg = wg.translated(*wg_offset)
+    insts += wg
+
+    links = fp.create_links(
+        link_type=TECH.WG.FWG.C.EXPANDED,
+        bend_factory=TECH.WG.FWG.C.WIRE.BEND_EULER,
+        specs=[
+            dc1[&#34;op_2&#34;] &gt;&gt; wg[&#34;op_0&#34;],
+            wg[&#34;op_1&#34;] &gt;&gt; dc2[&#34;op_1&#34;],
+            dc1[&#34;op_3&#34;] &gt;&gt; ps[&#34;op_0&#34;],
+            ps[&#34;op_1&#34;] &gt;&gt; dc2[&#34;op_0&#34;],
+        ],
+    )
+    insts += links
+
+    ports += [
+        dc1[&#34;op_0&#34;].with_name(&#34;op_0&#34;),
+        dc1[&#34;op_1&#34;].with_name(&#34;op_1&#34;),
+        dc2[&#34;op_2&#34;].with_name(&#34;op_2&#34;),
+        dc2[&#34;op_3&#34;].with_name(&#34;op_3&#34;),
+    ]
+
+    return insts, elems, ports</code></pre>
+</details>
+</dd>
+</dl>
+</dd>
+<dt id="gpdk.examples.example_mzi_perf.MziArray"><code class="flex name class">
+<span>class <span class="ident">MziArray</span></span>
+<span>(</span><span>name: str = None, bands: Optional[FrozenSet[fnpcell.interfaces.IBand]] = None, patches: Tuple[fnpcell.interfaces.IElement, ...] = (), port_names: Sequence[Union[None, str, fnpcell.interfaces.Hidden]] = (), transform: fnpcell.transform.Affine2D = None, mzis: Sequence[<a title="gpdk.examples.example_mzi_perf.Mzi" href="#gpdk.examples.example_mzi_perf.Mzi">Mzi</a>] = (Mzi(name='Mzi', bands=None, patches=(), port_names=(), transform=Affine2D.identity(), _pcell_elapsed_time_=0.06839299999999993, dc1=DirectionalCouplerBend(name='DirectionalCouplerBend', bands=None, patches=(), port_names=('op_0', 'op_1', 'op_2', 'op_3'), transform=Affine2D.identity(), _pcell_elapsed_time_=0.003564899999999982, coupler_spacing=1.2, coupler_length=10, bend_radius=10, straight_after_bend=6, waveguide_type=WG.FWG.C.FWG_C_WIRE(core_layout_width=0.55, cladding_layout_width=4.45, core_design_width=0.45, cladding_design_width=4.45, port_names=('op_0', 'op_1'))), dc2=DirectionalCouplerBend(name='DirectionalCouplerBend', bands=None, patches=(), port_names=('op_0', 'op_1', 'op_2', 'op_3'), transform=Affine2D.identity(), _pcell_elapsed_time_=0.0031153999999997684, coupler_spacing=1.2, coupler_length=10, bend_radius=10, straight_after_bend=6, waveguide_type=WG.FWG.C.FWG_C_WIRE(core_layout_width=0.55, cladding_layout_width=4.45, core_design_width=0.45, cladding_design_width=4.45, port_names=('op_0', 'op_1'))), ps=PnPhaseShifter(name='PnPhaseShifter', bands=None, patches=(), port_names=('op_0', 'op_1', 'ep_0', 'ep_1'), transform=Affine2D.identity(), _pcell_elapsed_time_=0.000981099999999957, p_width=1, n_width=1, np_offset=0, wg_length=80, waveguide_type=WG.FWG.C.FWG_C_WIRE(core_layout_width=0.55, cladding_layout_width=4.45, core_design_width=0.45, cladding_design_width=4.45, port_names=('op_0', 'op_1'))), ps_offset=(-40, 50), wg=Straight(name='Straight', bands=None, patches=(), port_names=('op_0', 'op_1'), transform=Affine2D.identity(), _pcell_elapsed_time_=0.0004417999999999367, length=40, waveguide_type=WG.FWG.C.FWG_C_WIRE(core_layout_width=0.55, cladding_layout_width=4.45, core_design_width=0.45, cladding_design_width=4.45, port_names=('op_0', 'op_1')), anchor=fnpcell.interfaces.Anchor.START), wg_offset=(-20, -50), dc_distance=200),), rows: int = 20, cols: int = 20, period_x: float = 600, period_y: float = 200, offsets: Sequence[Tuple[float, float]] = ((1, 1), (2, 2), (-1, 2), (-2, 1)), linkers: Sequence[Type[<a title="gpdk.examples.example_mzi_perf.LinkBetweenBase" href="#gpdk.examples.example_mzi_perf.LinkBetweenBase">LinkBetweenBase</a>]] = (&lt;function LinkBetween&gt;,), waypoints_candidates: Sequence[Any] = (Offset(0, 0),))</span>
+</code></dt>
+<dd>
+<div class="desc"><p>MziArray(<em>args: Any, </em>*kwargs: Any)</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class MziArray(fp.PCell):
+    mzis: Sequence[Mzi] = fp.ListParam(default=(Mzi(),), immutable=True).as_field()
+    rows: int = fp.PositiveIntParam(default=20).as_field()
+    cols: int = fp.PositiveIntParam(default=20).as_field()
+
+    period_x: float = fp.PositiveFloatParam(default=600).as_field()
+    period_y: float = fp.PositiveFloatParam(default=200).as_field()
+
+    offsets: Sequence[Tuple[float, float]] = fp.ListParam(default=((1, 1), (2, 2), (-1, 2), (-2, 1)), immutable=True).as_field()
+    linkers: Sequence[Type[LinkBetweenBase]] = fp.ListParam(default=(fp.LinkBetween,), immutable=True).as_field()
+    waypoints_candidates: Sequence[Any] = fp.ListParam(default=(fp.Offset(0, 0),), immutable=True).as_field()
+
+    def build(self):
+        insts, elems, ports = super().build()
+
+        mzis = self.mzis
+        rows = self.rows
+        cols = self.cols
+        period_x = self.period_x
+        period_y = self.period_y
+        offsets = self.offsets
+        linkers = self.linkers
+        waypoints_candidates = self.waypoints_candidates
+
+        p = 0
+        mzi_count = len(mzis)
+        offset_count = len(offsets)
+        linker_count = len(linkers)
+        waypoints_candidates_count = len(waypoints_candidates)
+        for i in range(rows):
+            for j in range(cols):
+                # choose mzi variant
+                mzi = mzis[p % mzi_count]
+                # get pseudo-random offset for mzi
+                dx, dy = offsets[p % offset_count]
+                # calculate mzi position
+                tx = period_x * j + dx + (period_x / 2 if (i % 2 == 1) else 0)
+                ty = period_y / 2 * math.sqrt(3) * i + dy
+                # snap to grid to avoid 1nm gap and better performance
+                tx = fp.snap_round(tx)
+                ty = fp.snap_round(ty)
+                # place mzi
+                mzi_array = mzi.translated(tx, ty)
+                insts += mzi_array, f&#34;{i},{j}&#34;
+                # print(f&#34;i:{i}, j:{j}, p:{p}, mzi:{p%mzi_count}&#34;)
+                p += 1
+
+        mapping = cast(Mapping[str, fp.ICellRef], insts)  # Just `mapping = insts` is OK, we cast here to help IDE typing
+        for i in range(rows):
+            for j in range(cols):
+                linker = linkers[p % linker_count]
+                if i &gt;= rows / 3 * 2 and j &gt;= cols / 3 * 2:
+                    waypoints = waypoints_candidates[p % waypoints_candidates_count]
+                else:
+                    waypoints = ()
+                it = mapping[f&#34;{i},{j}&#34;]
+                n = i % 2
+                if n == 0:
+                    if i == 0:
+                        if j != cols - 1:
+                            link = linker(start=it[&#34;op_2&#34;], end=mapping[f&#34;{i},{j + 1}&#34;][&#34;op_1&#34;], waypoints=waypoints)
+                            insts += link
+                    if i != rows - 1:
+                        link = linker(start=it[&#34;op_3&#34;], end=mapping[f&#34;{i+1},{j}&#34;][&#34;op_1&#34;], waypoints=waypoints)
+                        insts += link
+                        if j != 0:
+                            link = linker(start=mapping[f&#34;{i+1},{j-1}&#34;][&#34;op_2&#34;], end=it[&#34;op_0&#34;], waypoints=waypoints)
+                            insts += link
+                    else:
+                        if j != cols - 1:
+                            link = linker(start=it[&#34;op_3&#34;], end=mapping[f&#34;{i},{j+1}&#34;][&#34;op_0&#34;], waypoints=waypoints)
+                            insts += link
+                else:
+                    if i != rows - 1:
+                        link = linker(start=mapping[f&#34;{i+1},{j}&#34;][&#34;op_2&#34;], end=it[&#34;op_0&#34;], waypoints=waypoints)
+                        insts += link
+                        if j != cols - 1:
+                            link = linker(start=it[&#34;op_3&#34;], end=mapping[f&#34;{i+1},{j+1}&#34;][&#34;op_1&#34;], waypoints=waypoints)
+                            insts += link
+
+                    if i == rows - 1:
+                        if j != cols - 1:
+                            link = linker(start=it[&#34;op_3&#34;], end=mapping[f&#34;{i},{j + 1}&#34;][&#34;op_0&#34;], waypoints=waypoints)
+                            insts += link
+                p += 1
+
+        # fmt: on
+        return insts, elems, ports</code></pre>
+</details>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li>fnpcell.pdk.pcell.PCell</li>
+<li>fnpcell.cell.cell_ref.CellRef</li>
+<li>fnpcell.mixin.transform_mixin.TransformMixin</li>
+<li>fnpcell.interfaces.ICellRef</li>
+<li>fnpcell.interfaces.IUpdatable</li>
+<li>fnpcell.interfaces.IElement</li>
+<li>fnpcell.interfaces.IRunnable</li>
+<li>fnpcell.interfaces.IAffineTransformable</li>
+</ul>
+<h3>Class variables</h3>
+<dl>
+<dt id="gpdk.examples.example_mzi_perf.MziArray.cols"><code class="name">var <span class="ident">cols</span> : int</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="gpdk.examples.example_mzi_perf.MziArray.linkers"><code class="name">var <span class="ident">linkers</span> : Sequence[Type[<a title="gpdk.examples.example_mzi_perf.LinkBetweenBase" href="#gpdk.examples.example_mzi_perf.LinkBetweenBase">LinkBetweenBase</a>]]</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="gpdk.examples.example_mzi_perf.MziArray.mzis"><code class="name">var <span class="ident">mzis</span> : Sequence[<a title="gpdk.examples.example_mzi_perf.Mzi" href="#gpdk.examples.example_mzi_perf.Mzi">Mzi</a>]</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="gpdk.examples.example_mzi_perf.MziArray.offsets"><code class="name">var <span class="ident">offsets</span> : Sequence[Tuple[float, float]]</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="gpdk.examples.example_mzi_perf.MziArray.period_x"><code class="name">var <span class="ident">period_x</span> : float</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="gpdk.examples.example_mzi_perf.MziArray.period_y"><code class="name">var <span class="ident">period_y</span> : float</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="gpdk.examples.example_mzi_perf.MziArray.rows"><code class="name">var <span class="ident">rows</span> : int</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="gpdk.examples.example_mzi_perf.MziArray.waypoints_candidates"><code class="name">var <span class="ident">waypoints_candidates</span> : Sequence[Any]</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+</dl>
+<h3>Methods</h3>
+<dl>
+<dt id="gpdk.examples.example_mzi_perf.MziArray.build"><code class="name flex">
+<span>def <span class="ident">build</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Abstract method must be implemented to build a pcell.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def build(self):
+    insts, elems, ports = super().build()
+
+    mzis = self.mzis
+    rows = self.rows
+    cols = self.cols
+    period_x = self.period_x
+    period_y = self.period_y
+    offsets = self.offsets
+    linkers = self.linkers
+    waypoints_candidates = self.waypoints_candidates
+
+    p = 0
+    mzi_count = len(mzis)
+    offset_count = len(offsets)
+    linker_count = len(linkers)
+    waypoints_candidates_count = len(waypoints_candidates)
+    for i in range(rows):
+        for j in range(cols):
+            # choose mzi variant
+            mzi = mzis[p % mzi_count]
+            # get pseudo-random offset for mzi
+            dx, dy = offsets[p % offset_count]
+            # calculate mzi position
+            tx = period_x * j + dx + (period_x / 2 if (i % 2 == 1) else 0)
+            ty = period_y / 2 * math.sqrt(3) * i + dy
+            # snap to grid to avoid 1nm gap and better performance
+            tx = fp.snap_round(tx)
+            ty = fp.snap_round(ty)
+            # place mzi
+            mzi_array = mzi.translated(tx, ty)
+            insts += mzi_array, f&#34;{i},{j}&#34;
+            # print(f&#34;i:{i}, j:{j}, p:{p}, mzi:{p%mzi_count}&#34;)
+            p += 1
+
+    mapping = cast(Mapping[str, fp.ICellRef], insts)  # Just `mapping = insts` is OK, we cast here to help IDE typing
+    for i in range(rows):
+        for j in range(cols):
+            linker = linkers[p % linker_count]
+            if i &gt;= rows / 3 * 2 and j &gt;= cols / 3 * 2:
+                waypoints = waypoints_candidates[p % waypoints_candidates_count]
+            else:
+                waypoints = ()
+            it = mapping[f&#34;{i},{j}&#34;]
+            n = i % 2
+            if n == 0:
+                if i == 0:
+                    if j != cols - 1:
+                        link = linker(start=it[&#34;op_2&#34;], end=mapping[f&#34;{i},{j + 1}&#34;][&#34;op_1&#34;], waypoints=waypoints)
+                        insts += link
+                if i != rows - 1:
+                    link = linker(start=it[&#34;op_3&#34;], end=mapping[f&#34;{i+1},{j}&#34;][&#34;op_1&#34;], waypoints=waypoints)
+                    insts += link
+                    if j != 0:
+                        link = linker(start=mapping[f&#34;{i+1},{j-1}&#34;][&#34;op_2&#34;], end=it[&#34;op_0&#34;], waypoints=waypoints)
+                        insts += link
+                else:
+                    if j != cols - 1:
+                        link = linker(start=it[&#34;op_3&#34;], end=mapping[f&#34;{i},{j+1}&#34;][&#34;op_0&#34;], waypoints=waypoints)
+                        insts += link
+            else:
+                if i != rows - 1:
+                    link = linker(start=mapping[f&#34;{i+1},{j}&#34;][&#34;op_2&#34;], end=it[&#34;op_0&#34;], waypoints=waypoints)
+                    insts += link
+                    if j != cols - 1:
+                        link = linker(start=it[&#34;op_3&#34;], end=mapping[f&#34;{i+1},{j+1}&#34;][&#34;op_1&#34;], waypoints=waypoints)
+                        insts += link
+
+                if i == rows - 1:
+                    if j != cols - 1:
+                        link = linker(start=it[&#34;op_3&#34;], end=mapping[f&#34;{i},{j + 1}&#34;][&#34;op_0&#34;], waypoints=waypoints)
+                        insts += link
+            p += 1
+
+    # fmt: on
+    return insts, elems, ports</code></pre>
+</details>
+</dd>
+</dl>
+</dd>
+</dl>
+</section>
+</article>
+<nav id="sidebar">
+<form>
+<input id="lunr-search" name="q" placeholder="🔎 Search ..." aria-label="Search"
+disabled minlength="2">
+</form>
+<link rel="preload stylesheet" as="style" href="../assets/tingle/0.15.3/tingle.min.css">
+<script src="../assets/tingle/0.15.3/tingle.min.js"></script>
+<style>
+.modal-dialog iframe {
+width: 100vw;
+height: calc(100vh - 80px);
+}
+@media screen and (min-width: 700px) {
+.modal-dialog iframe {
+width: 70vw;
+height: 80vh;
+}
+}
+.modal-dialog .tingle-modal-box {width: auto;}
+.modal-dialog .tingle-modal-box__content {padding: 0;}
+</style>
+<script>
+const input = document.getElementById('lunr-search');
+input.disabled = false;
+input.form.addEventListener('submit', (ev) => {
+ev.preventDefault();
+const url = new URL(window.location);
+url.searchParams.set('q', input.value);
+history.replaceState({}, null, url.toString());
+search(input.value);
+});
+const query = new URL(window.location).searchParams.get('q');
+if (query)
+search(query);
+function search(query) {
+const url = '../doc-search.html#' + encodeURIComponent(query);
+new tingle.modal({
+cssClass: ['modal-dialog'],
+onClose: () => {
+const url = new URL(window.location);
+url.searchParams.delete('q');
+history.replaceState({}, null, url.toString());
+setTimeout(() => input.focus(), 100);
+}
+}).setContent('<iframe src="' + url + '"></iframe>').open();
+}
+</script>
+<h1>Index</h1>
+<div class="toc">
+<ul></ul>
+</div>
+<ul id="index">
+<li><h3>Super-module</h3>
+<ul>
+<li><code><a title="gpdk.examples" href="index.html">gpdk.examples</a></code></li>
+</ul>
+</li>
+<li><h3><a href="#header-classes">Classes</a></h3>
+<ul>
+<li>
+<h4><code><a title="gpdk.examples.example_mzi_perf.BendCosine" href="#gpdk.examples.example_mzi_perf.BendCosine">BendCosine</a></code></h4>
+<ul class="two-column">
+<li><code><a title="gpdk.examples.example_mzi_perf.BendCosine.build" href="#gpdk.examples.example_mzi_perf.BendCosine.build">build</a></code></li>
+<li><code><a title="gpdk.examples.example_mzi_perf.BendCosine.degrees" href="#gpdk.examples.example_mzi_perf.BendCosine.degrees">degrees</a></code></li>
+<li><code><a title="gpdk.examples.example_mzi_perf.BendCosine.l_max" href="#gpdk.examples.example_mzi_perf.BendCosine.l_max">l_max</a></code></li>
+<li><code><a title="gpdk.examples.example_mzi_perf.BendCosine.p" href="#gpdk.examples.example_mzi_perf.BendCosine.p">p</a></code></li>
+<li><code><a title="gpdk.examples.example_mzi_perf.BendCosine.port_names" href="#gpdk.examples.example_mzi_perf.BendCosine.port_names">port_names</a></code></li>
+<li><code><a title="gpdk.examples.example_mzi_perf.BendCosine.radius_eff" href="#gpdk.examples.example_mzi_perf.BendCosine.radius_eff">radius_eff</a></code></li>
+<li><code><a title="gpdk.examples.example_mzi_perf.BendCosine.radius_min" href="#gpdk.examples.example_mzi_perf.BendCosine.radius_min">radius_min</a></code></li>
+<li><code><a title="gpdk.examples.example_mzi_perf.BendCosine.raw_curve" href="#gpdk.examples.example_mzi_perf.BendCosine.raw_curve">raw_curve</a></code></li>
+<li><code><a title="gpdk.examples.example_mzi_perf.BendCosine.waveguide_type" href="#gpdk.examples.example_mzi_perf.BendCosine.waveguide_type">waveguide_type</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="gpdk.examples.example_mzi_perf.CosineBendFactory" href="#gpdk.examples.example_mzi_perf.CosineBendFactory">CosineBendFactory</a></code></h4>
+<ul class="">
+<li><code><a title="gpdk.examples.example_mzi_perf.CosineBendFactory.l_max" href="#gpdk.examples.example_mzi_perf.CosineBendFactory.l_max">l_max</a></code></li>
+<li><code><a title="gpdk.examples.example_mzi_perf.CosineBendFactory.radius_min" href="#gpdk.examples.example_mzi_perf.CosineBendFactory.radius_min">radius_min</a></code></li>
+<li><code><a title="gpdk.examples.example_mzi_perf.CosineBendFactory.waveguide_type" href="#gpdk.examples.example_mzi_perf.CosineBendFactory.waveguide_type">waveguide_type</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="gpdk.examples.example_mzi_perf.LinkBetweenBase" href="#gpdk.examples.example_mzi_perf.LinkBetweenBase">LinkBetweenBase</a></code></h4>
+<ul class="two-column">
+<li><code><a title="gpdk.examples.example_mzi_perf.LinkBetweenBase.bend_factory" href="#gpdk.examples.example_mzi_perf.LinkBetweenBase.bend_factory">bend_factory</a></code></li>
+<li><code><a title="gpdk.examples.example_mzi_perf.LinkBetweenBase.build" href="#gpdk.examples.example_mzi_perf.LinkBetweenBase.build">build</a></code></li>
+<li><code><a title="gpdk.examples.example_mzi_perf.LinkBetweenBase.curve_length" href="#gpdk.examples.example_mzi_perf.LinkBetweenBase.curve_length">curve_length</a></code></li>
+<li><code><a title="gpdk.examples.example_mzi_perf.LinkBetweenBase.end" href="#gpdk.examples.example_mzi_perf.LinkBetweenBase.end">end</a></code></li>
+<li><code><a title="gpdk.examples.example_mzi_perf.LinkBetweenBase.generated_link" href="#gpdk.examples.example_mzi_perf.LinkBetweenBase.generated_link">generated_link</a></code></li>
+<li><code><a title="gpdk.examples.example_mzi_perf.LinkBetweenBase.link_type" href="#gpdk.examples.example_mzi_perf.LinkBetweenBase.link_type">link_type</a></code></li>
+<li><code><a title="gpdk.examples.example_mzi_perf.LinkBetweenBase.start" href="#gpdk.examples.example_mzi_perf.LinkBetweenBase.start">start</a></code></li>
+<li><code><a title="gpdk.examples.example_mzi_perf.LinkBetweenBase.waypoints" href="#gpdk.examples.example_mzi_perf.LinkBetweenBase.waypoints">waypoints</a></code></li>
+<li><code><a title="gpdk.examples.example_mzi_perf.LinkBetweenBase.with_environment" href="#gpdk.examples.example_mzi_perf.LinkBetweenBase.with_environment">with_environment</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="gpdk.examples.example_mzi_perf.Linker" href="#gpdk.examples.example_mzi_perf.Linker">Linker</a></code></h4>
+<ul class="">
+<li><code><a title="gpdk.examples.example_mzi_perf.Linker.FWG_EXPANDED_EULER_WIRE" href="#gpdk.examples.example_mzi_perf.Linker.FWG_EXPANDED_EULER_WIRE">FWG_EXPANDED_EULER_WIRE</a></code></li>
+<li><code><a title="gpdk.examples.example_mzi_perf.Linker.FWG_WIRE_CIRCULAR_WIRE" href="#gpdk.examples.example_mzi_perf.Linker.FWG_WIRE_CIRCULAR_WIRE">FWG_WIRE_CIRCULAR_WIRE</a></code></li>
+<li><code><a title="gpdk.examples.example_mzi_perf.Linker.SWG_EXPANDED_COSINE_EXPANDED" href="#gpdk.examples.example_mzi_perf.Linker.SWG_EXPANDED_COSINE_EXPANDED">SWG_EXPANDED_COSINE_EXPANDED</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="gpdk.examples.example_mzi_perf.Mzi" href="#gpdk.examples.example_mzi_perf.Mzi">Mzi</a></code></h4>
+<ul class="two-column">
+<li><code><a title="gpdk.examples.example_mzi_perf.Mzi.build" href="#gpdk.examples.example_mzi_perf.Mzi.build">build</a></code></li>
+<li><code><a title="gpdk.examples.example_mzi_perf.Mzi.dc1" href="#gpdk.examples.example_mzi_perf.Mzi.dc1">dc1</a></code></li>
+<li><code><a title="gpdk.examples.example_mzi_perf.Mzi.dc2" href="#gpdk.examples.example_mzi_perf.Mzi.dc2">dc2</a></code></li>
+<li><code><a title="gpdk.examples.example_mzi_perf.Mzi.dc_distance" href="#gpdk.examples.example_mzi_perf.Mzi.dc_distance">dc_distance</a></code></li>
+<li><code><a title="gpdk.examples.example_mzi_perf.Mzi.ps" href="#gpdk.examples.example_mzi_perf.Mzi.ps">ps</a></code></li>
+<li><code><a title="gpdk.examples.example_mzi_perf.Mzi.ps_offset" href="#gpdk.examples.example_mzi_perf.Mzi.ps_offset">ps_offset</a></code></li>
+<li><code><a title="gpdk.examples.example_mzi_perf.Mzi.wg" href="#gpdk.examples.example_mzi_perf.Mzi.wg">wg</a></code></li>
+<li><code><a title="gpdk.examples.example_mzi_perf.Mzi.wg_offset" href="#gpdk.examples.example_mzi_perf.Mzi.wg_offset">wg_offset</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="gpdk.examples.example_mzi_perf.MziArray" href="#gpdk.examples.example_mzi_perf.MziArray">MziArray</a></code></h4>
+<ul class="">
+<li><code><a title="gpdk.examples.example_mzi_perf.MziArray.build" href="#gpdk.examples.example_mzi_perf.MziArray.build">build</a></code></li>
+<li><code><a title="gpdk.examples.example_mzi_perf.MziArray.cols" href="#gpdk.examples.example_mzi_perf.MziArray.cols">cols</a></code></li>
+<li><code><a title="gpdk.examples.example_mzi_perf.MziArray.linkers" href="#gpdk.examples.example_mzi_perf.MziArray.linkers">linkers</a></code></li>
+<li><code><a title="gpdk.examples.example_mzi_perf.MziArray.mzis" href="#gpdk.examples.example_mzi_perf.MziArray.mzis">mzis</a></code></li>
+<li><code><a title="gpdk.examples.example_mzi_perf.MziArray.offsets" href="#gpdk.examples.example_mzi_perf.MziArray.offsets">offsets</a></code></li>
+<li><code><a title="gpdk.examples.example_mzi_perf.MziArray.period_x" href="#gpdk.examples.example_mzi_perf.MziArray.period_x">period_x</a></code></li>
+<li><code><a title="gpdk.examples.example_mzi_perf.MziArray.period_y" href="#gpdk.examples.example_mzi_perf.MziArray.period_y">period_y</a></code></li>
+<li><code><a title="gpdk.examples.example_mzi_perf.MziArray.rows" href="#gpdk.examples.example_mzi_perf.MziArray.rows">rows</a></code></li>
+<li><code><a title="gpdk.examples.example_mzi_perf.MziArray.waypoints_candidates" href="#gpdk.examples.example_mzi_perf.MziArray.waypoints_candidates">waypoints_candidates</a></code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+</footer>
+</body>
+</html>

@@ -1,0 +1,684 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+<title>gpdk.util.pdk_spec.rule API documentation</title>
+<meta name="description" content="" />
+<link rel="preload stylesheet" as="style" href="../../assets/10up-sanitize.css/11.0.1/sanitize.min.css">
+<link rel="preload stylesheet" as="style" href="../../assets/10up-sanitize.css/11.0.1/typography.min.css">
+<link rel="stylesheet preload" as="style" href="../../assets/highlight.js/10.1.1/styles/github-dark.min.css">
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:30px;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}#lunr-search{width:100%;font-size:1em;padding:6px 9px 5px 9px;border:1px solid silver}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:1em 0 .50em 0}h3{font-size:1.4em;margin:25px 0 10px 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .3s ease-in-out}a:hover{color:#e82}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900}pre code{background:#f8f8f8;font-size:.8em;line-height:1.4em}code{background:#f2f2f1;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{background:#f8f8f8;border:0;border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0;padding:1ex}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-weight:bold;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em .5em;margin-bottom:1em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.item .name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul{padding-left:1.5em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+<script defer src="../../assets/highlight.js/10.1.1/highlight.min.js"></script>
+<script>window.addEventListener('DOMContentLoaded', () => hljs.initHighlighting())</script>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>gpdk.util.pdk_spec.rule</code></h1>
+</header>
+<section id="section-intro">
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">import shutil
+from abc import abstractmethod
+from dataclasses import dataclass
+from pathlib import Path
+from types import ModuleType
+from typing import Any, Tuple, Iterable, Union, List
+
+import openpyxl
+from openpyxl.styles import Font
+
+from fnpcell.ansi.term import Color, print_ansi, style
+from fnpcell.interfaces import IProcessor, IRunnable, IUpdatable
+from gpdk.util.pdk_spec.interfaces import ICheckRule, IRuleLib
+
+_T = Union[None, ICheckRule, Iterable[&#34;_T&#34;]]
+
+
+@dataclass
+class Progressable(IUpdatable):
+    _font: Font = Font(size=12)
+    _style: str = style(color=Color.GREEN)
+    _title: str = &#34;&#34;
+    total: int = 0
+    index: int = 0
+
+    @property
+    def style(self):
+        return self._style
+
+    @style.setter
+    def style(self, value: str):
+        self._style = value
+
+    @property
+    def title(self):
+        return self._title
+
+    @title.setter
+    def title(self, value: str):
+        self._title = value
+
+    def with_total(self, total: int):
+        return self.updated(total=total)
+
+    def with_index(self, index: int):
+        return self.updated(index=index)
+
+    def progress(self):
+        terminal_width = shutil.get_terminal_size().columns
+        progress = f&#34;{round((self.index + 1) / self.total * 100)}%&#34;
+        progress = f&#34;[{progress.rjust(4)}]&#34;.rjust(terminal_width - len(self.title))
+        print_ansi(self.title, self.style, progress)
+
+
+@dataclass
+class CheckRule(ICheckRule, Progressable):
+    @abstractmethod
+    def checked(self, pdk: ModuleType, worksheet: openpyxl.Workbook, index: int) -&gt; Tuple[str, str]:
+        pass
+
+
+@dataclass(frozen=True)
+class RuleLib(IRuleLib):
+    content: Tuple[ICheckRule, ...] = tuple()
+
+    def __add__(self, other: _T) -&gt; &#34;RuleLib&#34;:
+        content: List[ICheckRule] = []
+        content.extend(self.content)
+        if isinstance(other, RuleLib):
+            content.extend(other.content)
+        elif other is not None:
+            if not isinstance(other, Iterable):
+                other = [other]
+            assert isinstance(other, Iterable)
+            for it in other:
+                content.append(it)
+        return RuleLib(content=tuple(content))
+
+    def check(self, pdk: ModuleType):
+        self.run(processor=RuleChecker(pdk))
+
+
+class RuleChecker(IProcessor):
+    def __init__(self, pdk: ModuleType):
+        self.pdk = pdk
+        self._terminal_width = shutil.get_terminal_size().columns
+        self._workbook = openpyxl.Workbook()
+        self._worksheet = self._workbook.active
+        self._worksheet.title = &#34;report&#34;
+        print_ansi(f&#34; Checking {pdk.__name__} &#34;.center(self._terminal_width, &#34;=&#34;))
+
+    def enter(self, target: IRunnable) -&gt; bool:
+        self._worksheet.cell(1, 1, &#34;检查项目&#34;).font = Font(size=16, bold=True, color=&#34;00FF6600&#34;)
+
+        if isinstance(target, RuleLib):
+            results: List[Tuple[str, str]] = []
+            content = target.content
+            total = len(content)
+
+            for index, rule in enumerate(content):
+                results.append(rule.checked(self.pdk, self._workbook, index + 2))
+                new_rule = rule.with_total(total).with_index(index)  # type: ignore
+                new_rule.progress()
+            flag_results = [r for r in results if r != (&#34;&#34;, &#34;&#34;)]
+            if any(flag_results):
+                _print_ansi_result(flag_results, self._workbook, total)
+            else:
+                print_ansi(style(color=Color.GREEN), &#34; PASSED &#34;.center(self._terminal_width, &#34;=&#34;))
+
+            pdk_path = Path(self.pdk.__path__[0]) / f&#34;check_{self.pdk.__name__}_report&#34;
+            output_file = pdk_path.with_suffix(&#34;.xlsx&#34;)
+            self._workbook.save(str(output_file))
+
+        return True
+
+    def exit(self, target: Any) -&gt; None:
+        pass
+
+
+def _print_ansi_result(result: List[Tuple[str, str]], workbook: openpyxl.Workbook, index: int):
+    terminal_width = shutil.get_terminal_size().columns
+    fails: List[str] = []
+    warnings: List[str] = []
+    for color, content in result:
+        if color == style(color=Color.RED):
+            fails.append(content)
+        elif color == style(color=Color.YELLOW):
+            warnings.append(content)
+
+    font1 = Font(
+        size=16,
+        bold=True,
+        color=&#34;00FF6600&#34;,
+    )
+    font2 = Font(size=12)
+
+    total = index
+    worksheet = workbook.active
+    worksheet.cell(index + 5, 1, &#34;检查结果统计&#34;).font = font1
+    worksheet.cell(index + 6, 1, &#34;Success&#34;).font = font2
+    worksheet.cell(index + 6, 2, f&#34;{total - len(fails)-len(warnings)}&#34;).font = font2
+    worksheet.cell(index + 7, 1, &#34;Fail&#34;).font = font2
+    worksheet.cell(index + 7, 2, f&#34;{len(fails)}&#34;).font = font2
+    worksheet.cell(index + 8, 1, &#34;Warning&#34;).font = font2
+    worksheet.cell(index + 8, 2, f&#34;{len(warnings)}&#34;).font = font2
+    worksheet.cell(index + 12, 1, &#34;检查明细&#34;).font = font1
+    next_i = index + 13
+
+    if warnings:
+        worksheet.cell(
+            next_i, 1, &#34;----------------------------------------------------WARNING----------------------------------------------------&#34;
+        ).font = Font(size=12, color=&#34;003366FF&#34;)
+
+        print_ansi(style(color=Color.YELLOW), &#34; WARNING &#34;.center(terminal_width, &#34;=&#34;))
+        for _, warning in enumerate(warnings):
+            print_ansi(warning, style(color=Color.YELLOW))
+
+            warning_ = warning.split(&#34;\n&#34;)
+            next_i += 1
+            for _, per_warning in enumerate(warning_):
+                worksheet.cell(next_i, 1, per_warning).font = font2
+                next_i += 1
+
+    if fails:
+        worksheet.cell(next_i, 1, &#34;----------------------------------------------------FAILED----------------------------------------------------&#34;).font = Font(
+            size=12, color=&#34;00FF0000&#34;
+        )
+
+        print_ansi(style(color=Color.RED), &#34; FAILED &#34;.center(terminal_width, &#34;=&#34;))
+        for _, fail in enumerate(fails):
+            print_ansi(fail, style(color=Color.RED))
+
+            fail_ = fail.split(&#34;\n&#34;)
+            next_i += 1
+            for _, per_fail in enumerate(fail_):
+                worksheet.cell(next_i, 1, per_fail).font = font2
+                next_i += 1</code></pre>
+</details>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-classes">Classes</h2>
+<dl>
+<dt id="gpdk.util.pdk_spec.rule.CheckRule"><code class="flex name class">
+<span>class <span class="ident">CheckRule</span></span>
+<span>(</span><span>total: int = 0, index: int = 0)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>CheckRule(_font: openpyxl.styles.fonts.Font = <openpyxl.styles.fonts.Font object>
+Parameters:
+name=None, charset=None, family=None, b=False, i=False, strike=None, outline=None, shadow=None, condense=None, color=None, extend=None, sz=12.0, u=None, vertAlign=None, scheme=None, _style: str = '\x1b[32m', _title: str = '', total: int = 0, index: int = 0)</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class CheckRule(ICheckRule, Progressable):
+    @abstractmethod
+    def checked(self, pdk: ModuleType, worksheet: openpyxl.Workbook, index: int) -&gt; Tuple[str, str]:
+        pass</code></pre>
+</details>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li><a title="gpdk.util.pdk_spec.interfaces.ICheckRule" href="interfaces.html#gpdk.util.pdk_spec.interfaces.ICheckRule">ICheckRule</a></li>
+<li>fnpcell.interfaces.IRunnable</li>
+<li><a title="gpdk.util.pdk_spec.rule.Progressable" href="#gpdk.util.pdk_spec.rule.Progressable">Progressable</a></li>
+<li>fnpcell.interfaces.IUpdatable</li>
+</ul>
+<h3>Subclasses</h3>
+<ul class="hlist">
+<li><a title="gpdk.util.pdk_spec.components.component_all_check.ComponentAllCheckRule" href="components/component_all_check.html#gpdk.util.pdk_spec.components.component_all_check.ComponentAllCheckRule">ComponentAllCheckRule</a></li>
+<li><a title="gpdk.util.pdk_spec.components.component_func_all_check.ComponentFuncAllCheckRule" href="components/component_func_all_check.html#gpdk.util.pdk_spec.components.component_func_all_check.ComponentFuncAllCheckRule">ComponentFuncAllCheckRule</a></li>
+<li><a title="gpdk.util.pdk_spec.components.file_exist_check.FileExistCheckRule" href="components/file_exist_check.html#gpdk.util.pdk_spec.components.file_exist_check.FileExistCheckRule">FileExistCheckRule</a></li>
+<li><a title="gpdk.util.pdk_spec.technology.tech.TechCheckRule" href="technology/tech.html#gpdk.util.pdk_spec.technology.tech.TechCheckRule">TechCheckRule</a></li>
+</ul>
+<h3>Class variables</h3>
+<dl>
+<dt id="gpdk.util.pdk_spec.rule.CheckRule.index"><code class="name">var <span class="ident">index</span> : int</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="gpdk.util.pdk_spec.rule.CheckRule.total"><code class="name">var <span class="ident">total</span> : int</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+</dl>
+<h3>Methods</h3>
+<dl>
+<dt id="gpdk.util.pdk_spec.rule.CheckRule.checked"><code class="name flex">
+<span>def <span class="ident">checked</span></span>(<span>self, pdk: module, worksheet: openpyxl.workbook.workbook.Workbook, index: int) ‑> Tuple[str, str]</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@abstractmethod
+def checked(self, pdk: ModuleType, worksheet: openpyxl.Workbook, index: int) -&gt; Tuple[str, str]:
+    pass</code></pre>
+</details>
+</dd>
+</dl>
+</dd>
+<dt id="gpdk.util.pdk_spec.rule.Progressable"><code class="flex name class">
+<span>class <span class="ident">Progressable</span></span>
+<span>(</span><span>total: int = 0, index: int = 0)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Progressable(_font: openpyxl.styles.fonts.Font = <openpyxl.styles.fonts.Font object>
+Parameters:
+name=None, charset=None, family=None, b=False, i=False, strike=None, outline=None, shadow=None, condense=None, color=None, extend=None, sz=12.0, u=None, vertAlign=None, scheme=None, _style: str = '\x1b[32m', _title: str = '', total: int = 0, index: int = 0)</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class Progressable(IUpdatable):
+    _font: Font = Font(size=12)
+    _style: str = style(color=Color.GREEN)
+    _title: str = &#34;&#34;
+    total: int = 0
+    index: int = 0
+
+    @property
+    def style(self):
+        return self._style
+
+    @style.setter
+    def style(self, value: str):
+        self._style = value
+
+    @property
+    def title(self):
+        return self._title
+
+    @title.setter
+    def title(self, value: str):
+        self._title = value
+
+    def with_total(self, total: int):
+        return self.updated(total=total)
+
+    def with_index(self, index: int):
+        return self.updated(index=index)
+
+    def progress(self):
+        terminal_width = shutil.get_terminal_size().columns
+        progress = f&#34;{round((self.index + 1) / self.total * 100)}%&#34;
+        progress = f&#34;[{progress.rjust(4)}]&#34;.rjust(terminal_width - len(self.title))
+        print_ansi(self.title, self.style, progress)</code></pre>
+</details>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li>fnpcell.interfaces.IUpdatable</li>
+</ul>
+<h3>Subclasses</h3>
+<ul class="hlist">
+<li><a title="gpdk.util.pdk_spec.rule.CheckRule" href="#gpdk.util.pdk_spec.rule.CheckRule">CheckRule</a></li>
+</ul>
+<h3>Class variables</h3>
+<dl>
+<dt id="gpdk.util.pdk_spec.rule.Progressable.index"><code class="name">var <span class="ident">index</span> : int</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="gpdk.util.pdk_spec.rule.Progressable.total"><code class="name">var <span class="ident">total</span> : int</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+</dl>
+<h3>Instance variables</h3>
+<dl>
+<dt id="gpdk.util.pdk_spec.rule.Progressable.style"><code class="name">var <span class="ident">style</span></code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def style(self):
+    return self._style</code></pre>
+</details>
+</dd>
+<dt id="gpdk.util.pdk_spec.rule.Progressable.title"><code class="name">var <span class="ident">title</span></code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@property
+def title(self):
+    return self._title</code></pre>
+</details>
+</dd>
+</dl>
+<h3>Methods</h3>
+<dl>
+<dt id="gpdk.util.pdk_spec.rule.Progressable.progress"><code class="name flex">
+<span>def <span class="ident">progress</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def progress(self):
+    terminal_width = shutil.get_terminal_size().columns
+    progress = f&#34;{round((self.index + 1) / self.total * 100)}%&#34;
+    progress = f&#34;[{progress.rjust(4)}]&#34;.rjust(terminal_width - len(self.title))
+    print_ansi(self.title, self.style, progress)</code></pre>
+</details>
+</dd>
+<dt id="gpdk.util.pdk_spec.rule.Progressable.with_index"><code class="name flex">
+<span>def <span class="ident">with_index</span></span>(<span>self, index: int)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def with_index(self, index: int):
+    return self.updated(index=index)</code></pre>
+</details>
+</dd>
+<dt id="gpdk.util.pdk_spec.rule.Progressable.with_total"><code class="name flex">
+<span>def <span class="ident">with_total</span></span>(<span>self, total: int)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def with_total(self, total: int):
+    return self.updated(total=total)</code></pre>
+</details>
+</dd>
+</dl>
+</dd>
+<dt id="gpdk.util.pdk_spec.rule.RuleChecker"><code class="flex name class">
+<span>class <span class="ident">RuleChecker</span></span>
+<span>(</span><span>pdk: module)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>An IProcessor processes hierarchical targets in a deep first manner
+We use processors to plot, export_gds &hellip;</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class RuleChecker(IProcessor):
+    def __init__(self, pdk: ModuleType):
+        self.pdk = pdk
+        self._terminal_width = shutil.get_terminal_size().columns
+        self._workbook = openpyxl.Workbook()
+        self._worksheet = self._workbook.active
+        self._worksheet.title = &#34;report&#34;
+        print_ansi(f&#34; Checking {pdk.__name__} &#34;.center(self._terminal_width, &#34;=&#34;))
+
+    def enter(self, target: IRunnable) -&gt; bool:
+        self._worksheet.cell(1, 1, &#34;检查项目&#34;).font = Font(size=16, bold=True, color=&#34;00FF6600&#34;)
+
+        if isinstance(target, RuleLib):
+            results: List[Tuple[str, str]] = []
+            content = target.content
+            total = len(content)
+
+            for index, rule in enumerate(content):
+                results.append(rule.checked(self.pdk, self._workbook, index + 2))
+                new_rule = rule.with_total(total).with_index(index)  # type: ignore
+                new_rule.progress()
+            flag_results = [r for r in results if r != (&#34;&#34;, &#34;&#34;)]
+            if any(flag_results):
+                _print_ansi_result(flag_results, self._workbook, total)
+            else:
+                print_ansi(style(color=Color.GREEN), &#34; PASSED &#34;.center(self._terminal_width, &#34;=&#34;))
+
+            pdk_path = Path(self.pdk.__path__[0]) / f&#34;check_{self.pdk.__name__}_report&#34;
+            output_file = pdk_path.with_suffix(&#34;.xlsx&#34;)
+            self._workbook.save(str(output_file))
+
+        return True
+
+    def exit(self, target: Any) -&gt; None:
+        pass</code></pre>
+</details>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li>fnpcell.interfaces.IProcessor</li>
+</ul>
+<h3>Methods</h3>
+<dl>
+<dt id="gpdk.util.pdk_spec.rule.RuleChecker.enter"><code class="name flex">
+<span>def <span class="ident">enter</span></span>(<span>self, target: fnpcell.interfaces.IRunnable) ‑> bool</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Called before processing a target.
+Return
+True to continue processing child content.
+False to stop here and run exit for the target</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def enter(self, target: IRunnable) -&gt; bool:
+    self._worksheet.cell(1, 1, &#34;检查项目&#34;).font = Font(size=16, bold=True, color=&#34;00FF6600&#34;)
+
+    if isinstance(target, RuleLib):
+        results: List[Tuple[str, str]] = []
+        content = target.content
+        total = len(content)
+
+        for index, rule in enumerate(content):
+            results.append(rule.checked(self.pdk, self._workbook, index + 2))
+            new_rule = rule.with_total(total).with_index(index)  # type: ignore
+            new_rule.progress()
+        flag_results = [r for r in results if r != (&#34;&#34;, &#34;&#34;)]
+        if any(flag_results):
+            _print_ansi_result(flag_results, self._workbook, total)
+        else:
+            print_ansi(style(color=Color.GREEN), &#34; PASSED &#34;.center(self._terminal_width, &#34;=&#34;))
+
+        pdk_path = Path(self.pdk.__path__[0]) / f&#34;check_{self.pdk.__name__}_report&#34;
+        output_file = pdk_path.with_suffix(&#34;.xlsx&#34;)
+        self._workbook.save(str(output_file))
+
+    return True</code></pre>
+</details>
+</dd>
+<dt id="gpdk.util.pdk_spec.rule.RuleChecker.exit"><code class="name flex">
+<span>def <span class="ident">exit</span></span>(<span>self, target: Any) ‑> None</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Called after processing a target.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def exit(self, target: Any) -&gt; None:
+    pass</code></pre>
+</details>
+</dd>
+</dl>
+</dd>
+<dt id="gpdk.util.pdk_spec.rule.RuleLib"><code class="flex name class">
+<span>class <span class="ident">RuleLib</span></span>
+<span>(</span><span>content: Tuple[<a title="gpdk.util.pdk_spec.interfaces.ICheckRule" href="interfaces.html#gpdk.util.pdk_spec.interfaces.ICheckRule">ICheckRule</a>, ...] = ())</span>
+</code></dt>
+<dd>
+<div class="desc"><p>RuleLib(<em>args, </em>*kwds)</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class RuleLib(IRuleLib):
+    content: Tuple[ICheckRule, ...] = tuple()
+
+    def __add__(self, other: _T) -&gt; &#34;RuleLib&#34;:
+        content: List[ICheckRule] = []
+        content.extend(self.content)
+        if isinstance(other, RuleLib):
+            content.extend(other.content)
+        elif other is not None:
+            if not isinstance(other, Iterable):
+                other = [other]
+            assert isinstance(other, Iterable)
+            for it in other:
+                content.append(it)
+        return RuleLib(content=tuple(content))
+
+    def check(self, pdk: ModuleType):
+        self.run(processor=RuleChecker(pdk))</code></pre>
+</details>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li><a title="gpdk.util.pdk_spec.interfaces.IRuleLib" href="interfaces.html#gpdk.util.pdk_spec.interfaces.IRuleLib">IRuleLib</a></li>
+<li>fnpcell.interfaces.IRunnableContainer</li>
+<li>typing.Generic</li>
+<li>fnpcell.interfaces.IRunnable</li>
+</ul>
+<h3>Class variables</h3>
+<dl>
+<dt id="gpdk.util.pdk_spec.rule.RuleLib.content"><code class="name">var <span class="ident">content</span> : Tuple[<a title="gpdk.util.pdk_spec.interfaces.ICheckRule" href="interfaces.html#gpdk.util.pdk_spec.interfaces.ICheckRule">ICheckRule</a>, ...]</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+</dl>
+<h3>Methods</h3>
+<dl>
+<dt id="gpdk.util.pdk_spec.rule.RuleLib.check"><code class="name flex">
+<span>def <span class="ident">check</span></span>(<span>self, pdk: module)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def check(self, pdk: ModuleType):
+    self.run(processor=RuleChecker(pdk))</code></pre>
+</details>
+</dd>
+</dl>
+</dd>
+</dl>
+</section>
+</article>
+<nav id="sidebar">
+<form>
+<input id="lunr-search" name="q" placeholder="🔎 Search ..." aria-label="Search"
+disabled minlength="2">
+</form>
+<link rel="preload stylesheet" as="style" href="../../assets/tingle/0.15.3/tingle.min.css">
+<script src="../../assets/tingle/0.15.3/tingle.min.js"></script>
+<style>
+.modal-dialog iframe {
+width: 100vw;
+height: calc(100vh - 80px);
+}
+@media screen and (min-width: 700px) {
+.modal-dialog iframe {
+width: 70vw;
+height: 80vh;
+}
+}
+.modal-dialog .tingle-modal-box {width: auto;}
+.modal-dialog .tingle-modal-box__content {padding: 0;}
+</style>
+<script>
+const input = document.getElementById('lunr-search');
+input.disabled = false;
+input.form.addEventListener('submit', (ev) => {
+ev.preventDefault();
+const url = new URL(window.location);
+url.searchParams.set('q', input.value);
+history.replaceState({}, null, url.toString());
+search(input.value);
+});
+const query = new URL(window.location).searchParams.get('q');
+if (query)
+search(query);
+function search(query) {
+const url = '../../doc-search.html#' + encodeURIComponent(query);
+new tingle.modal({
+cssClass: ['modal-dialog'],
+onClose: () => {
+const url = new URL(window.location);
+url.searchParams.delete('q');
+history.replaceState({}, null, url.toString());
+setTimeout(() => input.focus(), 100);
+}
+}).setContent('<iframe src="' + url + '"></iframe>').open();
+}
+</script>
+<h1>Index</h1>
+<div class="toc">
+<ul></ul>
+</div>
+<ul id="index">
+<li><h3>Super-module</h3>
+<ul>
+<li><code><a title="gpdk.util.pdk_spec" href="index.html">gpdk.util.pdk_spec</a></code></li>
+</ul>
+</li>
+<li><h3><a href="#header-classes">Classes</a></h3>
+<ul>
+<li>
+<h4><code><a title="gpdk.util.pdk_spec.rule.CheckRule" href="#gpdk.util.pdk_spec.rule.CheckRule">CheckRule</a></code></h4>
+<ul class="">
+<li><code><a title="gpdk.util.pdk_spec.rule.CheckRule.checked" href="#gpdk.util.pdk_spec.rule.CheckRule.checked">checked</a></code></li>
+<li><code><a title="gpdk.util.pdk_spec.rule.CheckRule.index" href="#gpdk.util.pdk_spec.rule.CheckRule.index">index</a></code></li>
+<li><code><a title="gpdk.util.pdk_spec.rule.CheckRule.total" href="#gpdk.util.pdk_spec.rule.CheckRule.total">total</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="gpdk.util.pdk_spec.rule.Progressable" href="#gpdk.util.pdk_spec.rule.Progressable">Progressable</a></code></h4>
+<ul class="two-column">
+<li><code><a title="gpdk.util.pdk_spec.rule.Progressable.index" href="#gpdk.util.pdk_spec.rule.Progressable.index">index</a></code></li>
+<li><code><a title="gpdk.util.pdk_spec.rule.Progressable.progress" href="#gpdk.util.pdk_spec.rule.Progressable.progress">progress</a></code></li>
+<li><code><a title="gpdk.util.pdk_spec.rule.Progressable.style" href="#gpdk.util.pdk_spec.rule.Progressable.style">style</a></code></li>
+<li><code><a title="gpdk.util.pdk_spec.rule.Progressable.title" href="#gpdk.util.pdk_spec.rule.Progressable.title">title</a></code></li>
+<li><code><a title="gpdk.util.pdk_spec.rule.Progressable.total" href="#gpdk.util.pdk_spec.rule.Progressable.total">total</a></code></li>
+<li><code><a title="gpdk.util.pdk_spec.rule.Progressable.with_index" href="#gpdk.util.pdk_spec.rule.Progressable.with_index">with_index</a></code></li>
+<li><code><a title="gpdk.util.pdk_spec.rule.Progressable.with_total" href="#gpdk.util.pdk_spec.rule.Progressable.with_total">with_total</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="gpdk.util.pdk_spec.rule.RuleChecker" href="#gpdk.util.pdk_spec.rule.RuleChecker">RuleChecker</a></code></h4>
+<ul class="">
+<li><code><a title="gpdk.util.pdk_spec.rule.RuleChecker.enter" href="#gpdk.util.pdk_spec.rule.RuleChecker.enter">enter</a></code></li>
+<li><code><a title="gpdk.util.pdk_spec.rule.RuleChecker.exit" href="#gpdk.util.pdk_spec.rule.RuleChecker.exit">exit</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="gpdk.util.pdk_spec.rule.RuleLib" href="#gpdk.util.pdk_spec.rule.RuleLib">RuleLib</a></code></h4>
+<ul class="">
+<li><code><a title="gpdk.util.pdk_spec.rule.RuleLib.check" href="#gpdk.util.pdk_spec.rule.RuleLib.check">check</a></code></li>
+<li><code><a title="gpdk.util.pdk_spec.rule.RuleLib.content" href="#gpdk.util.pdk_spec.rule.RuleLib.content">content</a></code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+</footer>
+</body>
+</html>

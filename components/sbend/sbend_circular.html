@@ -1,0 +1,611 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+<title>gpdk.components.sbend.sbend_circular API documentation</title>
+<meta name="description" content="" />
+<link rel="preload stylesheet" as="style" href="../../assets/10up-sanitize.css/11.0.1/sanitize.min.css">
+<link rel="preload stylesheet" as="style" href="../../assets/10up-sanitize.css/11.0.1/typography.min.css">
+<link rel="stylesheet preload" as="style" href="../../assets/highlight.js/10.1.1/styles/github-dark.min.css">
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:30px;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}#lunr-search{width:100%;font-size:1em;padding:6px 9px 5px 9px;border:1px solid silver}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:1em 0 .50em 0}h3{font-size:1.4em;margin:25px 0 10px 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .3s ease-in-out}a:hover{color:#e82}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900}pre code{background:#f8f8f8;font-size:.8em;line-height:1.4em}code{background:#f2f2f1;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{background:#f8f8f8;border:0;border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0;padding:1ex}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-weight:bold;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em .5em;margin-bottom:1em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.item .name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul{padding-left:1.5em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+<script defer src="../../assets/highlight.js/10.1.1/highlight.min.js"></script>
+<script>window.addEventListener('DOMContentLoaded', () => hljs.initHighlighting())</script>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>gpdk.components.sbend.sbend_circular</code></h1>
+</header>
+<section id="section-intro">
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">import math
+from dataclasses import dataclass
+from typing import Tuple, cast
+
+from fnpcell import all as fp
+from gpdk.technology import get_technology
+
+
+@fp.pcell_class()
+@dataclass(eq=False)
+class SBendCircular(fp.PCell):
+    &#34;&#34;&#34;
+    Attributes:
+        distance: defaults to 20
+        height: defaults to 10
+        min_radius: required=False
+        waveguide_type: type of waveguide
+        port_names: defaults to [&#34;op_0&#34;, &#34;op_1&#34;]
+
+    Examples:
+    ```python
+    TECH = get_technology()
+        sbend = SBendCircular(name=&#34;f&#34;, distance=100, height=15, min_radius=15, waveguide_type=TECH.WG.FWG.C.WIRE)
+    fp.plot(sbend)
+    ```
+    ![SBendCircular](images/sbend_circular.png)
+    &#34;&#34;&#34;
+
+    distance: float = fp.PositiveFloatParam(default=20).as_field()
+    height: float = fp.FloatParam(default=10, invalid=[0]).as_field()
+    min_radius: float = fp.PositiveFloatParam(required=False).as_field()
+    waveguide_type: fp.IWaveguideType = fp.WaveguideTypeParam().as_field()
+    port_names: fp.IPortOptions = fp.PortOptionsParam(count=2, default=(&#34;op_0&#34;, &#34;op_1&#34;)).as_field()
+
+    def _default_waveguide_type(self):
+        return get_technology().WG.FWG.C.WIRE
+
+    def build(self) -&gt; Tuple[fp.InstanceSet, fp.ElementSet, fp.PortSet]:
+        insts, elems, ports = super().build()
+        # fmt: off
+
+        distance = self.distance
+        height = self.height
+        min_radius =self.min_radius
+        waveguide_type = self.waveguide_type
+        port_names = self.port_names
+        min_radius_of_type = cast(float, waveguide_type.BEND_CIRCULAR.radius_eff)  # type: ignore
+        if min_radius is None:
+            min_radius = min_radius_of_type
+        reflect = height &lt; 0
+        height = abs(height)
+        cx, cy = distance / 2, height / 2
+        r = (cx ** 2 + cy ** 2) / height
+        assert fp.is_close(r, min_radius) or (r &gt;= min_radius &gt;= min_radius_of_type), &#34;sbend_circular: min_radius must be greater than min_radius_of_type&#34;
+        theta = math.acos((r - cy) / r)
+
+        elliptical_arc = fp.g.EllipticalArc(
+            radius=r,
+            initial_degrees=-90,
+            final_radians=-math.pi / 2 + theta,
+            origin=(-cx, r - cy),
+        )
+        path = (
+            fp.g.Path.move(to=(-cx, -cy))
+            .appended(elliptical_arc)
+            .appended(elliptical_arc.c_mirrored(), reverse=True, end_at=(cx, cy))
+        )
+        if reflect:
+            path = path.v_mirrored()
+
+        # fmt: on
+        wg = waveguide_type(path).with_ports(port_names)
+        insts += wg
+        ports += wg.ports
+        return insts, elems, ports
+
+
+def _get_sbend_distance(*, height: float, bend_degrees: float, min_radius: float) -&gt; float:
+    h = height / 2
+    bend_angle = math.radians(bend_degrees)
+    bend_radius = max(h / (1 - math.cos(bend_angle)), min_radius)
+    d = bend_radius * math.sin(bend_angle)
+    return fp.snap_ceil(max(d * 2, height))
+
+
+@fp.pcell_class()
+@dataclass(eq=False)
+class SBendCircularPair(fp.PCell):
+    left_spacing: float = fp.PositiveFloatParam().as_field()
+    right_spacing: float = fp.PositiveFloatParam().as_field()
+    bend_degrees: float = fp.DegreeParam().as_field()
+    min_radius: float = fp.PositiveFloatParam(required=False).as_field()
+    waveguide_type: fp.IWaveguideType = fp.WaveguideTypeParam().as_field()
+    port_names: fp.IPortOptions = fp.PortOptionsParam(count=4, default=(&#34;op_0&#34;, &#34;op_1&#34;, &#34;op_2&#34;, &#34;op_3&#34;)).as_field()
+
+    def _default_waveguide_type(self):
+        return get_technology().WG.FWG.C.WIRE
+
+    def build(self) -&gt; Tuple[fp.InstanceSet, fp.ElementSet, fp.PortSet]:
+        insts, elems, ports = super().build()
+        # fmt: off
+
+        left_spacing = self.left_spacing
+        right_spacing = self.right_spacing
+        bend_degrees = self.bend_degrees
+        min_radius = self.min_radius
+        waveguide_type = self.waveguide_type
+        port_names = self.port_names
+        if min_radius is None:
+            min_radius = cast(float, waveguide_type.BEND_CIRCULAR.radius_eff)  # type: ignore
+
+        total_height = left_spacing - right_spacing
+        sbend_height = total_height / 2
+        if sbend_height &gt; 0:
+            dy = sbend_height / 2 + right_spacing / 2
+            transform0, transform1 = fp.v_mirror().translate(0, dy), fp.translate(0, -dy)
+        else:  # sbend_height &lt; 0:
+            sbend_height = -sbend_height
+            dy = sbend_height / 2 + left_spacing / 2
+            transform0, transform1 = fp.translate(0, dy), fp.v_mirror().translate(0, -dy)
+        sbend_distance = _get_sbend_distance(height=sbend_height, bend_degrees=bend_degrees, min_radius=min_radius)
+
+        sbend_0 = SBendCircular(name=&#34;0&#34;, distance=sbend_distance, height=sbend_height, min_radius=min_radius, waveguide_type=waveguide_type, transform=transform0)
+        sbend_1 = SBendCircular(name=&#34;1&#34;, distance=sbend_distance, height=sbend_height, min_radius=min_radius, waveguide_type=waveguide_type, transform=transform1)
+
+        insts += sbend_0
+        insts += sbend_1
+        ports += sbend_0[&#34;op_0&#34;].with_name(port_names[0])
+        ports += sbend_0[&#34;op_1&#34;].with_name(port_names[3])
+        ports += sbend_1[&#34;op_0&#34;].with_name(port_names[1])
+        ports += sbend_1[&#34;op_1&#34;].with_name(port_names[2])
+
+        # fmt: on
+        return insts, elems, ports
+
+
+if __name__ == &#34;__main__&#34;:
+    from pathlib import Path
+
+    gds_file = Path(__file__).parent / &#34;local&#34; / Path(__file__).with_suffix(&#34;.gds&#34;).name
+    library = fp.Library()
+
+    TECH = get_technology()
+    # =============================================================
+    # fmt: off
+
+    library += SBendCircular()
+
+    # fmt: on
+    # =============================================================
+    fp.export_gds(library, file=gds_file)</code></pre>
+</details>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-classes">Classes</h2>
+<dl>
+<dt id="gpdk.components.sbend.sbend_circular.SBendCircular"><code class="flex name class">
+<span>class <span class="ident">SBendCircular</span></span>
+<span>(</span><span>name: str = None, bands: Optional[FrozenSet[fnpcell.interfaces.IBand]] = None, patches: Tuple[fnpcell.interfaces.IElement, ...] = (), port_names: Sequence[Union[None, str, fnpcell.interfaces.Hidden]] = ('op_0', 'op_1'), transform: fnpcell.transform.Affine2D = None, distance: float = 20, height: float = 10, min_radius: float = None, waveguide_type: fnpcell.interfaces.IWaveguideType = None)</span>
+</code></dt>
+<dd>
+<div class="desc"><h2 id="attributes">Attributes</h2>
+<dl>
+<dt><strong><code>distance</code></strong></dt>
+<dd>defaults to 20</dd>
+<dt><strong><code>height</code></strong></dt>
+<dd>defaults to 10</dd>
+<dt><strong><code>min_radius</code></strong></dt>
+<dd>required=False</dd>
+<dt><strong><code>waveguide_type</code></strong></dt>
+<dd>type of waveguide</dd>
+<dt><strong><code>port_names</code></strong></dt>
+<dd>defaults to ["op_0", "op_1"]</dd>
+</dl>
+<p>Examples:</p>
+<pre><code class="language-python">TECH = get_technology()
+    sbend = SBendCircular(name=&quot;f&quot;, distance=100, height=15, min_radius=15, waveguide_type=TECH.WG.FWG.C.WIRE)
+fp.plot(sbend)
+</code></pre>
+<p><img alt="SBendCircular" src="images/sbend_circular.png"></p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class SBendCircular(fp.PCell):
+    &#34;&#34;&#34;
+    Attributes:
+        distance: defaults to 20
+        height: defaults to 10
+        min_radius: required=False
+        waveguide_type: type of waveguide
+        port_names: defaults to [&#34;op_0&#34;, &#34;op_1&#34;]
+
+    Examples:
+    ```python
+    TECH = get_technology()
+        sbend = SBendCircular(name=&#34;f&#34;, distance=100, height=15, min_radius=15, waveguide_type=TECH.WG.FWG.C.WIRE)
+    fp.plot(sbend)
+    ```
+    ![SBendCircular](images/sbend_circular.png)
+    &#34;&#34;&#34;
+
+    distance: float = fp.PositiveFloatParam(default=20).as_field()
+    height: float = fp.FloatParam(default=10, invalid=[0]).as_field()
+    min_radius: float = fp.PositiveFloatParam(required=False).as_field()
+    waveguide_type: fp.IWaveguideType = fp.WaveguideTypeParam().as_field()
+    port_names: fp.IPortOptions = fp.PortOptionsParam(count=2, default=(&#34;op_0&#34;, &#34;op_1&#34;)).as_field()
+
+    def _default_waveguide_type(self):
+        return get_technology().WG.FWG.C.WIRE
+
+    def build(self) -&gt; Tuple[fp.InstanceSet, fp.ElementSet, fp.PortSet]:
+        insts, elems, ports = super().build()
+        # fmt: off
+
+        distance = self.distance
+        height = self.height
+        min_radius =self.min_radius
+        waveguide_type = self.waveguide_type
+        port_names = self.port_names
+        min_radius_of_type = cast(float, waveguide_type.BEND_CIRCULAR.radius_eff)  # type: ignore
+        if min_radius is None:
+            min_radius = min_radius_of_type
+        reflect = height &lt; 0
+        height = abs(height)
+        cx, cy = distance / 2, height / 2
+        r = (cx ** 2 + cy ** 2) / height
+        assert fp.is_close(r, min_radius) or (r &gt;= min_radius &gt;= min_radius_of_type), &#34;sbend_circular: min_radius must be greater than min_radius_of_type&#34;
+        theta = math.acos((r - cy) / r)
+
+        elliptical_arc = fp.g.EllipticalArc(
+            radius=r,
+            initial_degrees=-90,
+            final_radians=-math.pi / 2 + theta,
+            origin=(-cx, r - cy),
+        )
+        path = (
+            fp.g.Path.move(to=(-cx, -cy))
+            .appended(elliptical_arc)
+            .appended(elliptical_arc.c_mirrored(), reverse=True, end_at=(cx, cy))
+        )
+        if reflect:
+            path = path.v_mirrored()
+
+        # fmt: on
+        wg = waveguide_type(path).with_ports(port_names)
+        insts += wg
+        ports += wg.ports
+        return insts, elems, ports</code></pre>
+</details>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li>fnpcell.pdk.pcell.PCell</li>
+<li>fnpcell.cell.cell_ref.CellRef</li>
+<li>fnpcell.mixin.transform_mixin.TransformMixin</li>
+<li>fnpcell.interfaces.ICellRef</li>
+<li>fnpcell.interfaces.IUpdatable</li>
+<li>fnpcell.interfaces.IElement</li>
+<li>fnpcell.interfaces.IRunnable</li>
+<li>fnpcell.interfaces.IAffineTransformable</li>
+</ul>
+<h3>Class variables</h3>
+<dl>
+<dt id="gpdk.components.sbend.sbend_circular.SBendCircular.distance"><code class="name">var <span class="ident">distance</span> : float</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="gpdk.components.sbend.sbend_circular.SBendCircular.height"><code class="name">var <span class="ident">height</span> : float</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="gpdk.components.sbend.sbend_circular.SBendCircular.min_radius"><code class="name">var <span class="ident">min_radius</span> : float</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="gpdk.components.sbend.sbend_circular.SBendCircular.port_names"><code class="name">var <span class="ident">port_names</span> : Sequence[Union[None, str, fnpcell.interfaces.Hidden]]</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="gpdk.components.sbend.sbend_circular.SBendCircular.waveguide_type"><code class="name">var <span class="ident">waveguide_type</span> : fnpcell.interfaces.IWaveguideType</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+</dl>
+<h3>Methods</h3>
+<dl>
+<dt id="gpdk.components.sbend.sbend_circular.SBendCircular.build"><code class="name flex">
+<span>def <span class="ident">build</span></span>(<span>self) ‑> Tuple[fnpcell.pdk.collection.InstanceSet, fnpcell.pdk.collection.ElementSet, fnpcell.pdk.collection.PortSet]</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Abstract method must be implemented to build a pcell.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def build(self) -&gt; Tuple[fp.InstanceSet, fp.ElementSet, fp.PortSet]:
+    insts, elems, ports = super().build()
+    # fmt: off
+
+    distance = self.distance
+    height = self.height
+    min_radius =self.min_radius
+    waveguide_type = self.waveguide_type
+    port_names = self.port_names
+    min_radius_of_type = cast(float, waveguide_type.BEND_CIRCULAR.radius_eff)  # type: ignore
+    if min_radius is None:
+        min_radius = min_radius_of_type
+    reflect = height &lt; 0
+    height = abs(height)
+    cx, cy = distance / 2, height / 2
+    r = (cx ** 2 + cy ** 2) / height
+    assert fp.is_close(r, min_radius) or (r &gt;= min_radius &gt;= min_radius_of_type), &#34;sbend_circular: min_radius must be greater than min_radius_of_type&#34;
+    theta = math.acos((r - cy) / r)
+
+    elliptical_arc = fp.g.EllipticalArc(
+        radius=r,
+        initial_degrees=-90,
+        final_radians=-math.pi / 2 + theta,
+        origin=(-cx, r - cy),
+    )
+    path = (
+        fp.g.Path.move(to=(-cx, -cy))
+        .appended(elliptical_arc)
+        .appended(elliptical_arc.c_mirrored(), reverse=True, end_at=(cx, cy))
+    )
+    if reflect:
+        path = path.v_mirrored()
+
+    # fmt: on
+    wg = waveguide_type(path).with_ports(port_names)
+    insts += wg
+    ports += wg.ports
+    return insts, elems, ports</code></pre>
+</details>
+</dd>
+</dl>
+</dd>
+<dt id="gpdk.components.sbend.sbend_circular.SBendCircularPair"><code class="flex name class">
+<span>class <span class="ident">SBendCircularPair</span></span>
+<span>(</span><span>name: str = None, bands: Optional[FrozenSet[fnpcell.interfaces.IBand]] = None, patches: Tuple[fnpcell.interfaces.IElement, ...] = (), port_names: Sequence[Union[None, str, fnpcell.interfaces.Hidden]] = ('op_0', 'op_1', 'op_2', 'op_3'), transform: fnpcell.transform.Affine2D = None, left_spacing: float = None, right_spacing: float = None, bend_degrees: float = None, min_radius: float = None, waveguide_type: fnpcell.interfaces.IWaveguideType = None)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>SBendCircularPair(<em>args: Any, </em>*kwargs: Any)</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class SBendCircularPair(fp.PCell):
+    left_spacing: float = fp.PositiveFloatParam().as_field()
+    right_spacing: float = fp.PositiveFloatParam().as_field()
+    bend_degrees: float = fp.DegreeParam().as_field()
+    min_radius: float = fp.PositiveFloatParam(required=False).as_field()
+    waveguide_type: fp.IWaveguideType = fp.WaveguideTypeParam().as_field()
+    port_names: fp.IPortOptions = fp.PortOptionsParam(count=4, default=(&#34;op_0&#34;, &#34;op_1&#34;, &#34;op_2&#34;, &#34;op_3&#34;)).as_field()
+
+    def _default_waveguide_type(self):
+        return get_technology().WG.FWG.C.WIRE
+
+    def build(self) -&gt; Tuple[fp.InstanceSet, fp.ElementSet, fp.PortSet]:
+        insts, elems, ports = super().build()
+        # fmt: off
+
+        left_spacing = self.left_spacing
+        right_spacing = self.right_spacing
+        bend_degrees = self.bend_degrees
+        min_radius = self.min_radius
+        waveguide_type = self.waveguide_type
+        port_names = self.port_names
+        if min_radius is None:
+            min_radius = cast(float, waveguide_type.BEND_CIRCULAR.radius_eff)  # type: ignore
+
+        total_height = left_spacing - right_spacing
+        sbend_height = total_height / 2
+        if sbend_height &gt; 0:
+            dy = sbend_height / 2 + right_spacing / 2
+            transform0, transform1 = fp.v_mirror().translate(0, dy), fp.translate(0, -dy)
+        else:  # sbend_height &lt; 0:
+            sbend_height = -sbend_height
+            dy = sbend_height / 2 + left_spacing / 2
+            transform0, transform1 = fp.translate(0, dy), fp.v_mirror().translate(0, -dy)
+        sbend_distance = _get_sbend_distance(height=sbend_height, bend_degrees=bend_degrees, min_radius=min_radius)
+
+        sbend_0 = SBendCircular(name=&#34;0&#34;, distance=sbend_distance, height=sbend_height, min_radius=min_radius, waveguide_type=waveguide_type, transform=transform0)
+        sbend_1 = SBendCircular(name=&#34;1&#34;, distance=sbend_distance, height=sbend_height, min_radius=min_radius, waveguide_type=waveguide_type, transform=transform1)
+
+        insts += sbend_0
+        insts += sbend_1
+        ports += sbend_0[&#34;op_0&#34;].with_name(port_names[0])
+        ports += sbend_0[&#34;op_1&#34;].with_name(port_names[3])
+        ports += sbend_1[&#34;op_0&#34;].with_name(port_names[1])
+        ports += sbend_1[&#34;op_1&#34;].with_name(port_names[2])
+
+        # fmt: on
+        return insts, elems, ports</code></pre>
+</details>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li>fnpcell.pdk.pcell.PCell</li>
+<li>fnpcell.cell.cell_ref.CellRef</li>
+<li>fnpcell.mixin.transform_mixin.TransformMixin</li>
+<li>fnpcell.interfaces.ICellRef</li>
+<li>fnpcell.interfaces.IUpdatable</li>
+<li>fnpcell.interfaces.IElement</li>
+<li>fnpcell.interfaces.IRunnable</li>
+<li>fnpcell.interfaces.IAffineTransformable</li>
+</ul>
+<h3>Class variables</h3>
+<dl>
+<dt id="gpdk.components.sbend.sbend_circular.SBendCircularPair.bend_degrees"><code class="name">var <span class="ident">bend_degrees</span> : float</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="gpdk.components.sbend.sbend_circular.SBendCircularPair.left_spacing"><code class="name">var <span class="ident">left_spacing</span> : float</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="gpdk.components.sbend.sbend_circular.SBendCircularPair.min_radius"><code class="name">var <span class="ident">min_radius</span> : float</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="gpdk.components.sbend.sbend_circular.SBendCircularPair.port_names"><code class="name">var <span class="ident">port_names</span> : Sequence[Union[None, str, fnpcell.interfaces.Hidden]]</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="gpdk.components.sbend.sbend_circular.SBendCircularPair.right_spacing"><code class="name">var <span class="ident">right_spacing</span> : float</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="gpdk.components.sbend.sbend_circular.SBendCircularPair.waveguide_type"><code class="name">var <span class="ident">waveguide_type</span> : fnpcell.interfaces.IWaveguideType</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+</dl>
+<h3>Methods</h3>
+<dl>
+<dt id="gpdk.components.sbend.sbend_circular.SBendCircularPair.build"><code class="name flex">
+<span>def <span class="ident">build</span></span>(<span>self) ‑> Tuple[fnpcell.pdk.collection.InstanceSet, fnpcell.pdk.collection.ElementSet, fnpcell.pdk.collection.PortSet]</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Abstract method must be implemented to build a pcell.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def build(self) -&gt; Tuple[fp.InstanceSet, fp.ElementSet, fp.PortSet]:
+    insts, elems, ports = super().build()
+    # fmt: off
+
+    left_spacing = self.left_spacing
+    right_spacing = self.right_spacing
+    bend_degrees = self.bend_degrees
+    min_radius = self.min_radius
+    waveguide_type = self.waveguide_type
+    port_names = self.port_names
+    if min_radius is None:
+        min_radius = cast(float, waveguide_type.BEND_CIRCULAR.radius_eff)  # type: ignore
+
+    total_height = left_spacing - right_spacing
+    sbend_height = total_height / 2
+    if sbend_height &gt; 0:
+        dy = sbend_height / 2 + right_spacing / 2
+        transform0, transform1 = fp.v_mirror().translate(0, dy), fp.translate(0, -dy)
+    else:  # sbend_height &lt; 0:
+        sbend_height = -sbend_height
+        dy = sbend_height / 2 + left_spacing / 2
+        transform0, transform1 = fp.translate(0, dy), fp.v_mirror().translate(0, -dy)
+    sbend_distance = _get_sbend_distance(height=sbend_height, bend_degrees=bend_degrees, min_radius=min_radius)
+
+    sbend_0 = SBendCircular(name=&#34;0&#34;, distance=sbend_distance, height=sbend_height, min_radius=min_radius, waveguide_type=waveguide_type, transform=transform0)
+    sbend_1 = SBendCircular(name=&#34;1&#34;, distance=sbend_distance, height=sbend_height, min_radius=min_radius, waveguide_type=waveguide_type, transform=transform1)
+
+    insts += sbend_0
+    insts += sbend_1
+    ports += sbend_0[&#34;op_0&#34;].with_name(port_names[0])
+    ports += sbend_0[&#34;op_1&#34;].with_name(port_names[3])
+    ports += sbend_1[&#34;op_0&#34;].with_name(port_names[1])
+    ports += sbend_1[&#34;op_1&#34;].with_name(port_names[2])
+
+    # fmt: on
+    return insts, elems, ports</code></pre>
+</details>
+</dd>
+</dl>
+</dd>
+</dl>
+</section>
+</article>
+<nav id="sidebar">
+<form>
+<input id="lunr-search" name="q" placeholder="🔎 Search ..." aria-label="Search"
+disabled minlength="2">
+</form>
+<link rel="preload stylesheet" as="style" href="../../assets/tingle/0.15.3/tingle.min.css">
+<script src="../../assets/tingle/0.15.3/tingle.min.js"></script>
+<style>
+.modal-dialog iframe {
+width: 100vw;
+height: calc(100vh - 80px);
+}
+@media screen and (min-width: 700px) {
+.modal-dialog iframe {
+width: 70vw;
+height: 80vh;
+}
+}
+.modal-dialog .tingle-modal-box {width: auto;}
+.modal-dialog .tingle-modal-box__content {padding: 0;}
+</style>
+<script>
+const input = document.getElementById('lunr-search');
+input.disabled = false;
+input.form.addEventListener('submit', (ev) => {
+ev.preventDefault();
+const url = new URL(window.location);
+url.searchParams.set('q', input.value);
+history.replaceState({}, null, url.toString());
+search(input.value);
+});
+const query = new URL(window.location).searchParams.get('q');
+if (query)
+search(query);
+function search(query) {
+const url = '../../doc-search.html#' + encodeURIComponent(query);
+new tingle.modal({
+cssClass: ['modal-dialog'],
+onClose: () => {
+const url = new URL(window.location);
+url.searchParams.delete('q');
+history.replaceState({}, null, url.toString());
+setTimeout(() => input.focus(), 100);
+}
+}).setContent('<iframe src="' + url + '"></iframe>').open();
+}
+</script>
+<h1>Index</h1>
+<div class="toc">
+<ul></ul>
+</div>
+<ul id="index">
+<li><h3>Super-module</h3>
+<ul>
+<li><code><a title="gpdk.components.sbend" href="index.html">gpdk.components.sbend</a></code></li>
+</ul>
+</li>
+<li><h3><a href="#header-classes">Classes</a></h3>
+<ul>
+<li>
+<h4><code><a title="gpdk.components.sbend.sbend_circular.SBendCircular" href="#gpdk.components.sbend.sbend_circular.SBendCircular">SBendCircular</a></code></h4>
+<ul class="two-column">
+<li><code><a title="gpdk.components.sbend.sbend_circular.SBendCircular.build" href="#gpdk.components.sbend.sbend_circular.SBendCircular.build">build</a></code></li>
+<li><code><a title="gpdk.components.sbend.sbend_circular.SBendCircular.distance" href="#gpdk.components.sbend.sbend_circular.SBendCircular.distance">distance</a></code></li>
+<li><code><a title="gpdk.components.sbend.sbend_circular.SBendCircular.height" href="#gpdk.components.sbend.sbend_circular.SBendCircular.height">height</a></code></li>
+<li><code><a title="gpdk.components.sbend.sbend_circular.SBendCircular.min_radius" href="#gpdk.components.sbend.sbend_circular.SBendCircular.min_radius">min_radius</a></code></li>
+<li><code><a title="gpdk.components.sbend.sbend_circular.SBendCircular.port_names" href="#gpdk.components.sbend.sbend_circular.SBendCircular.port_names">port_names</a></code></li>
+<li><code><a title="gpdk.components.sbend.sbend_circular.SBendCircular.waveguide_type" href="#gpdk.components.sbend.sbend_circular.SBendCircular.waveguide_type">waveguide_type</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="gpdk.components.sbend.sbend_circular.SBendCircularPair" href="#gpdk.components.sbend.sbend_circular.SBendCircularPair">SBendCircularPair</a></code></h4>
+<ul class="two-column">
+<li><code><a title="gpdk.components.sbend.sbend_circular.SBendCircularPair.bend_degrees" href="#gpdk.components.sbend.sbend_circular.SBendCircularPair.bend_degrees">bend_degrees</a></code></li>
+<li><code><a title="gpdk.components.sbend.sbend_circular.SBendCircularPair.build" href="#gpdk.components.sbend.sbend_circular.SBendCircularPair.build">build</a></code></li>
+<li><code><a title="gpdk.components.sbend.sbend_circular.SBendCircularPair.left_spacing" href="#gpdk.components.sbend.sbend_circular.SBendCircularPair.left_spacing">left_spacing</a></code></li>
+<li><code><a title="gpdk.components.sbend.sbend_circular.SBendCircularPair.min_radius" href="#gpdk.components.sbend.sbend_circular.SBendCircularPair.min_radius">min_radius</a></code></li>
+<li><code><a title="gpdk.components.sbend.sbend_circular.SBendCircularPair.port_names" href="#gpdk.components.sbend.sbend_circular.SBendCircularPair.port_names">port_names</a></code></li>
+<li><code><a title="gpdk.components.sbend.sbend_circular.SBendCircularPair.right_spacing" href="#gpdk.components.sbend.sbend_circular.SBendCircularPair.right_spacing">right_spacing</a></code></li>
+<li><code><a title="gpdk.components.sbend.sbend_circular.SBendCircularPair.waveguide_type" href="#gpdk.components.sbend.sbend_circular.SBendCircularPair.waveguide_type">waveguide_type</a></code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+</footer>
+</body>
+</html>

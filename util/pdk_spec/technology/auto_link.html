@@ -1,0 +1,539 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+<title>gpdk.util.pdk_spec.technology.auto_link API documentation</title>
+<meta name="description" content="" />
+<link rel="preload stylesheet" as="style" href="../../../assets/10up-sanitize.css/11.0.1/sanitize.min.css">
+<link rel="preload stylesheet" as="style" href="../../../assets/10up-sanitize.css/11.0.1/typography.min.css">
+<link rel="stylesheet preload" as="style" href="../../../assets/highlight.js/10.1.1/styles/github-dark.min.css">
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:30px;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}#lunr-search{width:100%;font-size:1em;padding:6px 9px 5px 9px;border:1px solid silver}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:1em 0 .50em 0}h3{font-size:1.4em;margin:25px 0 10px 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .3s ease-in-out}a:hover{color:#e82}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900}pre code{background:#f8f8f8;font-size:.8em;line-height:1.4em}code{background:#f2f2f1;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{background:#f8f8f8;border:0;border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0;padding:1ex}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-weight:bold;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em .5em;margin-bottom:1em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.item .name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul{padding-left:1.5em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+<script defer src="../../../assets/highlight.js/10.1.1/highlight.min.js"></script>
+<script>window.addEventListener('DOMContentLoaded', () => hljs.initHighlighting())</script>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>gpdk.util.pdk_spec.technology.auto_link</code></h1>
+</header>
+<section id="section-intro">
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">import inspect
+from dataclasses import dataclass
+from itertools import combinations
+from pathlib import Path
+from types import ModuleType
+from typing import Any, Callable, List, Mapping, Tuple
+
+from openpyxl import Workbook
+
+from fnpcell.ansi.term import Color, style
+from fnpcell.pdk.technology import all as fpt
+from .tech import TechCheckRule
+
+
+@dataclass
+class AutoLinkCheckRule(TechCheckRule):
+    def checked(self, pdk: ModuleType, workbook: Workbook, index: int) -&gt; Tuple[str, str]:
+        contents: List[str] = []
+        file_path = Path(__file__).parts[-2:]
+        relative_path = pdk.__name__ / Path(&#34;/&#34;.join(file_path))
+        file_path_str = str(relative_path.with_suffix(&#34;&#34;).as_posix()).replace(&#34;/&#34;, &#34;.&#34;)
+        title = f&#34;Checking [{file_path_str}]&#34;
+        worksheet = workbook.active
+        worksheet.cell(index, 1, f&#34;{file_path_str}&#34;).font = self._font
+        self.title = title
+        tech_ = self.load_tech(pdk)
+        if not tech_:
+            sty = style(color=Color.YELLOW)
+            self.style = sty
+            return (
+                sty,
+                f&#34;[{relative_path}]\n tech.py not exist or class TECH not exist in tech.py(Either provide this file or inherit it from another PDK like GPDK)\n\n&#34;,
+            )
+        else:
+            if not hasattr(tech_, &#34;LINKING_POLICY&#34;) or not inspect.isclass(getattr(tech_, &#34;LINKING_POLICY&#34;)):
+                sty = style(color=Color.YELLOW)
+                self.style = sty
+                return sty, f&#34;[{relative_path}]\n Class TECH has no &#39;LINKING_POLICY&#39; attribute(Please add this attribute for the integrity of PDK)\n\n&#34;
+
+            linking_policy_ = getattr(tech_, &#34;LINKING_POLICY&#34;)
+            if not hasattr(tech_, &#34;WG&#34;) or not inspect.isclass(getattr(tech_, &#34;WG&#34;)):
+                contents.append(f&#34;[{relative_path}]\n Class TECH has no &#39;WG&#39; attribute(Please add this attribute for the integrity of PDK)&#34;)
+            else:
+                wg_ = getattr(tech_, &#34;WG&#34;)
+                wg_types = [w_type for w_name, w_type in inspect.getmembers(wg_, inspect.isclass) if w_name != &#34;__class__&#34; and w_name.isupper()]
+                if not wg_types:
+                    contents.append(f&#34;No classes found in the class WG(It&#39;s better to have at least one class in the class WG)&#34;)
+                else:
+                    if hasattr(linking_policy_, &#34;DEFAULT&#34;):
+                        if isinstance(linking_policy_.DEFAULT, fpt.LinkingPolicy):
+                            sub_wg_types = [
+                                sub_type
+                                for w_type in wg_types
+                                for sub_name, sub_type in inspect.getmembers(w_type, inspect.isclass)
+                                if sub_name != &#34;__class__&#34; and sub_name.isupper()
+                            ]
+                            if not sub_wg_types:
+                                contents.append(
+                                    f&#34;No classes found in classes of the class WG(It&#39;s better to have at least one class in classes of the class WG)&#34;
+                                )
+                            else:
+                                lack_profile_classes: List[str] = []
+                                auto_link_types: Mapping[Any, str] = {}
+                                for sub_wg_type in sub_wg_types:
+                                    if not hasattr(sub_wg_type, &#34;profile&#34;):
+                                        lack_profile_classes.append(str(sub_wg_type))
+
+                                    for sub_w_name, sub_w_type in inspect.getmembers(sub_wg_type):
+                                        if sub_w_name.isupper() and not inspect.isclass(sub_w_type):
+                                            auto_link_types[sub_w_type.__class__] = f&#34;{sub_wg_type}.{sub_w_name}&#34;
+
+                                if lack_profile_classes:
+                                    lack_profile_classes_ = &#34;\n  &#34;.join(lack_profile_classes)
+                                    contents.append(
+                                        f&#34;Found classes lack &#39;profile&#39; attribute in the class WG(It&#39;s better to have &#39;profile&#39; attribute of classes in the class WG):\n  {lack_profile_classes_}&#34;
+                                    )
+
+                                all_auto_links: Mapping[Any, Any] = {}
+                                for w1, w2 in combinations(auto_link_types, 2):
+                                    all_auto_links[w1 &gt;&gt; w2] = (auto_link_types[w1], auto_link_types[w2])
+
+                                all_auto_links.update({w &gt;&gt; w: (auto_link_types[w], auto_link_types[w]) for w in auto_link_types})
+                                _registry_attr = getattr(linking_policy_.DEFAULT, &#34;_registry&#34;)
+                                lack_auto_links: List[str] = []
+                                abnormal_link_and_bend: List[str] = []
+                                for k, v in all_auto_links.items():
+                                    k1, k2 = k
+                                    link_and_bend = _registry_attr.get((k1, k2)) if _registry_attr.get((k1, k2)) else _registry_attr.get((k2, k1))
+                                    if link_and_bend:
+                                        link_prefer, bend_using = link_and_bend
+                                        link_prefer_class = link_prefer.__class__
+                                        bend_using_class = bend_using.__class__
+                                        if (
+                                            not isinstance(link_prefer, Callable)
+                                            or link_prefer_class(fpt.IWaveguideType)([fpt.IWaveguideType, fpt.IWaveguideType]) != fpt.IWaveguideType
+                                        ):
+                                            abnormal_link_and_bend.append(link_prefer_class)
+
+                                        if (
+                                            not isinstance(bend_using, Callable)
+                                            or bend_using_class(fpt.IBendWaveguideFactory)([fpt.IWaveguideType, fpt.IWaveguideType])
+                                            != fpt.IBendWaveguideFactory
+                                        ):
+                                            abnormal_link_and_bend.append(bend_using_class)
+
+                                    else:
+                                        lack_auto_links.append(str(v))
+
+                                if lack_auto_links:
+                                    lack_auto_links_ = &#34;\n  &#34;.join(lack_auto_links)
+                                    contents.append(
+                                        f&#34;Found some link specs not in the class WG(It&#39;s better to have all link spec combinations in namespace(as a class) WG):\n  {lack_auto_links_}&#34;
+                                    )
+
+                                if abnormal_link_and_bend:
+                                    abnormal_link_and_bend_ = [
+                                        f&#34;The definition or return value of {i} is not expected(It&#39;s better to make an instance of the class callable, with the return value set to an instance of the class)&#34;
+                                        for i in set(abnormal_link_and_bend)
+                                    ]
+                                    abnormal_link_and_bend_ = &#34;\n\n&#34;.join(abnormal_link_and_bend_)
+                                    contents.append(abnormal_link_and_bend_)
+                        else:
+                            contents.append(
+                                f&#34;The type of the return value of the DEFAULT method of the class LINKING_POLICY is not expected(It&#39;s better to set the return value to an instance of {fpt.LinkingPolicy})&#34;
+                            )
+                    else:
+                        contents.append(f&#34;Class LINKING_POLICY has no &#39;DEFAULT&#39; attribute(Please add this attribute for the integrity of PDK)&#34;)
+
+        if contents:
+            sty = style(color=Color.YELLOW)
+            self.style = sty
+            contents_ = &#34;\n\n&#34;.join(contents)
+            return sty, f&#34;[{file_path_str}]\n{contents_}\n\n&#34;
+
+        return &#34;&#34;, &#34;&#34;</code></pre>
+</details>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-classes">Classes</h2>
+<dl>
+<dt id="gpdk.util.pdk_spec.technology.auto_link.AutoLinkCheckRule"><code class="flex name class">
+<span>class <span class="ident">AutoLinkCheckRule</span></span>
+<span>(</span><span>total: int = 0, index: int = 0)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>AutoLinkCheckRule(_font: openpyxl.styles.fonts.Font = <openpyxl.styles.fonts.Font object>
+Parameters:
+name=None, charset=None, family=None, b=False, i=False, strike=None, outline=None, shadow=None, condense=None, color=None, extend=None, sz=12.0, u=None, vertAlign=None, scheme=None, _style: str = '\x1b[32m', _title: str = '', total: int = 0, index: int = 0)</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class AutoLinkCheckRule(TechCheckRule):
+    def checked(self, pdk: ModuleType, workbook: Workbook, index: int) -&gt; Tuple[str, str]:
+        contents: List[str] = []
+        file_path = Path(__file__).parts[-2:]
+        relative_path = pdk.__name__ / Path(&#34;/&#34;.join(file_path))
+        file_path_str = str(relative_path.with_suffix(&#34;&#34;).as_posix()).replace(&#34;/&#34;, &#34;.&#34;)
+        title = f&#34;Checking [{file_path_str}]&#34;
+        worksheet = workbook.active
+        worksheet.cell(index, 1, f&#34;{file_path_str}&#34;).font = self._font
+        self.title = title
+        tech_ = self.load_tech(pdk)
+        if not tech_:
+            sty = style(color=Color.YELLOW)
+            self.style = sty
+            return (
+                sty,
+                f&#34;[{relative_path}]\n tech.py not exist or class TECH not exist in tech.py(Either provide this file or inherit it from another PDK like GPDK)\n\n&#34;,
+            )
+        else:
+            if not hasattr(tech_, &#34;LINKING_POLICY&#34;) or not inspect.isclass(getattr(tech_, &#34;LINKING_POLICY&#34;)):
+                sty = style(color=Color.YELLOW)
+                self.style = sty
+                return sty, f&#34;[{relative_path}]\n Class TECH has no &#39;LINKING_POLICY&#39; attribute(Please add this attribute for the integrity of PDK)\n\n&#34;
+
+            linking_policy_ = getattr(tech_, &#34;LINKING_POLICY&#34;)
+            if not hasattr(tech_, &#34;WG&#34;) or not inspect.isclass(getattr(tech_, &#34;WG&#34;)):
+                contents.append(f&#34;[{relative_path}]\n Class TECH has no &#39;WG&#39; attribute(Please add this attribute for the integrity of PDK)&#34;)
+            else:
+                wg_ = getattr(tech_, &#34;WG&#34;)
+                wg_types = [w_type for w_name, w_type in inspect.getmembers(wg_, inspect.isclass) if w_name != &#34;__class__&#34; and w_name.isupper()]
+                if not wg_types:
+                    contents.append(f&#34;No classes found in the class WG(It&#39;s better to have at least one class in the class WG)&#34;)
+                else:
+                    if hasattr(linking_policy_, &#34;DEFAULT&#34;):
+                        if isinstance(linking_policy_.DEFAULT, fpt.LinkingPolicy):
+                            sub_wg_types = [
+                                sub_type
+                                for w_type in wg_types
+                                for sub_name, sub_type in inspect.getmembers(w_type, inspect.isclass)
+                                if sub_name != &#34;__class__&#34; and sub_name.isupper()
+                            ]
+                            if not sub_wg_types:
+                                contents.append(
+                                    f&#34;No classes found in classes of the class WG(It&#39;s better to have at least one class in classes of the class WG)&#34;
+                                )
+                            else:
+                                lack_profile_classes: List[str] = []
+                                auto_link_types: Mapping[Any, str] = {}
+                                for sub_wg_type in sub_wg_types:
+                                    if not hasattr(sub_wg_type, &#34;profile&#34;):
+                                        lack_profile_classes.append(str(sub_wg_type))
+
+                                    for sub_w_name, sub_w_type in inspect.getmembers(sub_wg_type):
+                                        if sub_w_name.isupper() and not inspect.isclass(sub_w_type):
+                                            auto_link_types[sub_w_type.__class__] = f&#34;{sub_wg_type}.{sub_w_name}&#34;
+
+                                if lack_profile_classes:
+                                    lack_profile_classes_ = &#34;\n  &#34;.join(lack_profile_classes)
+                                    contents.append(
+                                        f&#34;Found classes lack &#39;profile&#39; attribute in the class WG(It&#39;s better to have &#39;profile&#39; attribute of classes in the class WG):\n  {lack_profile_classes_}&#34;
+                                    )
+
+                                all_auto_links: Mapping[Any, Any] = {}
+                                for w1, w2 in combinations(auto_link_types, 2):
+                                    all_auto_links[w1 &gt;&gt; w2] = (auto_link_types[w1], auto_link_types[w2])
+
+                                all_auto_links.update({w &gt;&gt; w: (auto_link_types[w], auto_link_types[w]) for w in auto_link_types})
+                                _registry_attr = getattr(linking_policy_.DEFAULT, &#34;_registry&#34;)
+                                lack_auto_links: List[str] = []
+                                abnormal_link_and_bend: List[str] = []
+                                for k, v in all_auto_links.items():
+                                    k1, k2 = k
+                                    link_and_bend = _registry_attr.get((k1, k2)) if _registry_attr.get((k1, k2)) else _registry_attr.get((k2, k1))
+                                    if link_and_bend:
+                                        link_prefer, bend_using = link_and_bend
+                                        link_prefer_class = link_prefer.__class__
+                                        bend_using_class = bend_using.__class__
+                                        if (
+                                            not isinstance(link_prefer, Callable)
+                                            or link_prefer_class(fpt.IWaveguideType)([fpt.IWaveguideType, fpt.IWaveguideType]) != fpt.IWaveguideType
+                                        ):
+                                            abnormal_link_and_bend.append(link_prefer_class)
+
+                                        if (
+                                            not isinstance(bend_using, Callable)
+                                            or bend_using_class(fpt.IBendWaveguideFactory)([fpt.IWaveguideType, fpt.IWaveguideType])
+                                            != fpt.IBendWaveguideFactory
+                                        ):
+                                            abnormal_link_and_bend.append(bend_using_class)
+
+                                    else:
+                                        lack_auto_links.append(str(v))
+
+                                if lack_auto_links:
+                                    lack_auto_links_ = &#34;\n  &#34;.join(lack_auto_links)
+                                    contents.append(
+                                        f&#34;Found some link specs not in the class WG(It&#39;s better to have all link spec combinations in namespace(as a class) WG):\n  {lack_auto_links_}&#34;
+                                    )
+
+                                if abnormal_link_and_bend:
+                                    abnormal_link_and_bend_ = [
+                                        f&#34;The definition or return value of {i} is not expected(It&#39;s better to make an instance of the class callable, with the return value set to an instance of the class)&#34;
+                                        for i in set(abnormal_link_and_bend)
+                                    ]
+                                    abnormal_link_and_bend_ = &#34;\n\n&#34;.join(abnormal_link_and_bend_)
+                                    contents.append(abnormal_link_and_bend_)
+                        else:
+                            contents.append(
+                                f&#34;The type of the return value of the DEFAULT method of the class LINKING_POLICY is not expected(It&#39;s better to set the return value to an instance of {fpt.LinkingPolicy})&#34;
+                            )
+                    else:
+                        contents.append(f&#34;Class LINKING_POLICY has no &#39;DEFAULT&#39; attribute(Please add this attribute for the integrity of PDK)&#34;)
+
+        if contents:
+            sty = style(color=Color.YELLOW)
+            self.style = sty
+            contents_ = &#34;\n\n&#34;.join(contents)
+            return sty, f&#34;[{file_path_str}]\n{contents_}\n\n&#34;
+
+        return &#34;&#34;, &#34;&#34;</code></pre>
+</details>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li><a title="gpdk.util.pdk_spec.technology.tech.TechCheckRule" href="tech.html#gpdk.util.pdk_spec.technology.tech.TechCheckRule">TechCheckRule</a></li>
+<li><a title="gpdk.util.pdk_spec.rule.CheckRule" href="../rule.html#gpdk.util.pdk_spec.rule.CheckRule">CheckRule</a></li>
+<li><a title="gpdk.util.pdk_spec.interfaces.ICheckRule" href="../interfaces.html#gpdk.util.pdk_spec.interfaces.ICheckRule">ICheckRule</a></li>
+<li>fnpcell.interfaces.IRunnable</li>
+<li><a title="gpdk.util.pdk_spec.rule.Progressable" href="../rule.html#gpdk.util.pdk_spec.rule.Progressable">Progressable</a></li>
+<li>fnpcell.interfaces.IUpdatable</li>
+</ul>
+<h3>Class variables</h3>
+<dl>
+<dt id="gpdk.util.pdk_spec.technology.auto_link.AutoLinkCheckRule.index"><code class="name">var <span class="ident">index</span> : int</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="gpdk.util.pdk_spec.technology.auto_link.AutoLinkCheckRule.total"><code class="name">var <span class="ident">total</span> : int</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+</dl>
+<h3>Methods</h3>
+<dl>
+<dt id="gpdk.util.pdk_spec.technology.auto_link.AutoLinkCheckRule.checked"><code class="name flex">
+<span>def <span class="ident">checked</span></span>(<span>self, pdk: module, workbook: openpyxl.workbook.workbook.Workbook, index: int) ‑> Tuple[str, str]</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def checked(self, pdk: ModuleType, workbook: Workbook, index: int) -&gt; Tuple[str, str]:
+    contents: List[str] = []
+    file_path = Path(__file__).parts[-2:]
+    relative_path = pdk.__name__ / Path(&#34;/&#34;.join(file_path))
+    file_path_str = str(relative_path.with_suffix(&#34;&#34;).as_posix()).replace(&#34;/&#34;, &#34;.&#34;)
+    title = f&#34;Checking [{file_path_str}]&#34;
+    worksheet = workbook.active
+    worksheet.cell(index, 1, f&#34;{file_path_str}&#34;).font = self._font
+    self.title = title
+    tech_ = self.load_tech(pdk)
+    if not tech_:
+        sty = style(color=Color.YELLOW)
+        self.style = sty
+        return (
+            sty,
+            f&#34;[{relative_path}]\n tech.py not exist or class TECH not exist in tech.py(Either provide this file or inherit it from another PDK like GPDK)\n\n&#34;,
+        )
+    else:
+        if not hasattr(tech_, &#34;LINKING_POLICY&#34;) or not inspect.isclass(getattr(tech_, &#34;LINKING_POLICY&#34;)):
+            sty = style(color=Color.YELLOW)
+            self.style = sty
+            return sty, f&#34;[{relative_path}]\n Class TECH has no &#39;LINKING_POLICY&#39; attribute(Please add this attribute for the integrity of PDK)\n\n&#34;
+
+        linking_policy_ = getattr(tech_, &#34;LINKING_POLICY&#34;)
+        if not hasattr(tech_, &#34;WG&#34;) or not inspect.isclass(getattr(tech_, &#34;WG&#34;)):
+            contents.append(f&#34;[{relative_path}]\n Class TECH has no &#39;WG&#39; attribute(Please add this attribute for the integrity of PDK)&#34;)
+        else:
+            wg_ = getattr(tech_, &#34;WG&#34;)
+            wg_types = [w_type for w_name, w_type in inspect.getmembers(wg_, inspect.isclass) if w_name != &#34;__class__&#34; and w_name.isupper()]
+            if not wg_types:
+                contents.append(f&#34;No classes found in the class WG(It&#39;s better to have at least one class in the class WG)&#34;)
+            else:
+                if hasattr(linking_policy_, &#34;DEFAULT&#34;):
+                    if isinstance(linking_policy_.DEFAULT, fpt.LinkingPolicy):
+                        sub_wg_types = [
+                            sub_type
+                            for w_type in wg_types
+                            for sub_name, sub_type in inspect.getmembers(w_type, inspect.isclass)
+                            if sub_name != &#34;__class__&#34; and sub_name.isupper()
+                        ]
+                        if not sub_wg_types:
+                            contents.append(
+                                f&#34;No classes found in classes of the class WG(It&#39;s better to have at least one class in classes of the class WG)&#34;
+                            )
+                        else:
+                            lack_profile_classes: List[str] = []
+                            auto_link_types: Mapping[Any, str] = {}
+                            for sub_wg_type in sub_wg_types:
+                                if not hasattr(sub_wg_type, &#34;profile&#34;):
+                                    lack_profile_classes.append(str(sub_wg_type))
+
+                                for sub_w_name, sub_w_type in inspect.getmembers(sub_wg_type):
+                                    if sub_w_name.isupper() and not inspect.isclass(sub_w_type):
+                                        auto_link_types[sub_w_type.__class__] = f&#34;{sub_wg_type}.{sub_w_name}&#34;
+
+                            if lack_profile_classes:
+                                lack_profile_classes_ = &#34;\n  &#34;.join(lack_profile_classes)
+                                contents.append(
+                                    f&#34;Found classes lack &#39;profile&#39; attribute in the class WG(It&#39;s better to have &#39;profile&#39; attribute of classes in the class WG):\n  {lack_profile_classes_}&#34;
+                                )
+
+                            all_auto_links: Mapping[Any, Any] = {}
+                            for w1, w2 in combinations(auto_link_types, 2):
+                                all_auto_links[w1 &gt;&gt; w2] = (auto_link_types[w1], auto_link_types[w2])
+
+                            all_auto_links.update({w &gt;&gt; w: (auto_link_types[w], auto_link_types[w]) for w in auto_link_types})
+                            _registry_attr = getattr(linking_policy_.DEFAULT, &#34;_registry&#34;)
+                            lack_auto_links: List[str] = []
+                            abnormal_link_and_bend: List[str] = []
+                            for k, v in all_auto_links.items():
+                                k1, k2 = k
+                                link_and_bend = _registry_attr.get((k1, k2)) if _registry_attr.get((k1, k2)) else _registry_attr.get((k2, k1))
+                                if link_and_bend:
+                                    link_prefer, bend_using = link_and_bend
+                                    link_prefer_class = link_prefer.__class__
+                                    bend_using_class = bend_using.__class__
+                                    if (
+                                        not isinstance(link_prefer, Callable)
+                                        or link_prefer_class(fpt.IWaveguideType)([fpt.IWaveguideType, fpt.IWaveguideType]) != fpt.IWaveguideType
+                                    ):
+                                        abnormal_link_and_bend.append(link_prefer_class)
+
+                                    if (
+                                        not isinstance(bend_using, Callable)
+                                        or bend_using_class(fpt.IBendWaveguideFactory)([fpt.IWaveguideType, fpt.IWaveguideType])
+                                        != fpt.IBendWaveguideFactory
+                                    ):
+                                        abnormal_link_and_bend.append(bend_using_class)
+
+                                else:
+                                    lack_auto_links.append(str(v))
+
+                            if lack_auto_links:
+                                lack_auto_links_ = &#34;\n  &#34;.join(lack_auto_links)
+                                contents.append(
+                                    f&#34;Found some link specs not in the class WG(It&#39;s better to have all link spec combinations in namespace(as a class) WG):\n  {lack_auto_links_}&#34;
+                                )
+
+                            if abnormal_link_and_bend:
+                                abnormal_link_and_bend_ = [
+                                    f&#34;The definition or return value of {i} is not expected(It&#39;s better to make an instance of the class callable, with the return value set to an instance of the class)&#34;
+                                    for i in set(abnormal_link_and_bend)
+                                ]
+                                abnormal_link_and_bend_ = &#34;\n\n&#34;.join(abnormal_link_and_bend_)
+                                contents.append(abnormal_link_and_bend_)
+                    else:
+                        contents.append(
+                            f&#34;The type of the return value of the DEFAULT method of the class LINKING_POLICY is not expected(It&#39;s better to set the return value to an instance of {fpt.LinkingPolicy})&#34;
+                        )
+                else:
+                    contents.append(f&#34;Class LINKING_POLICY has no &#39;DEFAULT&#39; attribute(Please add this attribute for the integrity of PDK)&#34;)
+
+    if contents:
+        sty = style(color=Color.YELLOW)
+        self.style = sty
+        contents_ = &#34;\n\n&#34;.join(contents)
+        return sty, f&#34;[{file_path_str}]\n{contents_}\n\n&#34;
+
+    return &#34;&#34;, &#34;&#34;</code></pre>
+</details>
+</dd>
+</dl>
+</dd>
+</dl>
+</section>
+</article>
+<nav id="sidebar">
+<form>
+<input id="lunr-search" name="q" placeholder="🔎 Search ..." aria-label="Search"
+disabled minlength="2">
+</form>
+<link rel="preload stylesheet" as="style" href="../../../assets/tingle/0.15.3/tingle.min.css">
+<script src="../../../assets/tingle/0.15.3/tingle.min.js"></script>
+<style>
+.modal-dialog iframe {
+width: 100vw;
+height: calc(100vh - 80px);
+}
+@media screen and (min-width: 700px) {
+.modal-dialog iframe {
+width: 70vw;
+height: 80vh;
+}
+}
+.modal-dialog .tingle-modal-box {width: auto;}
+.modal-dialog .tingle-modal-box__content {padding: 0;}
+</style>
+<script>
+const input = document.getElementById('lunr-search');
+input.disabled = false;
+input.form.addEventListener('submit', (ev) => {
+ev.preventDefault();
+const url = new URL(window.location);
+url.searchParams.set('q', input.value);
+history.replaceState({}, null, url.toString());
+search(input.value);
+});
+const query = new URL(window.location).searchParams.get('q');
+if (query)
+search(query);
+function search(query) {
+const url = '../../../doc-search.html#' + encodeURIComponent(query);
+new tingle.modal({
+cssClass: ['modal-dialog'],
+onClose: () => {
+const url = new URL(window.location);
+url.searchParams.delete('q');
+history.replaceState({}, null, url.toString());
+setTimeout(() => input.focus(), 100);
+}
+}).setContent('<iframe src="' + url + '"></iframe>').open();
+}
+</script>
+<h1>Index</h1>
+<div class="toc">
+<ul></ul>
+</div>
+<ul id="index">
+<li><h3>Super-module</h3>
+<ul>
+<li><code><a title="gpdk.util.pdk_spec.technology" href="index.html">gpdk.util.pdk_spec.technology</a></code></li>
+</ul>
+</li>
+<li><h3><a href="#header-classes">Classes</a></h3>
+<ul>
+<li>
+<h4><code><a title="gpdk.util.pdk_spec.technology.auto_link.AutoLinkCheckRule" href="#gpdk.util.pdk_spec.technology.auto_link.AutoLinkCheckRule">AutoLinkCheckRule</a></code></h4>
+<ul class="">
+<li><code><a title="gpdk.util.pdk_spec.technology.auto_link.AutoLinkCheckRule.checked" href="#gpdk.util.pdk_spec.technology.auto_link.AutoLinkCheckRule.checked">checked</a></code></li>
+<li><code><a title="gpdk.util.pdk_spec.technology.auto_link.AutoLinkCheckRule.index" href="#gpdk.util.pdk_spec.technology.auto_link.AutoLinkCheckRule.index">index</a></code></li>
+<li><code><a title="gpdk.util.pdk_spec.technology.auto_link.AutoLinkCheckRule.total" href="#gpdk.util.pdk_spec.technology.auto_link.AutoLinkCheckRule.total">total</a></code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+</footer>
+</body>
+</html>
